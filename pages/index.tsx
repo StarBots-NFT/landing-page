@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import ReactPlayer from 'react-player'
 import {TextField} from "@material-ui/core";
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -44,3 +44,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

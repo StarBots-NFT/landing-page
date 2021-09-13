@@ -21,15 +21,10 @@ const StyledTabs = withStyles({
 })((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
 
 const Navbar = () => {
-    const [value, setValue] = React.useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
     return (
         <div className = {styles.navbar}>
             <div className = {styles.tab}>
-                <StyledTabs className= {styles.myTab} value={value} onChange={handleChange}>
+                <StyledTabs>
                     <Tab className = "tab" label = "Menu" />
                     <Tab label = "Banner" />
                     <Tab label = "Video" />
