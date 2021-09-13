@@ -1,0 +1,14 @@
+.navbar {
+    margin:         0 0 10px 0;
+    position:       fixed;
+    overflow:       hidden;
+    top:            0;
+    left:           0;
+    width:          100%;
+    padding-bottom: 10px;
+    background:     var(--dark);
+}
+
+.tab {
+    color: var(--white);
+}
