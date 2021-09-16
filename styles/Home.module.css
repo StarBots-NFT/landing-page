@@ -84,6 +84,7 @@ table.uniqueLayout {
 
 .roadmap {
     text-align: center;
+    margin-top: 100px;
 }
 
 .roadmapText {
@@ -163,14 +164,14 @@ table.uniqueLayout {
 }
 
 .ourTeamIntro {
-    width: 470px;
+    width:  470px;
     margin: auto;
 }
 
 .ourTeamLayout {
     table-layout: fixed;
     width:        1136px;
-    margin: 92px auto;
+    margin:       92px auto;
 }
 
 .btn {
