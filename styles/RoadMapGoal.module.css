@@ -1,0 +1,21 @@
+.text {
+    margin-top:  20px;
+    font-family: 'Open Sans', serif;
+    width: 400px;
+    word-break: break-word;
+    font-style:  normal;
+    font-weight: bold;
+    font-size:   24px;
+    line-height: 150%;
+    color:       var(--white);
+}
+
+.img {
+    background: var(--dark);
+    background-blend-mode: lighten;
+}
+
+.content {
+    height: var(--roadMapCompsHeight);
+    margin-top: 95px;
+}

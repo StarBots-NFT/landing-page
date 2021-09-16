@@ -1,0 +1,16 @@
+.content {
+    left: 283px;
+    top: 229px;
+
+    /* H1/Bold */
+
+    font-family: Blender Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 130%;
+    /* or 73px */
+    color: var(--white);
+    height: var(--roadMapCompsHeight);
+    margin-top: 95px;
+}
