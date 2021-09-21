@@ -1,33 +1,32 @@
 .unique {
-    width: 394px;
-    height: 234px;
-    display: inline-block;
-    margin-right: 40px;
-    margin-bottom: 111px;
+    width:          260px;
+    display:        inline-block;
+    margin-right:   20px;
+    margin-left:    20px;
+    vertical-align: top;
 }
 
 .title {
-    margin-top:  57px;
     font-family: "Open Sans", serif;
     font-style:  normal;
     font-weight: bold;
     font-size:   20px;
     line-height: 150%;
-    color: var(--white);
+    color:       var(--white);
 }
 
 .content {
-    margin:  16px auto auto;
+    margin:      16px auto auto;
     font-family: "Open Sans", serif;
     font-style:  normal;
     font-weight: normal;
     font-size:   16px;
     line-height: 160%;
-    width: 359px;
-    word-break: break-word;
-    color: var(--white);
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    width:       260px;
+    word-break:  break-word;
+    color:       var(--white);
+    flex:        none;
+    order:       1;
+    align-self:  stretch;
+    flex-grow:   0;
 }

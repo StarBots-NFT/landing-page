@@ -72,9 +72,8 @@
 }
 
 .unique {
-    margin:  99px auto auto;
-    display: block;
-    width:   870px;
+    width:     100%;
+    min-width: 1300px;
 }
 
 table.uniqueLayout {
@@ -101,6 +100,7 @@ table.uniqueLayout {
     vertical-align: top;
     text-align:     right;
     margin-top:     -20px;
+    width:          85%;
 }
 
 .roadmapRight {
@@ -117,14 +117,29 @@ table.uniqueLayout {
     margin-top:   50px;
 }
 
-.roadmapBody {
-    position: relative;
+.roadmapBodyTop {
+    position:       relative;
+    text-align:     center;
+    display:        inline-block;
+    width:          16%;
+    margin-left:    20px;
+    margin-right:   20px;
+}
+
+.roadmapBodyBot {
+    position:       relative;
+    text-align:     center;
+    display:        inline-block;
+    width:          16%;
+    margin-left:    20px;
+    margin-right:   20px;
+    vertical-align: top;
 }
 
 .roadmapStar {
     position: absolute;
-    top:      30%;
-    right:    -125px;
+    top:      -15px;
+    right:    40%;
 }
 
 .sponsored {

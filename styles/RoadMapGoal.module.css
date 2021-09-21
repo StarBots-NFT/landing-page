@@ -1,7 +1,7 @@
 .text {
-    margin-top:  20px;
+    margin:  20px auto auto;
     font-family: 'Open Sans', serif;
-    width: 400px;
+    width: 100%;
     word-break: break-word;
     font-style:  normal;
     font-weight: bold;
@@ -15,6 +15,6 @@
 }
 
 .content {
-    height: var(--roadMapCompsHeight);
     margin-top: 95px;
+    width:      100%;
 }

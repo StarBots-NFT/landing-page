@@ -5,9 +5,9 @@ import ReactPlayer from 'react-player'
 import banner from "../public/bannerr 1.png"
 import gameIntroArt from "../public/GameIntroArt.png"
 import unique from '../public/1.png'
-import frame from '../public/Frame 9406.png'
+import line from '../public/Line.png'
 import roadMapArt from '../public/5.png'
-import star from '../public/Star 12.png'
+import dot from '../public/dot.png'
 import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
 import ourTeamIcon from '../public/Polygon 8.png'
@@ -55,28 +55,14 @@ function Home(props) {
                     <div className={styles.featureText}>
                         <div className={styles.title}>Unique Feature</div>
                         <div className={styles.unique}>
-                            <table className={styles.uniqueLayout}>
-                                <tr>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Play to earn"}
-                                                content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                                    </th>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Customisable Weapons"}
-                                                content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Flexibility"}
-                                                content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                                    </th>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Strategy"}
-                                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
-                                    </th>
-                                </tr>
-                            </table>
+                            <Unique imgUrl={unique} title={"Play to earn"}
+                                    content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
+                            <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                    content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
+                            <Unique imgUrl={unique} title={"Flexibility"}
+                                    content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
+                            <Unique imgUrl={unique} title={"Strategy"}
+                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                         </div>
                     </div>
                 </div>
@@ -87,46 +73,56 @@ function Home(props) {
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
-                            <div className={styles.roadmapBody}>
+                            <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Oct"} year={"2021"}/>
-                                <div className={styles.roadmapStar}>
-                                    <img src={star}/>
-                                </div>
                             </div>
-                            <div className={styles.roadmapBody}>
+                            <div className={styles.roadmapBodyTop}>
                                 <RoadMapGoal img={roadMapArt} text={"BOT token introduction & IDO"}/>
-                                <div className={styles.roadmapStar}>
-                                    <img src={star}/>
-                                </div>
                             </div>
-                            <div className={styles.roadmapBody}>
+                            <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Q1"} year={"2022"}/>
-                                <div className={styles.roadmapStar}>
-                                    <img src={star}/>
-                                </div>
                             </div>
-                            <div className={styles.roadmapBody}>
+                            <div className={styles.roadmapBodyTop}>
                                 <RoadMapGoal img={roadMapArt} text={"PvE StoryMode Release"}/>
-                                <div className={styles.roadmapStar}>
-                                    <img src={star}/>
-                                </div>
                             </div>
-                            <div className={styles.roadmapBody}>
+                            <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Q1"} year={"2023"}/>
-                                <div className={styles.roadmapStar}>
-                                    <img src={star}/>
-                                </div>
                             </div>
                         </div>
                         <div className={styles.roadmapArt}>
-                            <img src={frame}/>
+                            <img src={line}/>
                         </div>
-                        <div className={styles.roadmapRight}>
-                            <RoadMapGoal img={roadMapArt} text={"BOT NFT Sale"}/>
-                            <RoadMapTime months={"Jan"} year={"2022"}/>
-                            <RoadMapGoal img={roadMapArt} text={"PvP Mode Release"}/>
-                            <RoadMapTime months={"Q3"} year={"2022"}/>
-                            <RoadMapGoal img={roadMapArt} text={"Universe Map Release (Planet Sale)"}/>
+                        <div className={styles.roadmapLeft}>
+                            <div className={styles.roadmapBodyBot}>
+                                <RoadMapGoal img={roadMapArt} text={"BOT NFT Sale"}/>
+                                <div className={styles.roadmapStar}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
+                            <div className={styles.roadmapBodyBot}>
+                                <RoadMapTime months={"Jan"} year={"2022"}/>
+                                <div className={styles.roadmapStar}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
+                            <div className={styles.roadmapBodyBot}>
+                                <RoadMapGoal img={roadMapArt} text={"PvP Mode Release"}/>
+                                <div className={styles.roadmapStar}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
+                            <div className={styles.roadmapBodyBot}>
+                                <RoadMapTime months={"Q3"} year={"2022"}/>
+                                <div className={styles.roadmapStar}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
+                            <div className={styles.roadmapBodyBot}>
+                                <RoadMapGoal img={roadMapArt} text={"Universe Map Release (Planet Sale)"}/>
+                                <div className={styles.roadmapStar}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
