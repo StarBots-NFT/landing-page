@@ -14,19 +14,22 @@
     color:          var(--white);
     z-index:        3;
     text-align:     center;
+    min-height: 58px;
 }
 
 .content {
-    display:    inline-block;
-    text-align: left;
-    width:      90vw;
-    position:   relative;
+    display:        inline-block;
+    text-align:     left;
+    width:          90vw;
+    position:       relative;
     vertical-align: bottom;
 }
 
 .img {
-    display:        inline-block;
-    margin-top: 18px;
+    position:    absolute;
+    left:        0;
+    margin-left: 10px;
+    top:         18px;
 }
 
 .tabs {
@@ -45,7 +48,7 @@
 .menu {
     position: absolute;
     right:    0;
-    top: -30px;
+    top:      -30px;
 }
 
 .dropdown {
