@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
 import {withStyles} from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
-import {Icon, Tabs} from "@material-ui/core";
+import {InputBase, MenuItem, Select, Tabs} from "@material-ui/core";
 import icon from '../../public/riot games.png'
 import LockIcon from '@material-ui/icons/Lock';
+import MenuIcon from '@material-ui/icons/Menu';
 
 interface StyledTabsProps {
     value: number;
@@ -27,6 +28,7 @@ const StyledTabs = withStyles({
 
 const Navbar = () => {
     const [value, setValue] = React.useState(0);
+    const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
         setValue(newValue);
         if (typeof document != "undefined" && typeof window != "undefined") {
@@ -60,24 +62,72 @@ const Navbar = () => {
             }
         }
     };
+    const useMediaQuery = (width) => {
+        const [targetReached, setTargetReached] = useState(false);
+
+        const updateTarget = useCallback((e) => {
+            if (e.matches) {
+                setTargetReached(true);
+            } else {
+                setTargetReached(false);
+            }
+        }, []);
+
+        useEffect(() => {
+            const media = window.matchMedia(`(max-width: ${width}px)`);
+            media.addListener(updateTarget);
+
+            // Check on mount (callback is not called until a change occurs)
+            if (media.matches) {
+                setTargetReached(true);
+            }
+            return () => media.removeListener(updateTarget);
+        }, []);
+
+        return targetReached;
+    };
+    const changeIsShow = () => {
+        setIsShowDropDown(!isShowDropDown)
+    }
+    const isBreakpoint = useMediaQuery(1400)
     return (
         <div className={styles.navbar} id={"navbar"}>
             <img className={styles.img} src={icon}/>
-            <div className={styles.tabs}>
-                <StyledTabs onChange={handleChange} value={value}>
-                    <Tab label="Home"/>
-                    <Tab label="Introduction"/>
-                    <Tab label="Trailer"/>
-                    <Tab label="Unique Feature"/>
-                    <Tab label="RoadMap"/>
-                    <Tab label="Sponsored"/>
-                    <Tab label="Our Team"/>
-                </StyledTabs>
-            </div>
-            <button className={styles.button}>
-                <LockIcon/>
-                <span className={styles.buttonLabel}>Connect Wallet</span>
-            </button>
+            {!isBreakpoint ? (
+                <div className={styles.content}>
+                    <div className={styles.tabs}>
+                        <StyledTabs onChange={handleChange} value={value}>
+                            <Tab label="Home"/>
+                            <Tab label="Introduction"/>
+                            <Tab label="Trailer"/>
+                            <Tab label="Unique Feature"/>
+                            <Tab label="RoadMap"/>
+                            <Tab label="Sponsored"/>
+                            <Tab label="Our Team"/>
+                        </StyledTabs>
+                    </div>
+                    <button className={styles.button}>
+                        <LockIcon/>
+                        <span className={styles.buttonLabel}>Connect Wallet</span>
+                    </button>
+                </div>
+            ) : (
+                <div className={styles.content}>
+                    <button className={styles.menu} onClick={changeIsShow}>menu</button>
+                </div>
+            )}
+            {(isShowDropDown && isBreakpoint) ? (
+                <div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,0)}>Home</div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,1)}>Introduction</div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,2)}>Trailer</div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,3)}>Unique Feature</div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,4)}>RoadMap</div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,5)}>Sponsored</div>
+                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,6)}>Our Team</div>
+                </div>
+
+            ) : null}
         </div>
     );
 }
