@@ -9,7 +9,9 @@ interface TextInfoProps {
 const Unique = ({title, content, imgUrl}: TextInfoProps) => {
     return (
         <div className={styles.unique}>
-            <img src={imgUrl} />
+            <div className={styles.img}>
+                <img width={'100%'} src={imgUrl} />
+            </div>
             <div>
                 <div className={styles.title}>
                     {title}

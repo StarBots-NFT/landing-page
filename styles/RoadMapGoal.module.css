@@ -12,9 +12,9 @@
 
 .img {
     background-blend-mode: lighten;
+    width: 100%;
 }
 
 .content {
-    margin-top: 95px;
     width:      100%;
 }

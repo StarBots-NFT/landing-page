@@ -1,8 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
 import {withStyles} from '@material-ui/core/styles';
-import Tab from '@material-ui/core/Tab';
-import {InputBase, MenuItem, Select, Tabs} from "@material-ui/core";
+import {createStyles, InputBase, MenuItem, Select, Tabs, Theme, Tab} from "@material-ui/core";
 import icon from '../../public/riot games.png'
 import LockIcon from '@material-ui/icons/Lock';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -26,10 +25,32 @@ const StyledTabs = withStyles({
     },
 })((props: StyledTabsProps) => <Tabs {...props} TabIndicatorProps={{children: <span/>}}/>);
 
+interface StyledTabProps {
+    label: string;
+}
+
+const StyledTab = withStyles({
+        root: {
+            textTransform: 'none',
+            color: '#fff',
+            minWidth: 120,
+            display: 'inline-block',
+            '&:focus': {
+                opacity: 1,
+            }
+        }
+    })((props: StyledTabProps) => <Tab disableRipple {...props} />);
+
 const Navbar = () => {
     const [value, setValue] = React.useState(0);
     const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+        var tablinks = document.getElementsByClassName("tablinks");
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            tablinks[i].style.backgroundSize = "50% 0px";
+        }
+        tablinks[newValue].style.backgroundSize = "50% 2px";
         setValue(newValue);
         if (typeof document != "undefined" && typeof window != "undefined") {
             const navheight = document.getElementById("navbar").getBoundingClientRect().height
@@ -62,6 +83,9 @@ const Navbar = () => {
             }
         }
     };
+    const changeIsShow = () => {
+        setIsShowDropDown(!isShowDropDown)
+    }
     const useMediaQuery = (width) => {
         const [targetReached, setTargetReached] = useState(false);
 
@@ -86,30 +110,25 @@ const Navbar = () => {
 
         return targetReached;
     };
-    const changeIsShow = () => {
-        setIsShowDropDown(!isShowDropDown)
-    }
-    const isBreakpoint = useMediaQuery(1400)
+    const isBreakpoint = useMediaQuery(1250)
     return (
         <div className={styles.navbar} id={"navbar"}>
             <img className={styles.img} src={icon}/>
             {!isBreakpoint ? (
                 <div className={styles.content}>
                     <div className={styles.tabs}>
-                        <StyledTabs onChange={handleChange} value={value}>
-                            <Tab label="Home"/>
-                            <Tab label="Introduction"/>
-                            <Tab label="Trailer"/>
-                            <Tab label="Unique Feature"/>
-                            <Tab label="RoadMap"/>
-                            <Tab label="Sponsored"/>
-                            <Tab label="Our Team"/>
-                        </StyledTabs>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 0)}>Home</button>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 1)}>Introduction</button>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer</button>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique Feature</button>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap</button>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored</button>
+                        <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team</button>
                     </div>
-                    <button className={styles.button}>
-                        <LockIcon/>
-                        <span className={styles.buttonLabel}>Connect Wallet</span>
-                    </button>
+                        <button className={styles.button}>
+                            <LockIcon/>
+                            <span className={styles.buttonLabel}>Connect Wallet</span>
+                        </button>
                 </div>
             ) : (
                 <div className={styles.content}>

@@ -14,17 +14,18 @@
 }
 
 .gameIntroImg {
-    width:   679px;
-    height:  621px;
-    display: inline-block;
+    width:      45vw;
+    height:     45vw;
+    min-width: 450px;
+    min-height: 450px;
+    margin-top: 8px;
 }
 
 .gameIntroText {
-    display:        inline-block;
     vertical-align: top;
-    margin-top:     175px;
-    text-align:     left;
-    width:          397px;
+    margin:         60px auto auto;
+    text-align:     center;
+    width:          63vw;
     word-break:     break-word;
     color:          var(--white);
 }
@@ -48,20 +49,20 @@
 }
 
 .trailer {
-    margin-top: 92px;
+    margin-top: 72px;
     text-align: center;
 }
 
 .trailerText {
     margin:     auto;
     text-align: center;
-    width:      670px;
+    width:      63vw;
     word-break: break-word;
 }
 
 .trailerVideo {
-    width:      1030px;
-    height:     690px;
+    width:      70vw;
+    height:     39vw;
     margin:     40px auto auto;
     text-align: center;
 }
@@ -72,13 +73,16 @@
 }
 
 .unique {
-    width:     100%;
-    min-width: 1300px;
 }
 
 table.uniqueLayout {
     table-layout: fixed;
-    width:        870px;
+    margin: auto;
+    width:        90%;
+}
+
+.featureTr {
+    vertical-align: top;
 }
 
 .roadmap {
@@ -99,6 +103,13 @@ table.uniqueLayout {
     display:        inline-block;
     vertical-align: top;
     text-align:     right;
+    width:          23vw;
+    margin-top: 40px;
+}
+
+.roadmapTop {
+    display:        inline-block;
+    vertical-align: top;
     margin-top:     -20px;
     width:          85%;
 }
@@ -107,30 +118,43 @@ table.uniqueLayout {
     text-align:     left;
     display:        inline-block;
     vertical-align: top;
-    margin-top:     -20px;
+    width:          23vw;
+    margin-top: 40px;
 }
 
 .roadmapArt {
+    display:       inline-block;
+    margin-top:    50px;
+    margin-bottom: 70px;
+}
+
+.roadmapArtCol {
     display:      inline-block;
-    margin-right: 115px;
-    margin-left:  115px;
-    margin-top:   50px;
+    margin-right: 95px;
+    margin-left:  95px;
+    height: 1240px;
+}
+
+.roadmapBodyCol {
+    position: relative;
+    height: 226px;
+    margin-bottom: 40px;
 }
 
 .roadmapBodyTop {
-    position:       relative;
-    text-align:     center;
-    display:        inline-block;
-    width:          16%;
-    margin-left:    20px;
-    margin-right:   20px;
+    position:     relative;
+    text-align:   center;
+    display:      inline-block;
+    width:        170px;
+    margin-left:  20px;
+    margin-right: 20px;
 }
 
 .roadmapBodyBot {
     position:       relative;
     text-align:     center;
     display:        inline-block;
-    width:          16%;
+    width:          170px;
     margin-left:    20px;
     margin-right:   20px;
     vertical-align: top;
@@ -138,8 +162,14 @@ table.uniqueLayout {
 
 .roadmapStar {
     position: absolute;
-    top:      -15px;
+    top:      -85px;
     right:    40%;
+}
+
+.roadmapStarCol {
+    position: absolute;
+    top:      20%;
+    right:    -125px;
 }
 
 .sponsored {

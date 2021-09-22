@@ -14,19 +14,18 @@
     color:          var(--white);
     z-index:        3;
     text-align:     center;
-    min-height: 58px;
+    min-height:     58px;
 }
 
 .content {
     display:        inline-block;
     text-align:     left;
-    width:          90vw;
+    width:          92vw;
     position:       relative;
     vertical-align: bottom;
 }
 
 .img {
-    position:    absolute;
     left:        0;
     margin-left: 10px;
     top:         18px;
@@ -34,7 +33,29 @@
 
 .tabs {
     display: inline-block;
-    width:   79vw;
+}
+
+
+.tab {
+    overflow: hidden;
+}
+
+.tabs button {
+    color:            white;
+    padding:          15px 32px;
+    text-align:       center;
+    text-decoration:  none;
+    display:          inline-block;
+    font-size:        16px;
+    margin:           4px 2px;
+    cursor:           pointer;
+    border-style:     none;
+    background:       var(--dark) linear-gradient(var(--white), var(--white)) no-repeat bottom;
+    background-size:  50% 0px;
+}
+
+.active {
+    background-color: #ba1919;
 }
 
 .button {
@@ -43,6 +64,9 @@
     border-radius:  20px;
     Padding:        5px 16px 5px 16px;
     vertical-align: bottom;
+    position:       absolute;
+    right:          0;
+    top:            20%;
 }
 
 .menu {
