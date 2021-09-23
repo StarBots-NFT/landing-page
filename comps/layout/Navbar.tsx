@@ -45,7 +45,7 @@ const Navbar = () => {
     const [value, setValue] = React.useState(0);
     const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-        var tablinks = document.getElementsByClassName("tablinks");
+        var tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
         for (var i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
             tablinks[i].style.backgroundSize = "50% 0px";
