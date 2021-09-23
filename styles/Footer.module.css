@@ -1,36 +1,44 @@
 .Footer {
-    margin-top: 457px;
-    margin-bottom: 80px;
+    background-color: var(--dark);
+    padding-top:      40px;
+    padding-bottom:   40px;
+    padding-left:     5vw;
+    text-align:       left;
 }
 
-.Marketplace {
+.starBot {
     vertical-align: top;
-    text-align: left;
+    text-align:     left;
+    display:        inline-block;
+    margin-right:   120px;
+    width:          370px;
+    margin-bottom:  20px;
+}
+
+.block {
     display: inline-block;
-    margin-right: 120px;
-    margin-left: 40%;
 }
 
 .MyAccount {
-    text-align: left;
-    display: inline-block;
+    text-align:     left;
+    display:        inline-block;
     vertical-align: top;
-    margin-right: 120px;
+    margin-right:   11vw;
 }
 
 .Stats {
     vertical-align: top;
-    text-align: left;
-    display: inline-block;
-    margin-right: 120px;
-    margin-top: 20px;
+    text-align:     left;
+    display:        inline-block;
+    margin-right:   120px;
+    margin-top:     20px;
 }
 
 .Resources {
     vertical-align: top;
-    text-align: left;
-    display: inline-block;
-    margin-right: 120px;
+    text-align:     left;
+    display:        inline-block;
+    margin-right:   120px;
 }
 
 .title {
@@ -40,7 +48,8 @@
     font-size:   20px;
     line-height: 130%;
     color:       var(--white);
-    display: block;
+    display:     block;
+    margin-bottom: 8px;
 }
 
 .content {
@@ -50,5 +59,36 @@
     font-size:   16px;
     line-height: 160%;
     color:       var(--white);
-    display: block;
+    display:     block;
+    margin-bottom: 20px;
+}
+
+.contentlink {
+    font-family: "Open Sans", serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   16px;
+    line-height: 160%;
+    color:       blue;
+    display:     inline-block;
+    text-decoration: underline;
+}
+
+.policy {
+    margin-top: 20px;
+}
+
+.policyContent {
+    font-family: "Open Sans", serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   16px;
+    line-height: 160%;
+    color:       var(--white);
+    display:     inline-block;
+    margin-right: 2px;
+}
+
+.icon {
+    margin-bottom: 24px;
 }

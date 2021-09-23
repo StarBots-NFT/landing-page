@@ -12,12 +12,20 @@ import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
 import ourTeamIcon from '../public/Polygon 8.png'
 import frame from '../public/Frame 9406.png'
+import sponseredBanner from '../public/background.png'
 
 import Unique from '../comps/Unique';
 import RoadMapTime from "../comps/RoadMapTime";
 import RoadMapGoal from "../comps/RoadMapGoal"
 import OurTeamItem from "../comps/OurTeamItem";
 import {useCallback, useEffect, useState} from 'react'
+
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
 
 function Home(props) {
     const useMediaQuery = (width) => {
@@ -46,85 +54,114 @@ function Home(props) {
     };
     const isBreakpointPc = useMediaQuery(1250)
     const isBreakpointMb = useMediaQuery(680)
+
     function feature() {
-        if (!isBreakpointPc) {
-            return (
-                <div className={styles.feature} id={"feature"}>
-                    <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
-                        <div className={styles.unique}>
+        if (isMobile) {
+            <div className={styles.feature} id={"feature"}>
+                <div className={styles.featureText}>
+                    <div className={styles.title}>Unique Feature</div>
+                    <div className={styles.unique}>
+                        <div>
                             <Unique imgUrl={unique} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
+                        </div>
+                        <div>
                             <Unique imgUrl={unique} title={"Customisable Weapons"}
                                     content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
+                        </div>
+
+                        <div>
                             <Unique imgUrl={unique} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                            <Unique imgUrl={unique} title={"Strategy"}
-                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                         </div>
+
+                        <div><Unique imgUrl={unique} title={"Strategy"}
+                                     content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                        </div>
+
                     </div>
                 </div>
-            )
-        } else if (isBreakpointPc && !isBreakpointMb) {
-            return (
-                <div className={styles.feature} id={"feature"}>
-                    <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
-                        <div className={styles.unique}>
-                            <table className={styles.uniqueLayout}>
-                                <tr className={styles.featureTr}>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Play to earn"}
-                                                content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                                    </th>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Customisable Weapons"}
-                                                content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                                    </th>
-                                </tr>
-                                <tr className={styles.featureTr}>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Flexibility"}
-                                                content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                                    </th>
-                                    <th>
-                                        <Unique imgUrl={unique} title={"Strategy"}
-                                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
-                                    </th>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            )
+            </div>
         } else {
-            return (
-                <div className={styles.feature} id={"feature"}>
-                    <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
-                        <div className={styles.unique}>
-                            <div>
+            if (!isBreakpointPc) {
+                return (
+                    <div className={styles.feature} id={"feature"}>
+                        <div className={styles.featureText}>
+                            <div className={styles.title}>Unique Feature</div>
+                            <div className={styles.unique}>
                                 <Unique imgUrl={unique} title={"Play to earn"}
                                         content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                            </div>
-                            <div>
                                 <Unique imgUrl={unique} title={"Customisable Weapons"}
                                         content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                            </div>
-
-                            <div>
                                 <Unique imgUrl={unique} title={"Flexibility"}
                                         content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
+                                <Unique imgUrl={unique} title={"Strategy"}
+                                        content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                             </div>
-
-                            <div><Unique imgUrl={unique} title={"Strategy"}
-                                         content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
-                            </div>
-
                         </div>
                     </div>
-                </div>
-            )
+                )
+            } else if (isBreakpointPc && !isBreakpointMb) {
+                return (
+                    <div className={styles.feature} id={"feature"}>
+                        <div className={styles.featureText}>
+                            <div className={styles.title}>Unique Feature</div>
+                            <div className={styles.unique}>
+                                <table className={styles.uniqueLayout}>
+                                    <tr className={styles.featureTr}>
+                                        <th>
+                                            <Unique imgUrl={unique} title={"Play to earn"}
+                                                    content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
+                                        </th>
+                                        <th>
+                                            <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                                    content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
+                                        </th>
+                                    </tr>
+                                    <tr className={styles.featureTr}>
+                                        <th>
+                                            <Unique imgUrl={unique} title={"Flexibility"}
+                                                    content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
+                                        </th>
+                                        <th>
+                                            <Unique imgUrl={unique} title={"Strategy"}
+                                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )
+            } else {
+                return (
+                    <div className={styles.feature} id={"feature"}>
+                        <div className={styles.featureText}>
+                            <div className={styles.title}>Unique Feature</div>
+                            <div className={styles.unique}>
+                                <div>
+                                    <Unique imgUrl={unique} title={"Play to earn"}
+                                            content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
+                                </div>
+                                <div>
+                                    <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                            content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
+                                </div>
+
+                                <div>
+                                    <Unique imgUrl={unique} title={"Flexibility"}
+                                            content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
+                                </div>
+
+                                <div><Unique imgUrl={unique} title={"Strategy"}
+                                             content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
         }
     }
 
@@ -258,6 +295,130 @@ function Home(props) {
         }
     }
 
+    function team() {
+        if (!isBreakpointPc) {
+            return (
+                <div className={styles.ourTeam} id={"team"}>
+                    <div className={styles.ourTeamIntro}>
+                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.content}>
+                            All the distinctive gaming features revolving around our ecosystem
+                        </div>
+                    </div>
+                    <table className={styles.ourTeamLayout}>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            )
+        } else if (isBreakpointPc && !isBreakpointMb) {
+            return (
+                <div className={styles.ourTeam} id={"team"}>
+                    <div className={styles.ourTeamIntro}>
+                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.content}>
+                            All the distinctive gaming features revolving around our ecosystem
+                        </div>
+                    </div>
+                    <table className={styles.ourTeamLayout}>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            )
+        } else {
+            return (
+                <div className={styles.ourTeam} id={"team"}>
+                    <div className={styles.ourTeamIntro}>
+                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.content}>
+                            All the distinctive gaming features revolving around our ecosystem
+                        </div>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                </div>
+            )
+        }
+    }
+
     return (
         <>
             <Head>
@@ -294,6 +455,7 @@ function Home(props) {
                 {feature()}
                 {map()}
                 <div className={styles.sponsored} id={"sponsored"}>
+                    <img className={styles.sponsoredBackgroud} src={sponseredBanner}/>
                     <div className={styles.sponsoredText}>
                         <div className={styles.title}>Sponsored By</div>
                         <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
@@ -307,6 +469,7 @@ function Home(props) {
                         <img className={styles.sponsoredImage} src={icon16}/>
                     </div>
                 </div>
+                {team()}
             </div>
         </>
     )

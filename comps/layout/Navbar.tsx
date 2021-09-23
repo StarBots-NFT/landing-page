@@ -46,11 +46,19 @@ const Navbar = () => {
     const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
         var tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
+        let dropdownH = 0;
         for (var i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
             tablinks[i].style.backgroundSize = "50% 0px";
         }
-        tablinks[newValue].style.backgroundSize = "50% 2px";
+        if (tablinks.length > 0) {
+            tablinks[newValue].style.backgroundSize = "50% 2px";
+        } else {
+            if (isShowDropDown) {
+               dropdownH = document.getElementById("dropdownBlock").getBoundingClientRect().height
+            }
+            changeIsShow()
+        }
         setValue(newValue);
         if (typeof document != "undefined" && typeof window != "undefined") {
             const navheight = document.getElementById("navbar").getBoundingClientRect().height
@@ -58,27 +66,27 @@ const Navbar = () => {
                 window.scrollTo(0, 0)
             }
             if (newValue == 1) {
-                let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY
+                let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
             }
             if (newValue == 2) {
-                let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY
+                let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
             }
             if (newValue == 3) {
-                let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY
+                let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
             }
             if (newValue == 4) {
-                let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY
+                let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
             }
             if (newValue == 5) {
-                let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY
+                let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
             }
             if (newValue == 6) {
-                let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY
+                let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
             }
         }
@@ -113,7 +121,7 @@ const Navbar = () => {
     const isBreakpoint = useMediaQuery(1250)
     return (
         <div className={styles.navbar} id={"navbar"}>
-            <img className={styles.img} src={icon}/>
+            {!isBreakpoint ? (<img className={styles.img} src={icon}/>) : (<img className={styles.imgBreak} src={icon}/>)}
             {!isBreakpoint ? (
                 <div className={styles.content}>
                     <div className={styles.tabs}>
@@ -132,11 +140,15 @@ const Navbar = () => {
                 </div>
             ) : (
                 <div className={styles.content}>
-                    <button className={styles.menu} onClick={changeIsShow}>menu</button>
+                    <menu className={styles.menu} onClick={changeIsShow}>
+                        <div className={styles.menuDiv}></div>
+                        <div className={styles.menuDiv}></div>
+                        <div className={styles.menuDiv}></div>
+                    </menu>
                 </div>
             )}
             {(isShowDropDown && isBreakpoint) ? (
-                <div>
+                <div className={styles.dropdownBlock} id = "dropdownBlock">
                     <div className={styles.dropdown} onClick={(e)=>handleChange(e,0)}>Home</div>
                     <div className={styles.dropdown} onClick={(e)=>handleChange(e,1)}>Introduction</div>
                     <div className={styles.dropdown} onClick={(e)=>handleChange(e,2)}>Trailer</div>
@@ -144,6 +156,10 @@ const Navbar = () => {
                     <div className={styles.dropdown} onClick={(e)=>handleChange(e,4)}>RoadMap</div>
                     <div className={styles.dropdown} onClick={(e)=>handleChange(e,5)}>Sponsored</div>
                     <div className={styles.dropdown} onClick={(e)=>handleChange(e,6)}>Our Team</div>
+                    <button className={styles.buttonDropDown}>
+                        <LockIcon/>
+                        <span className={styles.buttonLabel}>Connect Wallet</span>
+                    </button>
                 </div>
 
             ) : null}
