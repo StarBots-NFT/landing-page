@@ -18,11 +18,13 @@ import Unique from '../comps/Unique';
 import RoadMapTime from "../comps/RoadMapTime";
 import RoadMapGoal from "../comps/RoadMapGoal"
 import OurTeamItem from "../comps/OurTeamItem";
+import Mobile from "../comps/mobile"
+
 import {useCallback, useEffect, useState} from 'react'
 
 function Home(props) {
     const [isMobile, setMobile] = useState(false);
-    useEffect(()=> {
+    useEffect(() => {
         function detectMob() {
             const toMatch = [
                 /Android/i,
@@ -38,9 +40,9 @@ function Home(props) {
                 return navigator.userAgent.match(toMatchItem);
             });
         }
+
         setMobile(detectMob)
     })
-
 
 
     const useMediaQuery = (width) => {
@@ -69,113 +71,86 @@ function Home(props) {
     };
     const isBreakpointPc = useMediaQuery(1250)
     const isBreakpointMb = useMediaQuery(680)
+
     function feature() {
-        if (isMobile) {
-            <div className={styles.feature} id={"feature"}>
-                <div className={styles.featureText}>
-                    <div className={styles.title}>Unique Feature</div>
-                    <div className={styles.unique}>
-                        <div>
+        if (!isBreakpointPc) {
+            return (
+                <div className={styles.feature} id={"feature"}>
+                    <div className={styles.featureText}>
+                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.unique}>
                             <Unique imgUrl={unique} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                        </div>
-                        <div>
                             <Unique imgUrl={unique} title={"Customisable Weapons"}
                                     content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                        </div>
-
-                        <div>
                             <Unique imgUrl={unique} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
+                            <Unique imgUrl={unique} title={"Strategy"}
+                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                         </div>
-
-                        <div><Unique imgUrl={unique} title={"Strategy"}
-                                     content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
-                        </div>
-
                     </div>
                 </div>
-            </div>
+            )
+        } else if (isBreakpointPc && !isBreakpointMb) {
+            return (
+                <div className={styles.feature} id={"feature"}>
+                    <div className={styles.featureText}>
+                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.unique}>
+                            <table className={styles.uniqueLayout}>
+                                <tr className={styles.featureTr}>
+                                    <th>
+                                        <Unique imgUrl={unique} title={"Play to earn"}
+                                                content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
+                                    </th>
+                                    <th>
+                                        <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                                content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
+                                    </th>
+                                </tr>
+                                <tr className={styles.featureTr}>
+                                    <th>
+                                        <Unique imgUrl={unique} title={"Flexibility"}
+                                                content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
+                                    </th>
+                                    <th>
+                                        <Unique imgUrl={unique} title={"Strategy"}
+                                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            )
         } else {
-            if (!isBreakpointPc) {
-                return (
-                    <div className={styles.feature} id={"feature"}>
-                        <div className={styles.featureText}>
-                            <div className={styles.title}>Unique Feature</div>
-                            <div className={styles.unique}>
+            return (
+                <div className={styles.feature} id={"feature"}>
+                    <div className={styles.featureText}>
+                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.unique}>
+                            <div>
                                 <Unique imgUrl={unique} title={"Play to earn"}
                                         content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
+                            </div>
+                            <div>
                                 <Unique imgUrl={unique} title={"Customisable Weapons"}
                                         content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
+                            </div>
+
+                            <div>
                                 <Unique imgUrl={unique} title={"Flexibility"}
                                         content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                                <Unique imgUrl={unique} title={"Strategy"}
-                                        content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                             </div>
+
+                            <div><Unique imgUrl={unique} title={"Strategy"}
+                                         content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                            </div>
+
                         </div>
                     </div>
-                )
-            } else if (isBreakpointPc && !isBreakpointMb) {
-                return (
-                    <div className={styles.feature} id={"feature"}>
-                        <div className={styles.featureText}>
-                            <div className={styles.title}>Unique Feature</div>
-                            <div className={styles.unique}>
-                                <table className={styles.uniqueLayout}>
-                                    <tr className={styles.featureTr}>
-                                        <th>
-                                            <Unique imgUrl={unique} title={"Play to earn"}
-                                                    content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                                        </th>
-                                        <th>
-                                            <Unique imgUrl={unique} title={"Customisable Weapons"}
-                                                    content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                                        </th>
-                                    </tr>
-                                    <tr className={styles.featureTr}>
-                                        <th>
-                                            <Unique imgUrl={unique} title={"Flexibility"}
-                                                    content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                                        </th>
-                                        <th>
-                                            <Unique imgUrl={unique} title={"Strategy"}
-                                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
-                                        </th>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                )
-            } else {
-                return (
-                    <div className={styles.feature} id={"feature"}>
-                        <div className={styles.featureText}>
-                            <div className={styles.title}>Unique Feature</div>
-                            <div className={styles.unique}>
-                                <div>
-                                    <Unique imgUrl={unique} title={"Play to earn"}
-                                            content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                                </div>
-                                <div>
-                                    <Unique imgUrl={unique} title={"Customisable Weapons"}
-                                            content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                                </div>
-
-                                <div>
-                                    <Unique imgUrl={unique} title={"Flexibility"}
-                                            content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                                </div>
-
-                                <div><Unique imgUrl={unique} title={"Strategy"}
-                                             content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                )
-            }
+                </div>
+            )
         }
     }
 
@@ -443,48 +418,53 @@ function Home(props) {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"}/>
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
             </Head>
-            <div>
-                <img className={styles.banner} src={banner}/>
-                <div id={"intro"} className={styles.gameIntro}>
-                    <div className={styles.gameIntroText}>
-                        <div className={styles.title}>Game Introduction</div>
-                        <div className={styles.content}>Starbots is the first-ever robot battle NFT game where players
-                            gain GEAR tokens through strategically assembling their own robots, winning battles,
-                            completing missions, and conquering new lands.
+            {isMobile ? (
+                <Mobile/>
+            ) : (
+                <div>
+                    <img className={styles.banner} src={banner}/>
+                    <div id={"intro"} className={styles.gameIntro}>
+                        <div className={styles.gameIntroText}>
+                            <div className={styles.title}>Game Introduction</div>
+                            <div className={styles.content}>Starbots is the first-ever robot battle NFT game where
+                                players
+                                gain GEAR tokens through strategically assembling their own robots, winning battles,
+                                completing missions, and conquering new lands.
+                            </div>
+                        </div>
+                        <img className={styles.gameIntroImg} src={gameIntroArt}/>
+                    </div>
+                    <div className={styles.trailer} id={"trailer"}>
+                        <div className={styles.trailerText}>
+                            <div className={styles.title}>Trailer</div>
+                            <div className={styles.content}>The constant sounds of metals crashing and grenades
+                                exploding
+                                won't stop until there's only one left standing - the one to conquer all lands.
+                            </div>
+                        </div>
+                        <div className={styles.trailerVideo}>
+                            <ReactPlayer width='100%' height='100%' url="https://youtu.be/Zb2CoXDPBlk"/>
                         </div>
                     </div>
-                    <img className={styles.gameIntroImg} src={gameIntroArt}/>
-                </div>
-                <div className={styles.trailer} id={"trailer"}>
-                    <div className={styles.trailerText}>
-                        <div className={styles.title}>Trailer</div>
-                        <div className={styles.content}>The constant sounds of metals crashing and grenades exploding
-                            won't stop until there's only one left standing - the one to conquer all lands.
+                    {feature()}
+                    {map()}
+                    <div className={styles.sponsored} id={"sponsored"}>
+                        <img className={styles.sponsoredBackgroud} src={sponseredBanner}/>
+                        <div className={styles.sponsoredText}>
+                            <div className={styles.title}>Sponsored By</div>
+                            <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
+                                aliquet congue. Integer ac neque in.
+                            </div>
+                        </div>
+                        <div className={styles.sponsoredIcon}>
+                            <img className={styles.sponsoredImage} src={icon14}/>
+                            <img className={styles.sponsoredImage} src={icon14}/>
+                            <img className={styles.sponsoredImage} src={icon16}/>
+                            <img className={styles.sponsoredImage} src={icon16}/>
                         </div>
                     </div>
-                    <div className={styles.trailerVideo}>
-                        <ReactPlayer width='100%' height='100%' url="https://youtu.be/Zb2CoXDPBlk"/>
-                    </div>
-                </div>
-                {feature()}
-                {map()}
-                <div className={styles.sponsored} id={"sponsored"}>
-                    <img className={styles.sponsoredBackgroud} src={sponseredBanner}/>
-                    <div className={styles.sponsoredText}>
-                        <div className={styles.title}>Sponsored By</div>
-                        <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
-                            aliquet congue. Integer ac neque in.
-                        </div>
-                    </div>
-                    <div className={styles.sponsoredIcon}>
-                        <img className={styles.sponsoredImage} src={icon14}/>
-                        <img className={styles.sponsoredImage} src={icon14}/>
-                        <img className={styles.sponsoredImage} src={icon16}/>
-                        <img className={styles.sponsoredImage} src={icon16}/>
-                    </div>
-                </div>
-                {team()}
-            </div>
+                    {team()}
+                </div>)}
         </>
     )
 }

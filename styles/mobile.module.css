@@ -1,0 +1,258 @@
+@font-face {
+    font-family: "Blender Pro";
+    src:         url(font/BlenderPro-Bold.woff);
+}
+
+.banner {
+    left:  0;
+    width: 100%;
+}
+
+.gameIntro {
+    text-align: center;
+    margin:     37px auto auto;
+}
+
+.gameIntroImg {
+    width:      52vw;
+    height:     21.45vw;
+    min-width:  450px;
+    min-height: 330px;
+    margin-top: 8px;
+}
+
+.gameIntroText {
+    vertical-align: top;
+    margin:         60px auto auto;
+    text-align:     center;
+    width:          52vw;
+    word-break:     break-word;
+    color:          var(--white);
+}
+
+.title {
+    font-family: "Blender Pro", serif;
+    font-style:  normal;
+    font-weight: bold;
+    font-size:   48px;
+    line-height: 130%;
+    color:       var(--white);
+}
+
+.content {
+    font-family: "Open Sans", serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   16px;
+    line-height: 160%;
+    color:       var(--white);
+}
+
+.trailer {
+    margin-top: 72px;
+    text-align: center;
+}
+
+.trailerText {
+    margin:     auto;
+    text-align: center;
+    width:      52vw;
+    word-break: break-word;
+}
+
+.trailerVideo {
+    width:      71vw;
+    height:     39vw;
+    margin:     40px auto auto;
+    text-align: center;
+}
+
+.featureText {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.unique {
+}
+
+table.uniqueLayout {
+    table-layout: fixed;
+    margin:       auto;
+    width:        70%;
+}
+
+.featureTr {
+    vertical-align: top;
+}
+
+.roadmap {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.roadmapText {
+    text-align: center;
+}
+
+.roadmapContent {
+    margin-top: 20px;
+    display:    inline-block;
+}
+
+.roadmapLeft {
+    display:        inline-block;
+    vertical-align: top;
+    text-align:     right;
+    width:          23vw;
+    margin-top:     40px;
+}
+
+.roadmapTop {
+    display:        inline-block;
+    vertical-align: top;
+    margin-top:     40px;
+    width:          85%;
+}
+
+.roadmapRight {
+    text-align:     left;
+    display:        inline-block;
+    vertical-align: top;
+    width:          23vw;
+    margin-top:     40px;
+}
+
+.roadmapArt {
+    display:       inline-block;
+    margin-top:    50px;
+    margin-bottom: 70px;
+}
+
+.roadmapArtCol {
+    display:      inline-block;
+    margin-right: 95px;
+    margin-left:  95px;
+    height:       1240px;
+}
+
+.roadmapBodyCol {
+    position:      relative;
+    height:        226px;
+    margin-bottom: 40px;
+}
+
+.roadmapBodyTop {
+    position:     relative;
+    text-align:   center;
+    display:      inline-block;
+    width:        170px;
+    margin-left:  20px;
+    margin-right: 20px;
+}
+
+.roadmapBodyBot {
+    position:       relative;
+    text-align:     center;
+    display:        inline-block;
+    width:          170px;
+    margin-left:    20px;
+    margin-right:   20px;
+    vertical-align: top;
+}
+
+.roadmapStar {
+    position: absolute;
+    top:      -145px;
+    right:    40%;
+}
+
+.roadmapStarCol {
+    position: absolute;
+    top:      20%;
+    right:    -125px;
+}
+
+.sponsored {
+    margin-top:     130px;
+    padding-bottom: 57px;
+    padding-top:    60px;
+    position:       relative;
+    text-align:     center;
+}
+
+.sponsoredBackgroud {
+    position: absolute;
+    width:    100%;
+    z-index:  -1;
+    left:     0;
+    top:      0;
+    height:   100%;
+}
+
+.sponsoredText {
+    text-align: center;
+    width:      480px;
+    word-break: break-word;
+    margin:     auto;
+}
+
+.sponsoredIcon {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sponsoredImage {
+    display:        inline-block;
+    margin-right:   5vw;
+    vertical-align: middle;
+    width:          15vw;
+}
+
+.sponsoredImage:last-child {
+    margin: auto;
+}
+
+.ourTeam {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.ourTeamIntro {
+    width:  460px;
+    margin: auto;
+}
+
+.ourTeamLayout {
+    table-layout: fixed;
+    width:        75%;
+    margin:       40px auto;
+}
+
+.btn {
+    display:       block;
+    width:         150px;
+    padding:       8px 0;
+    margin:        20px auto;
+    background:    #4979ff;
+    border-radius: 4px;
+    color:         white;
+    text-align:    center;
+}
+
+
+
+@media only screen and (max-width: 820px) {
+    .gameIntroText {
+        width: 100%;
+    }
+    .gameIntroImg {
+        width: 100%;
+    }
+    .trailerVideo {
+        width: 98%;
+    }
+    .trailerText {
+        width: 100%;
+    }
+}
+
