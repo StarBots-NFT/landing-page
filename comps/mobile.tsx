@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '../styles/mobile.module.css'
 import ReactPlayer from 'react-player'
 
@@ -13,11 +12,10 @@ import ourTeamIcon from '../public/Polygon 8.png'
 import frame from '../public/Frame 9406.png'
 import sponseredBanner from '../public/background.png'
 
-import Unique from './Unique';
 import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
 import OurTeamItem from "./OurTeamItem";
-import {useCallback, useEffect, useState} from 'react'
+import UniqueMobile from "./UniqueMobile";
 
 const Mobile = () => {
     return (
@@ -49,18 +47,18 @@ const Mobile = () => {
                         <div className={styles.title}>Unique Feature</div>
                         <div className={styles.unique}>
                             <div>
-                                <Unique imgUrl={unique} title={"Play to earn"}
+                                <UniqueMobile imgUrl={unique} title={"Play to earn"}
                                         content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
                             </div>
                             <div>
-                                <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                <UniqueMobile imgUrl={unique} title={"Customisable Weapons"}
                                         content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
                             </div>
                             <div>
-                                <Unique imgUrl={unique} title={"Flexibility"}
+                                <UniqueMobile imgUrl={unique} title={"Flexibility"}
                                         content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
                             </div>
-                            <div><Unique imgUrl={unique} title={"Strategy"}
+                            <div><UniqueMobile imgUrl={unique} title={"Strategy"}
                                          content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                             </div>
                         </div>
