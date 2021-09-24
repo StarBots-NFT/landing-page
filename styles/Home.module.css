@@ -14,8 +14,8 @@
 }
 
 .gameIntroImg {
-    width:      45vw;
-    height:     45vw;
+    width:      52vw;
+    height:     21.45vw;
     min-width:  450px;
     min-height: 450px;
     margin-top: 8px;
@@ -28,12 +28,6 @@
     width:          52vw;
     word-break:     break-word;
     color:          var(--white);
-}
-
-@media only screen and (max-width: 820px) {
-    .gameIntroText {
-        width: 100%;
-    }
 }
 
 .title {
@@ -66,14 +60,8 @@
     word-break: break-word;
 }
 
-@media only screen and (max-width: 820px) {
-    .trailerText {
-        width: 100%;
-    }
-}
-
 .trailerVideo {
-    width:      70vw;
+    width:      71vw;
     height:     39vw;
     margin:     40px auto auto;
     text-align: center;
@@ -249,5 +237,22 @@ table.uniqueLayout {
     border-radius: 4px;
     color:         white;
     text-align:    center;
+}
+
+
+
+@media only screen and (max-width: 820px) {
+    .gameIntroText {
+        width: 100%;
+    }
+    .gameIntroImg {
+        width: 100%;
+    }
+    .trailerVideo {
+        width: 98%;
+    }
+    .trailerText {
+        width: 100%;
+    }
 }
 
