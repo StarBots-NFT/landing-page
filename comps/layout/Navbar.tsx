@@ -133,10 +133,10 @@ const Navbar = () => {
                         <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored</button>
                         <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team</button>
                     </div>
-                        <button className={styles.button}>
-                            <LockIcon/>
-                            <span className={styles.buttonLabel}>Connect Wallet</span>
-                        </button>
+                    <button className={styles.button}>
+                        <LockIcon/>
+                        <span className={styles.buttonLabel}>Connect Wallet</span>
+                    </button>
                 </div>
             ) : (
                 <div className={styles.content}>
@@ -166,4 +166,5 @@ const Navbar = () => {
         </div>
     );
 }
+
 export default Navbar;

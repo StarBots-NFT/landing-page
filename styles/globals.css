@@ -30,3 +30,6 @@ nav .logo {
 .not-found {
   text-align: center;
 }
+html {
+  scroll-behavior: smooth;
+}
