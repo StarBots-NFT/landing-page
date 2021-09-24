@@ -21,22 +21,14 @@
     display: inline-block;
 }
 
-.MyAccount {
+.about {
     text-align: left;
     display: inline-block;
     vertical-align: top;
     margin-right: 11vw;
 }
 
-.Stats {
-    vertical-align: top;
-    text-align: left;
-    display: inline-block;
-    margin-right: 11vw;
-    margin-top: 20px;
-}
-
-.Resources {
+.followUs {
     vertical-align: top;
     text-align: left;
     display: inline-block;
@@ -99,15 +91,11 @@
         margin-right: 30px;
     }
 
-    .Resources {
+    .followUs {
         margin-right: 30px;
     }
 
-    .Stats {
-        margin-right: 30px;
-    }
-
-    .MyAccount {
+    .about {
         margin-right: 30px;
     }
 }

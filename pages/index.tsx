@@ -20,14 +20,29 @@ import RoadMapGoal from "../comps/RoadMapGoal"
 import OurTeamItem from "../comps/OurTeamItem";
 import {useCallback, useEffect, useState} from 'react'
 
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-} from "react-device-detect";
-
 function Home(props) {
+    const [isMobile, setMobile] = useState(false);
+    useEffect(()=> {
+        function detectMob() {
+            const toMatch = [
+                /Android/i,
+                /webOS/i,
+                /iPhone/i,
+                /iPad/i,
+                /iPod/i,
+                /BlackBerry/i,
+                /Windows Phone/i
+            ];
+
+            return toMatch.some((toMatchItem) => {
+                return navigator.userAgent.match(toMatchItem);
+            });
+        }
+        setMobile(detectMob)
+    })
+
+
+
     const useMediaQuery = (width) => {
         const [targetReached, setTargetReached] = useState(false);
 
@@ -54,7 +69,6 @@ function Home(props) {
     };
     const isBreakpointPc = useMediaQuery(1250)
     const isBreakpointMb = useMediaQuery(680)
-
     function feature() {
         if (isMobile) {
             <div className={styles.feature} id={"feature"}>
