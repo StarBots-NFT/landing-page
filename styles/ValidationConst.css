@@ -9,5 +9,9 @@
     layout
      */
     --titleMobiW: 98vw;
+    --MarginBlock: 100px;
+
+    --MaxWItem: 800px;
+
     --roadMapCompsHeight: 176px
 }

@@ -14,7 +14,7 @@
 }
 
 .gameIntroImg {
-    width: 100%;
+    width:      100%;
     margin-top: 8px;
 }
 
@@ -58,30 +58,17 @@
 }
 
 .trailerVideo {
-    width:      98vw;
-    height:     53vw;
-    margin:     40px auto auto;
+    width:         98vw;
+    height:        53vw;
+    margin:        40px auto auto;
     padding-right: 3px;
-    padding-left: 3px;
-    text-align: center;
+    padding-left:  3px;
+    text-align:    center;
 }
 
 .featureText {
     text-align: center;
     margin-top: 100px;
-}
-
-.unique {
-}
-
-table.uniqueLayout {
-    table-layout: fixed;
-    margin:       auto;
-    width:        70%;
-}
-
-.featureTr {
-    vertical-align: top;
 }
 
 .roadmap {
@@ -102,35 +89,22 @@ table.uniqueLayout {
     display:        inline-block;
     vertical-align: top;
     text-align:     right;
-    width:          23vw;
+    width:          30vw;
     margin-top:     40px;
-}
-
-.roadmapTop {
-    display:        inline-block;
-    vertical-align: top;
-    margin-top:     40px;
-    width:          85%;
 }
 
 .roadmapRight {
     text-align:     left;
     display:        inline-block;
     vertical-align: top;
-    width:          23vw;
+    width:          30vw;
     margin-top:     40px;
-}
-
-.roadmapArt {
-    display:       inline-block;
-    margin-top:    50px;
-    margin-bottom: 70px;
 }
 
 .roadmapArtCol {
     display:      inline-block;
-    margin-right: 95px;
-    margin-left:  95px;
+    margin-right: 30px;
+    margin-left:  30px;
     height:       1240px;
 }
 
@@ -138,25 +112,6 @@ table.uniqueLayout {
     position:      relative;
     height:        226px;
     margin-bottom: 40px;
-}
-
-.roadmapBodyTop {
-    position:     relative;
-    text-align:   center;
-    display:      inline-block;
-    width:        170px;
-    margin-left:  20px;
-    margin-right: 20px;
-}
-
-.roadmapBodyBot {
-    position:       relative;
-    text-align:     center;
-    display:        inline-block;
-    width:          170px;
-    margin-left:    20px;
-    margin-right:   20px;
-    vertical-align: top;
 }
 
 .roadmapStar {
@@ -190,7 +145,6 @@ table.uniqueLayout {
 
 .sponsoredText {
     text-align: center;
-    width:      480px;
     word-break: break-word;
     margin:     auto;
 }
@@ -202,13 +156,10 @@ table.uniqueLayout {
 
 .sponsoredImage {
     display:        inline-block;
-    margin-right:   5vw;
+    margin-right:   2vw;
+    margin-left:    2vw;
     vertical-align: middle;
-    width:          15vw;
-}
-
-.sponsoredImage:last-child {
-    margin: auto;
+    width:          40vw;
 }
 
 .ourTeam {
@@ -217,14 +168,7 @@ table.uniqueLayout {
 }
 
 .ourTeamIntro {
-    width:  460px;
     margin: auto;
-}
-
-.ourTeamLayout {
-    table-layout: fixed;
-    width:        75%;
-    margin:       40px auto;
 }
 
 .btn {

@@ -1,7 +1,7 @@
 .ourTeamItem {
-    width: 218px;
-    height: 234px;
-    display: inline-block;
+    width:         218px;
+    height:        234px;
+    display:       inline-block;
     margin-bottom: 60px;
 }
 
@@ -11,7 +11,8 @@
     font-weight: bold;
     font-size:   20px;
     line-height: 150%;
-    color: var(--white);
+    color:       var(--white);
+    margin-top:  8px;
 }
 
 .content {
@@ -20,8 +21,9 @@
     font-weight: normal;
     font-size:   16px;
     line-height: 160%;
+    margin-top:  8px;
     /* or 26px */
 
     text-align:  center;
-    color: var(--white);
+    color:       var(--white);
 }

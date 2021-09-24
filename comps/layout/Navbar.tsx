@@ -1,45 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
-import {withStyles} from '@material-ui/core/styles';
-import {createStyles, InputBase, MenuItem, Select, Tabs, Theme, Tab} from "@material-ui/core";
 import icon from '../../public/riot games.png'
 import LockIcon from '@material-ui/icons/Lock';
-import MenuIcon from '@material-ui/icons/Menu';
-
-interface StyledTabsProps {
-    value: number;
-    onChange: (event: React.ChangeEvent<{}>, newValue: number) => void;
-}
-
-const StyledTabs = withStyles({
-    indicator: {
-        display: 'flex',
-        justifyContent: 'center',
-        backgroundColor: 'transparent',
-        color: '#fff',
-        '& > span': {
-            maxWidth: 40,
-            width: '100%',
-            backgroundColor: '#ffffff',
-        },
-    },
-})((props: StyledTabsProps) => <Tabs {...props} TabIndicatorProps={{children: <span/>}}/>);
-
-interface StyledTabProps {
-    label: string;
-}
-
-const StyledTab = withStyles({
-        root: {
-            textTransform: 'none',
-            color: '#fff',
-            minWidth: 120,
-            display: 'inline-block',
-            '&:focus': {
-                opacity: 1,
-            }
-        }
-    })((props: StyledTabProps) => <Tab disableRipple {...props} />);
 
 const Navbar = () => {
     const [value, setValue] = React.useState(0);

@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 
 import banner from "../public/bannerr 1.png"
 import gameIntroArt from "../public/GameIntroArt.png"
-import unique from '../public/1.png'
+import unique from '../public/1.svg'
 import line from '../public/Line.png'
 import roadMapArt from '../public/5.png'
 import dot from '../public/dot.png'

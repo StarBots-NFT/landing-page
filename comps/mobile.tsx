@@ -8,14 +8,14 @@ import roadMapArt from '../public/5.png'
 import dot from '../public/dot.png'
 import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
-import ourTeamIcon from '../public/Polygon 8.png'
 import frame from '../public/Frame 9406.png'
 import sponseredBanner from '../public/background.png'
 
 import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
-import OurTeamItem from "./OurTeamItem";
 import UniqueMobile from "./UniqueMobile";
+import OurTeamItem from "./OurTeamItem";
+import ourTeamIcon from "../public/Polygon 8.png";
 
 const Mobile = () => {
     return (
@@ -146,38 +146,38 @@ const Mobile = () => {
                             All the distinctive gaming features revolving around our ecosystem
                         </div>
                     </div>
-                    <table className={styles.ourTeamLayout}>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                        </tr>
-                    </table>
+                </div>
+                <div className={styles.ourTeam} id={"team"}>
+                    <div className={styles.ourTeamIntro}>
+                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.content}>
+                            All the distinctive gaming features revolving around our ecosystem
+                        </div>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
                 </div>
             </div>
     )

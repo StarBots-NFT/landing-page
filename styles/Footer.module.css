@@ -10,11 +10,8 @@
     vertical-align: top;
     text-align: left;
     display: inline-block;
-    margin-right: 10vw;
-    width: 26vw;
+    margin-right: 8vw;
     margin-bottom: 20px;
-    min-width: 370px;
-
 }
 
 .block {
@@ -97,5 +94,21 @@
 
     .about {
         margin-right: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .starBot {
+        margin-right: 130px;
+    }
+
+    .about {
+        margin-right: 150px;
+    }
+}
+
+@media only screen and (min-width: 480px){
+    .starBot {
+        width: 370px;
     }
 }
