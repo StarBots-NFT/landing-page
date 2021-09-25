@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
-import icon from '../../public/riot games.png'
+import icon from '../../public/starbotLogo.svg'
 import LockIcon from '@material-ui/icons/Lock';
 
 const Navbar = () => {
@@ -101,7 +101,7 @@ const Navbar = () => {
                     </button>
                 </div>
             ) : (
-                <div className={styles.content}>
+                <div className={styles.contentBreak}>
                     <menu className={styles.menu} onClick={changeIsShow}>
                         <div className={styles.menuDiv}></div>
                         <div className={styles.menuDiv}></div>

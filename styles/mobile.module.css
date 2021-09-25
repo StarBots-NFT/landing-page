@@ -10,7 +10,7 @@
 
 .gameIntro {
     text-align: center;
-    margin:     37px auto auto;
+    margin:     524px auto auto;
 }
 
 .gameIntroImg {
@@ -20,7 +20,7 @@
 
 .gameIntroText {
     vertical-align: top;
-    margin:         60px auto auto;
+    margin:         auto auto;
     text-align:     center;
     width:          var(--titleMobiW);
     word-break:     break-word;
@@ -34,6 +34,8 @@
     font-size:   48px;
     line-height: 130%;
     color:       var(--white);
+    max-width:   800px;
+    margin:      auto;
 }
 
 .content {
@@ -43,10 +45,12 @@
     font-size:   16px;
     line-height: 160%;
     color:       var(--white);
+    max-width:   800px;
+    margin:      16px auto;
 }
 
 .trailer {
-    margin-top: 72px;
+    margin-top: var(--MarginBlock);
     text-align: center;
 }
 
@@ -58,22 +62,24 @@
 }
 
 .trailerVideo {
-    width:         98vw;
-    height:        53vw;
-    margin:        40px auto auto;
-    padding-right: 3px;
-    padding-left:  3px;
-    text-align:    center;
+    width:      98vw;
+    height:     55vw;
+    max-width:  var(--MaxWItem);
+    max-height: 450px;
+    margin:     60px auto auto;
+    text-align: center;
 }
 
 .featureText {
     text-align: center;
-    margin-top: 100px;
+    width:      var(--titleMobiW);
+    margin:     var(--MarginBlock) auto;
 }
 
 .roadmap {
     text-align: center;
-    margin-top: 100px;
+    max-width:  1200px;
+    margin:     var(--MarginBlock) auto;
 }
 
 .roadmapText {
@@ -89,7 +95,7 @@
     display:        inline-block;
     vertical-align: top;
     text-align:     right;
-    width:          30vw;
+    width:          41vw;
     margin-top:     40px;
 }
 
@@ -97,7 +103,7 @@
     text-align:     left;
     display:        inline-block;
     vertical-align: top;
-    width:          30vw;
+    width:          41vw;
     margin-top:     40px;
 }
 
@@ -114,22 +120,16 @@
     margin-bottom: 40px;
 }
 
-.roadmapStar {
-    position: absolute;
-    top:      -145px;
-    right:    40%;
-}
-
 .roadmapStarCol {
     position: absolute;
-    top:      20%;
-    right:    -125px;
+    top:      15%;
+    right:    -59px;
 }
 
 .sponsored {
-    margin-top:     130px;
-    padding-bottom: 57px;
-    padding-top:    60px;
+    margin-top:     var(--MarginBlock);
+    padding-bottom: 40px;
+    padding-top:    40px;
     position:       relative;
     text-align:     center;
 }
@@ -145,30 +145,36 @@
 
 .sponsoredText {
     text-align: center;
+    max-width:  800px;
     word-break: break-word;
     margin:     auto;
 }
 
 .sponsoredIcon {
-    margin-top: 40px;
     text-align: center;
+    max-width:  800px;
+    margin:     30px auto 0;
 }
 
 .sponsoredImage {
     display:        inline-block;
-    margin-right:   2vw;
-    margin-left:    2vw;
+    margin-right:   12px;
+    margin-left:    12px;
     vertical-align: middle;
-    width:          40vw;
+    width:          11.8vw;
+    max-width:      176px;
+    min-width:      159px;
 }
 
 .ourTeam {
     text-align: center;
-    margin-top: 80px;
+    margin-top: var(--MarginBlock);
 }
 
 .ourTeamIntro {
-    margin: auto;
+    width:     55.56vw;
+    max-width: var(--MaxWItem);
+    margin:    auto auto 40px;
 }
 
 .btn {

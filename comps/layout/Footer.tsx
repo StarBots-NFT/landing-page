@@ -1,6 +1,6 @@
 import styles from '../../styles/Footer.module.css'
 
-import icon from '../../public/riot games.png'
+import icon from '../../public/starbotLogo.svg'
 
 
 const Footer = () => {

@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 
 import banner from "../public/bannerr 1.png"
 import gameIntroArt from "../public/GameIntroArt.png"
-import unique from '../public/1.png'
+import unique from '../public/1.svg'
 import roadMapArt from '../public/5.png'
 import dot from '../public/dot.png'
 import icon14 from '../public/image 14.png'
@@ -137,14 +137,6 @@ const Mobile = () => {
                         <img className={styles.sponsoredImage} src={icon14}/>
                         <img className={styles.sponsoredImage} src={icon16}/>
                         <img className={styles.sponsoredImage} src={icon16}/>
-                    </div>
-                </div>
-                <div className={styles.ourTeam} id={"team"}>
-                    <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
-                        <div className={styles.content}>
-                            All the distinctive gaming features revolving around our ecosystem
-                        </div>
                     </div>
                 </div>
                 <div className={styles.ourTeam} id={"team"}>
