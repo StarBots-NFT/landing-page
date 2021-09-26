@@ -1,5 +1,6 @@
 .unique {
     margin: 50px auto;
+    width:  70%;
 }
 
 .title {
@@ -13,21 +14,22 @@
 }
 
 .content {
-    margin:      16px auto auto;
-    font-family: "Open Sans", serif;
-    font-style:  normal;
-    font-weight: normal;
-    font-size:   16px;
-    line-height: 160%;
-    word-break:  break-word;
-    color:       var(--white);
-    flex:        none;
-    order:       1;
-    align-self:  stretch;
-    flex-grow:   0;
+    margin:        16px auto auto;
+    font-family:   "Open Sans", serif;
+    font-style:    normal;
+    font-weight:   normal;
+    font-size:     16px;
+    line-height:   160%;
+    word-break:    break-word;
+    color:         var(--white);
+    flex:          none;
+    order:         1;
+    align-self:    stretch;
+    flex-grow:     0;
+    padding-right: 2px;
+    padding-left:  2px;
 }
 
 .img {
-    width:  35%;
     margin: auto;
 }
