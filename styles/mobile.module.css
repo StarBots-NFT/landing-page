@@ -10,7 +10,7 @@
 
 .gameIntro {
     text-align: center;
-    margin:     524px auto auto;
+    margin:     40px auto auto;
 }
 
 .gameIntroImg {
@@ -31,7 +31,7 @@
     font-family: "Blender Pro", serif;
     font-style:  normal;
     font-weight: bold;
-    font-size:   48px;
+    font-size:   32px;
     line-height: 130%;
     color:       var(--white);
     max-width:   800px;
@@ -50,7 +50,7 @@
 }
 
 .trailer {
-    margin-top: var(--MarginBlock);
+    margin-top: var(--MarginBlockMb);
     text-align: center;
 }
 
@@ -73,13 +73,13 @@
 .featureText {
     text-align: center;
     width:      var(--titleMobiW);
-    margin:     var(--MarginBlock) auto;
+    margin:     var(--MarginBlockMb) auto;
 }
 
 .roadmap {
     text-align: center;
     max-width:  1200px;
-    margin:     var(--MarginBlock) auto;
+    margin:     var(--MarginBlockMb) auto;
 }
 
 .roadmapText {
@@ -126,7 +126,7 @@
 }
 
 .sponsored {
-    margin-top:     var(--MarginBlock);
+    margin-top:     var(--MarginBlockMb);
     padding-bottom: 40px;
     padding-top:    40px;
     position:       relative;
@@ -167,7 +167,7 @@
 
 .ourTeam {
     text-align: center;
-    margin-top: var(--MarginBlock);
+    margin-top: var(--MarginBlockMb);
 }
 
 .ourTeamIntro {

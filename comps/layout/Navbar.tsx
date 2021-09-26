@@ -11,10 +11,10 @@ const Navbar = () => {
         let dropdownH = 0;
         for (var i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
-            tablinks[i].style.backgroundSize = "50% 0px";
+            tablinks[i].style.color = "#FFFFFF";
         }
         if (tablinks.length > 0) {
-            tablinks[newValue].style.backgroundSize = "50% 2px";
+            tablinks[newValue].style.color = "#00E1D2";
         } else {
             if (isShowDropDown) {
                dropdownH = document.getElementById("dropdownBlock").getBoundingClientRect().height

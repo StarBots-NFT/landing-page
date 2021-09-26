@@ -13,7 +13,7 @@
     color:      var(--white);
     z-index:    3;
     text-align: center;
-    min-height: 60px;
+    min-height: 70px;
 }
 
 .content {
@@ -33,7 +33,7 @@
 }
 
 .img {
-    vertical-align: bottom;
+    vertical-align: super;
     margin-left:    10px;
     display:        inline-block;
 }
@@ -59,11 +59,10 @@
     text-align:      center;
     text-decoration: none;
     display:         inline-block;
-    margin:          4px 2px;
+    margin:          10px 2px;
     cursor:          pointer;
     border-style:    none;
-    background:      var(--dark) linear-gradient(var(--white), var(--white)) no-repeat bottom;
-    background-size: 50% 0px;
+    background:      var(--dark);
     font-family:     "Blender Pro", serif;
     font-style:      normal;
     font-weight:     bold;
@@ -84,7 +83,7 @@
     Padding:        5px 16px 5px 16px;
     right:          0;
     top:            20%;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 .buttonDropDown {
@@ -113,7 +112,7 @@
     font-family:   Blender Pro, serif;
     font-style:    normal;
     font-weight:   bold;
-    font-size:     16px;
+    font-size:     20px;
     line-height:   26px;
     /* identical to box height, or 162% */
 
