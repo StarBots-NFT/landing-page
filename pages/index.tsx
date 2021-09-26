@@ -441,9 +441,7 @@ function Home(props) {
                                 won't stop until there's only one left standing - the one to conquer all lands.
                             </div>
                         </div>
-                        <div className={styles.trailerVideo}>
-                            <ReactPlayer width='100%' height='100%' url="https://youtu.be/Zb2CoXDPBlk"/>
-                        </div>
+                        <video className={styles.trailerVideo} src='/starBOTvideo.mp4'  controls={true}></video>
                     </div>
                     {feature()}
                     {map()}

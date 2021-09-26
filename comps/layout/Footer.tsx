@@ -23,9 +23,8 @@ const Footer = () => {
                 <div className={styles.followUs}>
                     <a className={styles.title}>Follow us</a>
                     <a className={styles.content}>Twitter</a>
-                    <a className={styles.content}>Lorem ipsum</a>
-                    <a className={styles.content}>Lorem ipsum</a>
-                    <a className={styles.content}>Lorem ipsum</a>
+                    <a className={styles.content}>Discord</a>
+                    <a className={styles.content}>Telegram</a>
                 </div>
             </div>
             <div className={styles.policy}>
