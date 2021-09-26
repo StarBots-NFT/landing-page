@@ -1,6 +1,6 @@
 import styles from '../../styles/Footer.module.css'
 
-import icon from '../../public/starbotLogo.svg'
+import icon from '../../public/logo_FOOTER.svg'
 
 
 const Footer = () => {

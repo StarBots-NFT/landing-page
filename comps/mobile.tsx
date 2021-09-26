@@ -1,14 +1,15 @@
 import styles from '../styles/mobile.module.css'
 import ReactPlayer from 'react-player'
 
-import banner from "../public/bannerr 1.png"
-import gameIntroArt from "../public/GameIntroArt.png"
-import unique from '../public/1.svg'
-import roadMapArt from '../public/5.png'
+import gameIntroArt from "../public/Game Introduction.svg"
+import stratege from '../public/Strategy 1.png'
+import weapons from '../public/Customisable Weapons.svg'
+import flexibility from '../public/Flexibility.svg'
+import playToEarn from '../public/Play to earn.svg'
 import dot from '../public/dot.png'
 import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
-import frame from '../public/Frame 9406.png'
+import frame from '../public/LineCol.png'
 import sponseredBanner from '../public/background.png'
 
 import RoadMapTime from "./RoadMapTime";
@@ -20,7 +21,9 @@ import ourTeamIcon from "../public/Polygon 8.png";
 const Mobile = () => {
     return (
             <div>
-                <img className={styles.banner} src={banner}/>
+                <video autoPlay loop muted className={styles.banner}>
+                    <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                </video>
                 <div id={"intro"} className={styles.gameIntro}>
                     <div className={styles.gameIntroText}>
                         <div className={styles.title}>Game Introduction</div>
@@ -47,18 +50,18 @@ const Mobile = () => {
                         <div className={styles.title}>Unique Feature</div>
                         <div className={styles.unique}>
                             <div>
-                                <UniqueMobile imgUrl={unique} title={"Play to earn"}
+                                <UniqueMobile imgUrl={playToEarn} title={"Play to earn"}
                                         content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
                             </div>
                             <div>
-                                <UniqueMobile imgUrl={unique} title={"Customisable Weapons"}
+                                <UniqueMobile imgUrl={weapons} title={"Customisable Weapons"}
                                         content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
                             </div>
                             <div>
-                                <UniqueMobile imgUrl={unique} title={"Flexibility"}
+                                <UniqueMobile imgUrl={flexibility} title={"Flexibility"}
                                         content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
                             </div>
-                            <div><UniqueMobile imgUrl={unique} title={"Strategy"}
+                            <div><UniqueMobile imgUrl={stratege} title={"Strategy"}
                                          content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                             </div>
                         </div>
@@ -78,7 +81,7 @@ const Mobile = () => {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"BOT token introduction & IDO"}/>
+                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -90,7 +93,7 @@ const Mobile = () => {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"PvE StoryMode Release"}/>
+                                <RoadMapGoal text={"PvE StoryMode Release"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -107,19 +110,19 @@ const Mobile = () => {
                         </div>
                         <div className={styles.roadmapRight}>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"BOT NFT Sale"}/>
+                                <RoadMapGoal text={"BOT NFT Sale"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapTime months={"Jan"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"PvP Mode Release"}/>
+                                <RoadMapGoal text={"PvP Mode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapTime months={"Q3"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
                             </div>
                         </div>
                     </div>

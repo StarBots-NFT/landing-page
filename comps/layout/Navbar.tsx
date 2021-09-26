@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
-import icon from '../../public/starbotLogo.svg'
+import icon from '../../public/Logo_HEADER.svg'
 import LockIcon from '@material-ui/icons/Lock';
 
 const Navbar = () => {

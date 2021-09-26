@@ -15,9 +15,9 @@
 
 .gameIntroImg {
     width:      52vw;
-    height:     21.45vw;
+    height:     34vw;
     max-width:  800px;
-    max-height: 330px;
+    max-height: 523px;
     min-width:  450px;
     margin-top: 8px;
 }
@@ -116,7 +116,7 @@ table.uniqueLayout {
     display:        inline-block;
     vertical-align: top;
     text-align:     right;
-    width:          23vw;
+    width:          17vw;
     margin-top:     40px;
 }
 
@@ -131,7 +131,7 @@ table.uniqueLayout {
     text-align:     left;
     display:        inline-block;
     vertical-align: top;
-    width:          23vw;
+    width:          17vw;
     margin-top:     40px;
 }
 
@@ -145,13 +145,12 @@ table.uniqueLayout {
     display:      inline-block;
     margin-right: 95px;
     margin-left:  95px;
-    height:       1240px;
 }
 
 .roadmapBodyCol {
     position:      relative;
-    height:        226px;
-    margin-bottom: 40px;
+    height:        113px;
+    margin-bottom: 50px;
 }
 
 .roadmapBodyTop {
@@ -181,7 +180,7 @@ table.uniqueLayout {
 
 .roadmapStarCol {
     position: absolute;
-    top:      20%;
+    top:      26%;
     right:    -125px;
 }
 
@@ -267,7 +266,7 @@ table.uniqueLayout {
 
     .gameIntroImg {
         width:  100%;
-        height: 41.25vw;
+        height: 65.37vw;
     }
 
     .trailerVideo {

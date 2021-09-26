@@ -2,16 +2,17 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ReactPlayer from 'react-player'
 
-import banner from "../public/bannerr 1.png"
-import gameIntroArt from "../public/GameIntroArt.png"
-import unique from '../public/1.svg'
+import gameIntroArt from "../public/Game Introduction.svg"
+import stratege from '../public/Strategy 1.png'
+import weapons from '../public/Customisable Weapons.svg'
+import flexibility from '../public/Flexibility.svg'
+import playToEarn from '../public/Play to earn.svg'
 import line from '../public/Line.png'
-import roadMapArt from '../public/5.png'
 import dot from '../public/dot.png'
 import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
 import ourTeamIcon from '../public/Polygon 8.png'
-import frame from '../public/Frame 9406.png'
+import frame from '../public/LineCol.png'
 import sponseredBanner from '../public/background.png'
 
 import Unique from '../comps/Unique';
@@ -30,8 +31,6 @@ function Home(props) {
                 /Android/i,
                 /webOS/i,
                 /iPhone/i,
-                /iPad/i,
-                /iPod/i,
                 /BlackBerry/i,
                 /Windows Phone/i
             ];
@@ -79,13 +78,13 @@ function Home(props) {
                     <div className={styles.featureText}>
                         <div className={styles.title}>Unique Feature</div>
                         <div className={styles.unique}>
-                            <Unique imgUrl={unique} title={"Play to earn"}
+                            <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
-                            <Unique imgUrl={unique} title={"Customisable Weapons"}
+                            <Unique imgUrl={weapons} title={"Customisable Weapons"}
                                     content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
-                            <Unique imgUrl={unique} title={"Flexibility"}
+                            <Unique imgUrl={flexibility} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
-                            <Unique imgUrl={unique} title={"Strategy"}
+                            <Unique imgUrl={stratege} title={"Strategy"}
                                     content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                         </div>
                     </div>
@@ -100,21 +99,21 @@ function Home(props) {
                             <table className={styles.uniqueLayout}>
                                 <tr className={styles.featureTr}>
                                     <th>
-                                        <Unique imgUrl={unique} title={"Play to earn"}
+                                        <Unique imgUrl={playToEarn} title={"Play to earn"}
                                                 content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
                                     </th>
                                     <th>
-                                        <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                        <Unique imgUrl={weapons} title={"Customisable Weapons"}
                                                 content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
                                     </th>
                                 </tr>
                                 <tr className={styles.featureTr}>
                                     <th>
-                                        <Unique imgUrl={unique} title={"Flexibility"}
+                                        <Unique imgUrl={flexibility} title={"Flexibility"}
                                                 content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
                                     </th>
                                     <th>
-                                        <Unique imgUrl={unique} title={"Strategy"}
+                                        <Unique imgUrl={stratege} title={"Strategy"}
                                                 content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                                     </th>
                                 </tr>
@@ -130,20 +129,20 @@ function Home(props) {
                         <div className={styles.title}>Unique Feature</div>
                         <div className={styles.unique}>
                             <div>
-                                <Unique imgUrl={unique} title={"Play to earn"}
+                                <Unique imgUrl={playToEarn} title={"Play to earn"}
                                         content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
                             </div>
                             <div>
-                                <Unique imgUrl={unique} title={"Customisable Weapons"}
+                                <Unique imgUrl={weapons} title={"Customisable Weapons"}
                                         content={"Customize your battle robots to your own liking using a diverse selection of body parts."}/>
                             </div>
 
                             <div>
-                                <Unique imgUrl={unique} title={"Flexibility"}
+                                <Unique imgUrl={flexibility} title={"Flexibility"}
                                         content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
                             </div>
 
-                            <div><Unique imgUrl={unique} title={"Strategy"}
+                            <div><Unique imgUrl={stratege} title={"Strategy"}
                                          content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
                             </div>
 
@@ -168,13 +167,13 @@ function Home(props) {
                                 <RoadMapTime months={"Oct"} year={"2021"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapGoal img={roadMapArt} text={"BOT token introduction & IDO"}/>
+                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Q1"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapGoal img={roadMapArt} text={"PvE StoryMode Release"}/>
+                                <RoadMapGoal text={"PvE StoryMode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Q1"} year={"2023"}/>
@@ -185,7 +184,7 @@ function Home(props) {
                         </div>
                         <div className={styles.roadmapTop}>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapGoal img={roadMapArt} text={"BOT NFT Sale"}/>
+                                <RoadMapGoal text={"BOT NFT Sale"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
@@ -197,7 +196,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapGoal img={roadMapArt} text={"PvP Mode Release"}/>
+                                <RoadMapGoal text={"PvP Mode Release"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
@@ -209,7 +208,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapGoal img={roadMapArt} text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
@@ -234,7 +233,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"BOT token introduction & IDO"}/>
+                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -246,7 +245,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"PvE StoryMode Release"}/>
+                                <RoadMapGoal text={"PvE StoryMode Release"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -263,19 +262,19 @@ function Home(props) {
                         </div>
                         <div className={styles.roadmapRight}>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"BOT NFT Sale"}/>
+                                <RoadMapGoal text={"BOT NFT Sale"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapTime months={"Jan"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"PvP Mode Release"}/>
+                                <RoadMapGoal text={"PvP Mode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapTime months={"Q3"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal img={roadMapArt} text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
                             </div>
                         </div>
                     </div>
@@ -420,7 +419,9 @@ function Home(props) {
                 <Mobile/>
             ) : (
                 <div>
-                    <img className={styles.banner} src={banner}/>
+                    <video autoPlay loop muted className={styles.banner}>
+                        <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                    </video>
                     <div id={"intro"} className={styles.gameIntro}>
                         <div className={styles.gameIntroText}>
                             <div className={styles.title}>Game Introduction</div>

@@ -1,17 +1,29 @@
 .text {
-    font-family: "Open Sans", serif;
-    font-style:  normal;
-    font-weight: 600;
-    font-size:   20px;
-    line-height: 150%;
-    color:       var(--white);
+    font-family:   "Open Sans", serif;
+    font-style:    normal;
+    font-weight:   600;
+    font-size:     20px;
+    line-height:   150%;
+    color:         var(--white);
+    padding-left:  2px;
+    padding-right: 2px;
 }
 
 .img {
     background-blend-mode: lighten;
-    width: 100%;
+    width:                 100%;
 }
 
 .content {
-    width:      100%;
+    width:     100%;
+    position:  absolute;
+    top:       50%;
+    transform: translate(0%, -50%);
+}
+
+@media only screen and (min-width: 1200px) {
+    .content {
+        position:  relative;
+        transform: translate(0, 0);
+    }
 }

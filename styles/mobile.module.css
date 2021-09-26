@@ -95,7 +95,7 @@
     display:        inline-block;
     vertical-align: top;
     text-align:     right;
-    width:          41vw;
+    width:          33vw;
     margin-top:     40px;
 }
 
@@ -103,7 +103,7 @@
     text-align:     left;
     display:        inline-block;
     vertical-align: top;
-    width:          41vw;
+    width:          33vw;
     margin-top:     40px;
 }
 
@@ -111,18 +111,17 @@
     display:      inline-block;
     margin-right: 30px;
     margin-left:  30px;
-    height:       1240px;
 }
 
 .roadmapBodyCol {
     position:      relative;
-    height:        226px;
-    margin-bottom: 40px;
+    height:        113px;
+    margin-bottom: 50px;
 }
 
 .roadmapStarCol {
     position: absolute;
-    top:      15%;
+    top:      27%;
     right:    -59px;
 }
 
