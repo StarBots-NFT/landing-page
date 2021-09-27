@@ -418,7 +418,12 @@ function Home(props) {
             {isMobile ? (
                 <Mobile/>
             ) : (
-                <div>
+                <div  style={{
+                    backgroundImage: "url(" + `${require("../public/BG.png")}` + ")",
+                    width: "100%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover"
+                }}>
                     <video autoPlay loop muted className={styles.banner}>
                         <source src='/ShortVideoF3.mp4' type='video/mp4' />
                     </video>
