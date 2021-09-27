@@ -418,7 +418,7 @@ function Home(props) {
             {isMobile ? (
                 <Mobile/>
             ) : (
-                <div>
+                <div className={styles.bodyContent}>
                     <video autoPlay loop muted className={styles.banner}>
                         <source src='/ShortVideoF3.mp4' type='video/mp4' />
                     </video>
@@ -442,7 +442,7 @@ function Home(props) {
                             </div>
                         </div>
                         <div className={styles.trailerVideo}>
-                            <video autoPlay={false} width='100%' height='100%' src='https://youtu.be/A-lKEJKhYKo' controls={true}/>
+                            <ReactPlayer autoPlay={false} width='100%' height='100%' url='https://youtu.be/A-lKEJKhYKo' controls={true}/>
                         </div>
                     </div>
                     {feature()}
