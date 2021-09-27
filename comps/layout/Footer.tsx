@@ -1,6 +1,6 @@
 import styles from '../../styles/Footer.module.css'
 
-import icon from '../../public/logo_FOOTER.svg'
+import icon from '../../public/logo_FOOTER.png'
 
 
 const Footer = () => {

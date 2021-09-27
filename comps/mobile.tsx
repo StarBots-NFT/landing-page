@@ -1,14 +1,14 @@
 import styles from '../styles/mobile.module.css'
 import ReactPlayer from 'react-player'
 
-import gameIntroArt from "../public/Game Introduction.svg"
+import gameIntroArt from "../public/Game Introduction.png"
 import stratege from '../public/Strategy 1.png'
 import weapons from '../public/Customisable Weapons.svg'
 import flexibility from '../public/Flexibility.svg'
 import playToEarn from '../public/Play to earn.svg'
 import dot from '../public/dot.png'
-import icon14 from '../public/image 14.png'
-import icon16 from '../public/image 16.png'
+import lua from '../public/lua.png'
+import tomochain from '../public/tomochain.png'
 import frame from '../public/LineCol.png'
 
 import RoadMapTime from "./RoadMapTime";
@@ -18,6 +18,7 @@ import OurTeamItem from "./OurTeamItem";
 import ourTeamIcon from "../public/Polygon 8.png";
 import {useEffect, useState} from "react";
 import gift from "../public/ezgif.com-gif-maker.gif"
+import videoFooter from "../public/bannerFooter.png";
 
 const Mobile = () => {
     const [isIos, setIos] = useState(false);
@@ -36,7 +37,7 @@ const Mobile = () => {
         setIos(detectIos)
     })
     return (
-            <div>
+            <div className={styles.bodyContent}>
                 {isIos ? (
                     <img className={styles.banner} src={gift} />
                 ) : (
@@ -45,6 +46,7 @@ const Mobile = () => {
                     </video>
                 )}
                 <div id={"intro"} className={styles.gameIntro}>
+                    <img className={styles.videoFooter} src={videoFooter}/>
                     <div className={styles.gameIntroText}>
                         <div className={styles.title}>Game Introduction</div>
                         <div className={styles.content}>Starbots is the first-ever robot battle NFT game where players
@@ -95,7 +97,7 @@ const Mobile = () => {
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                                <RoadMapTime months={"Dec"} year={"2021"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -150,15 +152,10 @@ const Mobile = () => {
                 <div className={styles.sponsored} id={"sponsored"}>
                     <div className={styles.sponsoredText}>
                         <div className={styles.title}>Sponsored By</div>
-                        <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
-                            aliquet congue. Integer ac neque in.
-                        </div>
                     </div>
                     <div className={styles.sponsoredIcon}>
-                        <img className={styles.sponsoredImage} src={icon14}/>
-                        <img className={styles.sponsoredImage} src={icon14}/>
-                        <img className={styles.sponsoredImage} src={icon16}/>
-                        <img className={styles.sponsoredImage} src={icon16}/>
+                        <img className={styles.sponsoredImage} src={lua}/>
+                        <img className={styles.sponsoredImage} src={tomochain}/>
                     </div>
                 </div>
                 <div className={styles.ourTeam} id={"team"}>
@@ -167,6 +164,22 @@ const Mobile = () => {
                         <div className={styles.content}>
                             All the distinctive gaming features revolving around our ecosystem
                         </div>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}

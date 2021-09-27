@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import gameIntroArt from "../public/Game Introduction.svg"
+import gameIntroArt from "../public/Game Introduction.png"
 import stratege from '../public/Strategy 1.png'
 import weapons from '../public/Customisable Weapons.svg'
 import flexibility from '../public/Flexibility.svg'
 import playToEarn from '../public/Play to earn.svg'
 import line from '../public/Line.png'
 import dot from '../public/dot.png'
-import icon14 from '../public/image 14.png'
-import icon16 from '../public/image 16.png'
+import lua from '../public/lua.png'
+import tomochain from '../public/tomochain.png'
 import ourTeamIcon from '../public/Polygon 8.png'
 import frame from '../public/LineCol.png'
 import videoFooter from '../public/bannerFooter.png'
@@ -163,7 +163,7 @@ function Home(props) {
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapTop}>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                                <RoadMapTime months={"Dec"} year={"2021"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapGoal text={"BOT token introduction & IDO"}/>
@@ -226,7 +226,7 @@ function Home(props) {
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                                <RoadMapTime months={"Dec"} year={"2021"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -469,7 +469,7 @@ function Home(props) {
             {isMobile ? (
                 <Mobile/>
             ) : (
-                <div>
+                <div className={styles.bodyContent}>
                     <video autoPlay loop muted className={styles.banner}>
                         <source src='/ShortVideoF3.mp4' type='video/mp4'/>
                     </video>
@@ -502,15 +502,10 @@ function Home(props) {
                     <div className={styles.sponsored} id={"sponsored"}>
                         <div className={styles.sponsoredText}>
                             <div className={styles.title}>Sponsored By</div>
-                            <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
-                                aliquet congue. Integer ac neque in.
-                            </div>
                         </div>
                         <div className={styles.sponsoredIcon}>
-                            <img className={styles.sponsoredImage} src={icon14}/>
-                            <img className={styles.sponsoredImage} src={icon14}/>
-                            <img className={styles.sponsoredImage} src={icon16}/>
-                            <img className={styles.sponsoredImage} src={icon16}/>
+                            <img className={styles.sponsoredImage} src={lua}/>
+                            <img className={styles.sponsoredImage} src={tomochain}/>
                         </div>
                     </div>
                     {team()}

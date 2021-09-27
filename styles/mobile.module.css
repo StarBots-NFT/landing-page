@@ -3,6 +3,12 @@
     src:         url(font/BlenderPro-Bold.woff);
 }
 
+.bodyContent {
+    background-image: url("../public/BG.png");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
 .banner {
     left:  0;
     width: 100%;
@@ -11,6 +17,16 @@
 .gameIntro {
     text-align: center;
     margin:     40px auto auto;
+    position:   relative;
+}
+
+.videoFooter {
+    position: absolute;
+    top:      -90px;
+    left:     0;
+    width:    100%;
+    height:   52px;
+    z-index:  2;
 }
 
 .gameIntroImg {
@@ -131,9 +147,8 @@
     padding-top:           40px;
     position:              relative;
     text-align:            center;
-    background-image:      url("../public/background.png");
+    background-image:      url("../public/Sponsor.png");
     background-repeat:     no-repeat;
-    background-attachment: fixed;
     background-size:       100% 100%;
 }
 
@@ -161,12 +176,12 @@
 
 .sponsoredImage {
     display:        inline-block;
-    margin-right:   12px;
-    margin-left:    12px;
+    margin-right:   15px;
+    margin-left:    15px;
     vertical-align: middle;
     width:          11.8vw;
-    max-width:      176px;
-    min-width:      159px;
+    max-width:      300px;
+    min-width:      150px;
 }
 
 .ourTeam {
