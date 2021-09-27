@@ -17,19 +17,15 @@ import UniqueMobile from "./UniqueMobile";
 import OurTeamItem from "./OurTeamItem";
 import ourTeamIcon from "../public/Polygon 8.png";
 import {useEffect} from "react";
+import gift from "../public/ezgif.com-gif-maker.gif"
 
 const Mobile = () => {
     useEffect( () => {
         if (typeof window != "undefined") window.scrollTo(0, 1);
-        if (typeof document != "undefined" && document.getElementById("bannerVideo") != null) {
-                document.getElementById("bannerVideo").click()
-        }
     })
     return (
             <div>
-                <video playsInline={true} autoPlay={true} loop muted className={styles.banner} id={"bannerVideo"}>
-                    <source src='/ShortVideoF3.mp4' type='video/mp4' />
-                </video>
+                <img className={styles.banner} src={gift} />
                 <div id={"intro"} className={styles.gameIntro}>
                     <div className={styles.gameIntroText}>
                         <div className={styles.title}>Game Introduction</div>
