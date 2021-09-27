@@ -41,9 +41,6 @@ const Mobile = () => {
                             won't stop until there's only one left standing - the one to conquer all lands.
                         </div>
                     </div>
-                    <div className={styles.trailerVideo}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A-lKEJKhYKo"/>
-                    </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
