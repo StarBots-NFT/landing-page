@@ -21,9 +21,9 @@ import ourTeamIcon from "../public/Polygon 8.png";
 const Mobile = () => {
     return (
             <div>
-                <video autoPlay loop muted className={styles.banner}>
-                    <source src='/ShortVideoF3.mp4' type='video/mp4' />
-                </video>
+                <div className={styles.banner}>
+                    <ReactPlayer muted={true} autoPlay={true} width='100%' height='100%' url='/ShortVideoF3.mp4' controls={false}/>
+                </div>
                 <div id={"intro"} className={styles.gameIntro}>
                     <div className={styles.gameIntroText}>
                         <div className={styles.title}>Game Introduction</div>
@@ -42,7 +42,7 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div className={styles.trailerVideo}>
-                        <ReactPlayer width='100%' height='100%' url="https://youtu.be/A-lKEJKhYKo" controls={true}/>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A-lKEJKhYKo"/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
