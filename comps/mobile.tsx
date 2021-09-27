@@ -1,5 +1,4 @@
 import styles from '../styles/mobile.module.css'
-import ReactPlayer from 'react-player'
 
 import gameIntroArt from "../public/Game Introduction.png"
 import stratege from '../public/Strategy 1.png'
