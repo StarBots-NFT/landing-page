@@ -89,13 +89,13 @@
 .featureText {
     text-align: center;
     width:      var(--titleMobiW);
-    margin:     var(--MarginBlockMb) auto;
+    margin:     var(--MarginBlockMb) auto 0;
 }
 
 .roadmap {
     text-align: center;
     max-width:  1200px;
-    margin:     var(--MarginBlockMb) auto;
+    margin:     var(--MarginBlockMb) auto 0;
 }
 
 .roadmapText {
