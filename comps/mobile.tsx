@@ -10,7 +10,6 @@ import dot from '../public/dot.png'
 import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
 import frame from '../public/LineCol.png'
-import sponseredBanner from '../public/background.png'
 
 import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
@@ -22,12 +21,15 @@ import {useEffect} from "react";
 const Mobile = () => {
     useEffect( () => {
         if (typeof window != "undefined") window.scrollTo(0, 1);
+        if (typeof document != "undefined" && document.getElementById("bannerVideo") != null) {
+                document.getElementById("bannerVideo").click()
+        }
     })
     return (
             <div>
-                <div className={styles.banner}>
-                    <ReactPlayer muted={true} autoPlay={true} width='100%' height='100%' url='/ShortVideoF3.mp4' controls={false}/>
-                </div>
+                <video autoPlay loop muted className={styles.banner}>
+                    <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                </video>
                 <div id={"intro"} className={styles.gameIntro}>
                     <div className={styles.gameIntroText}>
                         <div className={styles.title}>Game Introduction</div>
