@@ -47,6 +47,7 @@
 .tabs {
     display:   inline-block;
     width:     68vw;
+    max-width: 840px;
 }
 
 
