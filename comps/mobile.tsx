@@ -42,7 +42,7 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div className={styles.trailerVideo}>
-                        <ReactPlayer width='100%' height='100%' url="https://youtu.be/Zb2CoXDPBlk"/>
+                        <ReactPlayer width='100%' height='100%' url="https://youtu.be/A-lKEJKhYKo" controls={true}/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
