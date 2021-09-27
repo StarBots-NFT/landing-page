@@ -138,3 +138,7 @@
     font-style:     normal;
     text-align:     center;
 }
+
+.lockIcon {
+  height: 24px;
+}
