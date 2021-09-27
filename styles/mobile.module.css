@@ -126,11 +126,15 @@
 }
 
 .sponsored {
-    margin-top:     var(--MarginBlockMb);
-    padding-bottom: 40px;
-    padding-top:    40px;
-    position:       relative;
-    text-align:     center;
+    margin-top:            var(--MarginBlockMb);
+    padding-bottom:        40px;
+    padding-top:           40px;
+    position:              relative;
+    text-align:            center;
+    background-image:      url("../public/background.png");
+    background-repeat:     no-repeat;
+    background-attachment: fixed;
+    background-size:       100% 100%;
 }
 
 .sponsoredBackgroud {

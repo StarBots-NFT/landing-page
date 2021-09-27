@@ -128,7 +128,6 @@ const Mobile = () => {
                     </div>
                 </div>
                 <div className={styles.sponsored} id={"sponsored"}>
-                    <img className={styles.sponsoredBackgroud} src={sponseredBanner}/>
                     <div className={styles.sponsoredText}>
                         <div className={styles.title}>Sponsored By</div>
                         <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
