@@ -418,7 +418,7 @@ function Home(props) {
             {isMobile ? (
                 <Mobile/>
             ) : (
-                <div className={styles.bodyContent}>
+                <div>
                     <video autoPlay loop muted className={styles.banner}>
                         <source src='/ShortVideoF3.mp4' type='video/mp4' />
                     </video>

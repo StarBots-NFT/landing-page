@@ -3,10 +3,6 @@
     src:         url(font/BlenderPro-Bold.woff);
 }
 
-.bodyContent {
-    background-image: url("../public/BG.png");
-}
-
 .banner {
     left:  0;
     width: 100%;
