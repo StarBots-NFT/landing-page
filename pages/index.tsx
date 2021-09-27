@@ -483,7 +483,7 @@ function Home(props) {
                                 completing missions, and conquering new lands.
                             </div>
                         </div>
-                        <img className={styles.gameIntroImg} src={gameIntroArt}/>
+                        <img className={styles.gameIntroImg} src={"/Game Introduction.png"}/>
                     </div>
                     <div className={styles.trailer} id={"trailer"}>
                         <div className={styles.trailerText}>
