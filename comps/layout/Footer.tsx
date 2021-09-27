@@ -1,13 +1,10 @@
 import styles from '../../styles/Footer.module.css'
 
-import icon from '../../public/logo_FOOTER.png'
-
-
 const Footer = () => {
     return (
         <footer className={styles.Footer}>
             <div className={styles.starBot}>
-                <img className={styles.icon} src={icon}/>
+                <img className={styles.icon} src={"/logo_FOOTER.png"}/>
                 <a className={styles.title}>Starbot</a>
                 <a className={styles.content}>The first-ever robot battle NFT game to exalt strategy over contingent
                     luck.</a>

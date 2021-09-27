@@ -1,6 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
-import icon from '../../public/Logo_HEADER.png'
 import LockIcon from '@material-ui/icons/Lock';
 
 const Navbar = () => {
@@ -83,7 +82,7 @@ const Navbar = () => {
     const isBreakpoint = useMediaQuery(1290)
     return (
         <div className={styles.navbar} id={"navbar"}>
-            {!isBreakpoint ? (<img className={styles.img} src={icon}/>) : (<img className={styles.imgBreak} src={icon}/>)}
+            {!isBreakpoint ? (<img className={styles.img} src={"/Logo_HEADER.png"}/>) : (<img className={styles.imgBreak} src={"/Logo_HEADER.png"}/>)}
             {!isBreakpoint ? (
                 <div className={styles.content}>
                     <div className={styles.tabs}>
