@@ -27,7 +27,7 @@ const Mobile = () => {
     })
     return (
             <div>
-                <video autoPlay loop muted className={styles.banner}>
+                <video playsInline={true} autoPlay={true} loop muted className={styles.banner} id={"bannerVideo"}>
                     <source src='/ShortVideoF3.mp4' type='video/mp4' />
                 </video>
                 <div id={"intro"} className={styles.gameIntro}>
