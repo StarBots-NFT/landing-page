@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ReactPlayer from 'react-player'
 
 import gameIntroArt from "../public/Game Introduction.svg"
 import stratege from '../public/Strategy 1.png'
@@ -13,6 +12,7 @@ import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
 import ourTeamIcon from '../public/Polygon 8.png'
 import frame from '../public/LineCol.png'
+import videoFooter from '../public/bannerFooter.png'
 
 import Unique from '../comps/Unique';
 import RoadMapTime from "../comps/RoadMapTime";
@@ -307,8 +307,24 @@ function Home(props) {
                                 <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
                                              content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
                             </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
                         </tr>
                         <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
                             <th>
                                 <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
                                              content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
@@ -335,6 +351,26 @@ function Home(props) {
                         </div>
                     </div>
                     <table className={styles.ourTeamLayout}>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                            </th>
+                        </tr>
                         <tr>
                             <th>
                                 <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
@@ -401,6 +437,22 @@ function Home(props) {
                         <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
                                      content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
                     </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
+                    <div>
+                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
+                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                    </div>
                 </div>
             )
         }
@@ -419,9 +471,10 @@ function Home(props) {
             ) : (
                 <div>
                     <video autoPlay loop muted className={styles.banner}>
-                        <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                        <source src='/ShortVideoF3.mp4' type='video/mp4'/>
                     </video>
                     <div id={"intro"} className={styles.gameIntro}>
+                        <img className={styles.videoFooter} src={videoFooter}/>
                         <div className={styles.gameIntroText}>
                             <div className={styles.title}>Game Introduction</div>
                             <div className={styles.content}>Starbots is the first-ever robot battle NFT game where

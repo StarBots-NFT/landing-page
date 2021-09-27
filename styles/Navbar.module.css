@@ -45,8 +45,8 @@
 }
 
 .tabs {
-    display: inline-block;
-    width:   68vw;
+    display:   inline-block;
+    width:     68vw;
 }
 
 
@@ -55,7 +55,7 @@
 }
 
 .tabs button {
-    padding:         13px 20px 3px;
+    padding:         13px 13px 3px;
     text-align:      center;
     text-decoration: none;
     display:         inline-block;
@@ -140,5 +140,10 @@
 }
 
 .lockIcon {
-  height: 24px;
+    height: 24px;
+}
+
+@media only screen and (max-width: 1290px) {
+    .tabs {
+    }
 }

@@ -16,16 +16,34 @@ import RoadMapGoal from "./RoadMapGoal"
 import UniqueMobile from "./UniqueMobile";
 import OurTeamItem from "./OurTeamItem";
 import ourTeamIcon from "../public/Polygon 8.png";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import gift from "../public/ezgif.com-gif-maker.gif"
 
 const Mobile = () => {
+    const [isIos, setIos] = useState(false);
     useEffect( () => {
         if (typeof window != "undefined") window.scrollTo(0, 1);
+        function detectIos() {
+            const toMatch = [
+                /webOS/i,
+                /iPhone/i,
+            ];
+
+            return toMatch.some((toMatchItem) => {
+                return navigator.userAgent.match(toMatchItem);
+            });
+        }
+        setIos(detectIos)
     })
     return (
             <div>
-                <img className={styles.banner} src={gift} />
+                {isIos ? (
+                    <img className={styles.banner} src={gift} />
+                ) : (
+                    <video autoPlay loop muted className={styles.banner}>
+                        <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                    </video>
+                )}
                 <div id={"intro"} className={styles.gameIntro}>
                     <div className={styles.gameIntroText}>
                         <div className={styles.title}>Game Introduction</div>
