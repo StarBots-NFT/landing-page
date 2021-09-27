@@ -17,8 +17,12 @@ import RoadMapGoal from "./RoadMapGoal"
 import UniqueMobile from "./UniqueMobile";
 import OurTeamItem from "./OurTeamItem";
 import ourTeamIcon from "../public/Polygon 8.png";
+import {useEffect} from "react";
 
 const Mobile = () => {
+    useEffect( () => {
+        if (typeof window != "undefined") window.scrollTo(0, 1);
+    })
     return (
             <div>
                 <div className={styles.banner}>
@@ -40,6 +44,9 @@ const Mobile = () => {
                         <div className={styles.content}>The constant sounds of metals crashing and grenades exploding
                             won't stop until there's only one left standing - the one to conquer all lands.
                         </div>
+                    </div>
+                    <div className={styles.trailerVideo}>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A-lKEJKhYKo"/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
