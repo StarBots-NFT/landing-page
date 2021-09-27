@@ -52,7 +52,7 @@ const Mobile = () => {
                             completing missions, and conquering new lands.
                         </div>
                     </div>
-                    <img className={styles.gameIntroImg} src={"/Game Introduction.png"}/>
+                    <img className={styles.gameIntroImg} src={"/game_introduction.png"}/>
                 </div>
                 <div className={styles.trailer} id={"trailer"}>
                     <div className={styles.trailerText}>

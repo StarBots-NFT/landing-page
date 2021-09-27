@@ -82,7 +82,7 @@ const Navbar = () => {
     const isBreakpoint = useMediaQuery(1290)
     return (
         <div className={styles.navbar} id={"navbar"}>
-            {!isBreakpoint ? (<img className={styles.img} src={"/Logo_HEADER.png"}/>) : (<img className={styles.imgBreak} src={"/Logo_HEADER.png"}/>)}
+            {!isBreakpoint ? (<img className={styles.img} src={"/logo_HEADER.png"}/>) : (<img className={styles.imgBreak} src={"/logo_HEADER.png"}/>)}
             {!isBreakpoint ? (
                 <div className={styles.content}>
                     <div className={styles.tabs}>
