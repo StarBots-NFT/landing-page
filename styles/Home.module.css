@@ -185,11 +185,14 @@ table.uniqueLayout {
 }
 
 .sponsored {
-    margin-top:     var(--MarginBlock);
-    padding-bottom: 60px;
-    padding-top:    60px;
-    position:       relative;
-    text-align:     center;
+    margin-top:        var(--MarginBlock);
+    padding-bottom:    60px;
+    padding-top:       60px;
+    position:          relative;
+    text-align:        center;
+    background-image:  url("../public/background.png");
+    background-repeat: no-repeat;
+    background-size:   100% 100%;
 }
 
 .sponsoredBackgroud {
@@ -270,7 +273,7 @@ table.uniqueLayout {
     }
 
     .trailerVideo {
-        width: 98%;
+        width:  98%;
         height: 55.125vw;
     }
 

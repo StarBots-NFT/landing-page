@@ -13,7 +13,6 @@ import icon14 from '../public/image 14.png'
 import icon16 from '../public/image 16.png'
 import ourTeamIcon from '../public/Polygon 8.png'
 import frame from '../public/LineCol.png'
-import sponseredBanner from '../public/background.png'
 
 import Unique from '../comps/Unique';
 import RoadMapTime from "../comps/RoadMapTime";
@@ -442,13 +441,12 @@ function Home(props) {
                             </div>
                         </div>
                         <div className={styles.trailerVideo}>
-                            <ReactPlayer autoPlay={false} width='100%' height='100%' url='https://youtu.be/A-lKEJKhYKo' controls={true}/>
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A-lKEJKhYKo"/>
                         </div>
                     </div>
                     {feature()}
                     {map()}
                     <div className={styles.sponsored} id={"sponsored"}>
-                        <img className={styles.sponsoredBackgroud} src={sponseredBanner}/>
                         <div className={styles.sponsoredText}>
                             <div className={styles.title}>Sponsored By</div>
                             <div className={styles.content}>dolor sit amet, consectetur adipiscing elit. Vivamus tempor
