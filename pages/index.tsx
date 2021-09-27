@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import stratege from '../public/Strategy 1.png'
-import gameIntroArt from "../public/Game Introduction.png"
 import weapons from '../public/Customisable Weapons.svg'
 import flexibility from '../public/Flexibility.svg'
 import playToEarn from '../public/Play to earn.svg'

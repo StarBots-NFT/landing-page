@@ -1,6 +1,5 @@
 import styles from '../styles/mobile.module.css'
 
-import gameIntroArt from "../public/Game Introduction.png"
 import stratege from '../public/Strategy 1.png'
 import weapons from '../public/Customisable Weapons.svg'
 import flexibility from '../public/Flexibility.svg'
@@ -53,7 +52,7 @@ const Mobile = () => {
                             completing missions, and conquering new lands.
                         </div>
                     </div>
-                    <img className={styles.gameIntroImg} src={gameIntroArt}/>
+                    <img className={styles.gameIntroImg} src={"/Game Introduction.png"}/>
                 </div>
                 <div className={styles.trailer} id={"trailer"}>
                     <div className={styles.trailerText}>
