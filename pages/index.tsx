@@ -410,7 +410,7 @@ function Home(props) {
     return (
         <>
             <Head>
-                <title>My Game | Landing Page</title>
+                <title>Starbots | The first-ever robot battle NFT game</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"}/>
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
@@ -442,7 +442,7 @@ function Home(props) {
                             </div>
                         </div>
                         <div className={styles.trailerVideo}>
-                            <ReactPlayer width='100%' height='100%' url="https://youtu.be/A-lKEJKhYKo" controls={true}/>
+                            <video autoPlay={false} width='100%' height='100%' src='https://youtu.be/A-lKEJKhYKo' controls={true}/>
                         </div>
                     </div>
                     {feature()}
