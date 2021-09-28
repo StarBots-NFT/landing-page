@@ -16,6 +16,19 @@
     min-height: 70px;
 }
 
+.navbarMb {
+    position:   fixed;
+    overflow:   hidden;
+    top:        0;
+    left:       0;
+    width:      100%;
+    background: var(--dark);
+    color:      var(--white);
+    z-index:    3;
+    text-align: center;
+    min-height: 70px;
+}
+
 .navbarContent {
     width: 100%;
     text-align: left;
