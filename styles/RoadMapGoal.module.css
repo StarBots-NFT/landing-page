@@ -1,15 +1,10 @@
 @font-face {
-    font-family: "Open Sans-bold";
-    src:         url(font/OpenSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: "Open Sans-regular";
-    src:         url(font/OpenSans-Regular.ttf);
+    font-family: "Open Sans-semibold";
+    src:         url(font/OpenSans-SemiBold.ttf);
 }
 
 .text {
-    font-family:   "Open Sans-regular";
+    font-family:   "Open Sans-semibold";
     font-style:    normal;
     font-weight:   800;
     font-size:     20px;
