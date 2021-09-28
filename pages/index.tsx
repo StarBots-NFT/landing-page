@@ -9,6 +9,7 @@ import line from '../public/Line.png'
 import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
+import gamee from '../public/gamee-logo-01.png'
 import kien from '../public/kien_vuong.png'
 import hung from '../public/hung_nguyen.png'
 import hong from '../public/hong_nguyen.png'
@@ -308,7 +309,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                             content={"Head of Game"}/>
+                                             content={"Creative Director"}/>
 
                             </th>
                             <th>
@@ -366,7 +367,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                             content={"Head of Game"}/>
+                                             content={"Creative Director"}/>
                             </th>
                         </tr>
                         <tr>
@@ -427,7 +428,7 @@ function Home(props) {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                     content={"Head of Game"}/>
+                                     content={"Creative Director"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
@@ -512,6 +513,7 @@ function Home(props) {
                             <div className={styles.title}>Sponsored By</div>
                         </div>
                         <div className={styles.sponsoredIcon}>
+                            <img className={styles.sponsoredImage} src={gamee}/>  
                             <img className={styles.sponsoredImage} src={lua}/>
                             <img className={styles.sponsoredImage} src={tomochain}/>
                         </div>
