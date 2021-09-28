@@ -308,7 +308,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                             content={"Head of Game"}/>
+                                             content={"Creative Director"}/>
 
                             </th>
                             <th>
@@ -366,7 +366,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                             content={"Head of Game"}/>
+                                             content={"Creative Director"}/>
                             </th>
                         </tr>
                         <tr>
@@ -427,7 +427,7 @@ function Home(props) {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                     content={"Head of Game"}/>
+                                     content={"Creative Director"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
