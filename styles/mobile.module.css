@@ -5,7 +5,7 @@
 
 .bodyContent {
     background-image:      url("../public/Mobile BG.png");
-    background-size:       auto;
+    background-size:       cover;
     background-attachment: fixed;
 }
 
