@@ -145,7 +145,15 @@ table.uniqueLayout {
 .roadmapTop {
     display:        inline-block;
     vertical-align: top;
-    margin-top:     40px;
+    margin-top:     20px;
+    width:          85%;
+}
+
+.roadmapBot {
+    display:        inline-block;
+    vertical-align: top;
+    margin-top:     20px;
+    margin-bottom:  50px;
     width:          85%;
 }
 
@@ -159,7 +167,7 @@ table.uniqueLayout {
 
 .roadmapArt {
     display:       inline-block;
-    margin-top:    20px;
+    margin-top:    40px;
     margin-bottom: 20px;
 }
 
@@ -196,7 +204,7 @@ table.uniqueLayout {
 
 .roadmapStar {
     position: absolute;
-    top:      -95px;
+    top:      -75px;
     right:    40%;
 }
 
@@ -207,7 +215,7 @@ table.uniqueLayout {
 }
 
 .sponsored {
-    margin-top:        var(--MarginBlock);
+    margin-top:        50px;
     padding-bottom:    60px;
     padding-top:       60px;
     position:          relative;

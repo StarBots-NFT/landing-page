@@ -180,7 +180,7 @@ function Home(props) {
                         <div className={styles.roadmapArt}>
                             <img src={line}/>
                         </div>
-                        <div className={styles.roadmapTop}>
+                        <div className={styles.roadmapBot}>
                             <div className={styles.roadmapBodyBot}>
                                 <RoadMapGoal text={"BOT NFT Sale"}/>
                                 <div className={styles.roadmapStar}>
