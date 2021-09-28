@@ -12,7 +12,7 @@ const Footer = () => {
                     </div>
                     <div className={styles.block}>
                         <div className={styles.about}>
-                            <a className={styles.title}>About Starbot</a>
+                            <a className={styles.title}>About</a>
                             <a className={styles.content}>Resources</a>
                             <a className={styles.content}>Overview</a>
                             <a className={styles.content}>Whitepaper</a>
@@ -24,10 +24,6 @@ const Footer = () => {
                             <a className={styles.content}>Discord</a>
                             <a className={styles.content}>Telegram</a>
                         </div>
-                    </div>
-                    <div className={styles.policy}>
-                        <span className={styles.policyContent}>All rights reserved.</span>
-                        <a href={"https://www.google.com.vn/?hl=vi"} className={styles.contentlink}>Privacy Policy</a>
                     </div>
                 </footer>
             </div>
