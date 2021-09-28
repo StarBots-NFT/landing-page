@@ -339,7 +339,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                             content={"Strategic Advisor"}/>
+                                             content={"Co-founder, Strategic Advisor"}/>
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
