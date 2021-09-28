@@ -17,6 +17,16 @@ import ourTeamIcon from "../public/Polygon 8.png";
 import {useEffect, useState} from "react";
 import gift from "../public/ezgif.com-gif-maker.gif"
 import videoFooter from "../public/bannerFooter.png";
+import kien from "../public/kien_vuong.png";
+import hung from "../public/hung_nguyen.png";
+import hong from "../public/hong_nguyen.png";
+import cuong from "../public/cuong_nguyen.png";
+import quang from "../public/quang_nguyen.png";
+import anh from "../public/anh_cong.png";
+import cuong_ph from "../public/cuong_phung.png";
+import truong from "../public/tr_nguyen.png";
+import long from "../public/long_vuong.png";
+import anhNg from "../public/anh_nguyen.png";
 
 const Mobile = () => {
     const [isIos, setIos] = useState(false);
@@ -164,44 +174,44 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
+                                     content={"CEO"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
+                                     content={"Head of Game"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
+                                     content={"Head of Communications"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
+                                     content={"Art Lead"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
+                                     content={"Game Developer"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={anh} title={"Anh Cong"}
+                                     content={"Concept Artist"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
+                                     content={"Character Artist"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                     content={"Fullstack Developer"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={long} title={"Long Vuong"}
+                                     content={"Co-founder, Strategic Advisor"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
+                                     content={"Marketing & Operation Advisor"}/>
                     </div>
                 </div>
             </div>

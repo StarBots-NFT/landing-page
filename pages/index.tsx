@@ -9,7 +9,16 @@ import line from '../public/Line.png'
 import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
-import ourTeamIcon from '../public/Polygon 8.png'
+import kien from '../public/kien_vuong.png'
+import hung from '../public/hung_nguyen.png'
+import hong from '../public/hong_nguyen.png'
+import cuong from '../public/cuong_nguyen.png'
+import quang from '../public/quang_nguyen.png'
+import anh from '../public/anh_cong.png'
+import cuong_ph from '../public/cuong_phung.png'
+import truong from '../public/tr_nguyen.png'
+import long from '../public/long_vuong.png'
+import anhNg from '../public/anh_nguyen.png'
 import frame from '../public/LineCol.png'
 import videoFooter from '../public/bannerFooter.png'
 
@@ -294,47 +303,47 @@ function Home(props) {
                     <table className={styles.ourTeamLayout}>
                         <tr>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
+                                             content={"CEO"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
+                                             content={"Head of Game"}/>
 
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
+                                             content={"Head of Communications"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
+                                             content={"Art Lead"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
+                                             content={"Game Developer"}/>
                             </th>
                         </tr>
                         <tr>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={anh} title={"Anh Cong"}
+                                             content={"Concept Artist"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
+                                             content={"Character Artist"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                             content={"Fullstack Developer"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={long} title={"Long Vuong"}
+                                             content={"Co-founder, Strategic Advisor"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
+                                             content={"Marketing & Operation Advisor"}/>
                             </th>
                         </tr>
                     </table>
@@ -352,52 +361,52 @@ function Home(props) {
                     <table className={styles.ourTeamLayout}>
                         <tr>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
+                                             content={"CEO"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
+                                             content={"Head of Game"}/>
                             </th>
                         </tr>
                         <tr>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
+                                             content={"Head of Communications"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
+                                             content={"Art Lead"}/>
                             </th>
                         </tr>
                         <tr>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
+                                             content={"Game Developer"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                             content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                                <OurTeamItem imgUrl={anh} title={"Anh Cong"}
+                                             content={"Concept Artist"}/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
+                                             content={"Character Artist"}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                             content={"Fullstack Developer"}/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <OurTeamItem imgUrl={long} title={"Long Vuong"}
+                                             content={"Co-founder, Strategic Advisor"}/>
+                            </th>
+                            <th>
+                                <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
+                                             content={"Marketing & Operation Advisor"}/>
                             </th>
                         </tr>
                     </table>
@@ -413,44 +422,44 @@ function Home(props) {
                         </div>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
+                                     content={"CEO"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
+                                     content={"Head of Game"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
+                                     content={"Head of Communications"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
+                                     content={"Art Lead"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
+                                     content={"Game Developer"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={anh} title={"Anh Cong"}
+                                     content={"Concept Artist"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
+                                     content={"Character Artist"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                     content={"Fullstack Developer"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={long} title={"Long Vuong"}
+                                     content={"Co-founder, Strategic Advisor"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={ourTeamIcon} title={"Lorem ipsum"}
-                                     content={"Vivamus tempor aliquet congue. Integer ac neque in."}/>
+                        <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
+                                     content={"Marketing & Operation Advisor"}/>
                     </div>
                 </div>
             )

@@ -1,8 +1,20 @@
+.FooterBlock {
+    background-color: var(--dark);
+    text-align:       center;
+}
+
 .Footer {
+    width:      100%;
+    max-width:  1440px;
+    margin:     auto;
+    text-align: left
+}
+
+.FooterContent {
     background-color: var(--dark);
     padding-top:      40px;
     padding-bottom:   40px;
-    padding-left:     5vw;
+    margin-left:      131px;
     text-align:       left;
 }
 
@@ -110,5 +122,12 @@
 @media only screen and (min-width: 480px) {
     .starBot {
         width: 370px;
+    }
+}
+
+@media only screen and (max-width: 1270px){
+
+    .FooterContent {
+        margin-left: 3vw;
     }
 }

@@ -9,11 +9,18 @@
     top:        0;
     left:       0;
     width:      100%;
-    background: var(--dark);
+    background: rgba(1, 27, 63, 0.8);
     color:      var(--white);
     z-index:    3;
     text-align: center;
     min-height: 70px;
+}
+
+.navbarContent {
+    width: 100%;
+    text-align: left;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .content {
@@ -34,7 +41,7 @@
 
 .img {
     vertical-align: super;
-    margin-left:    10px;
+    margin-left:    135px;
     display:        inline-block;
 }
 
@@ -63,7 +70,7 @@
     margin:          10px 2px;
     cursor:          pointer;
     border-style:    none;
-    background:      var(--dark);
+    background:      transparent;;
     font-family:     "Blender Pro", serif;
     font-style:      normal;
     font-weight:     bold;

@@ -82,48 +82,50 @@ const Navbar = () => {
     const isBreakpoint = useMediaQuery(1290)
     return (
         <div className={styles.navbar} id={"navbar"}>
-            {!isBreakpoint ? (<img className={styles.img} src={"/logo_HEADER.png"}/>) : (<img className={styles.imgBreak} src={"/logo_HEADER.png"}/>)}
-            {!isBreakpoint ? (
-                <div className={styles.content}>
-                    <div className={styles.tabs}>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 0)}>Home</button>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 1)}>Introduction</button>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer</button>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique Feature</button>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap</button>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored</button>
-                        <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team</button>
+            <div className={styles.navbarContent}>
+                {!isBreakpoint ? (<img className={styles.img} src={"/logo_HEADER.png"}/>) : (<img className={styles.imgBreak} src={"/logo_HEADER.png"}/>)}
+                {!isBreakpoint ? (
+                    <div className={styles.content}>
+                        <div className={styles.tabs}>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 0)}>Home</button>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 1)}>Introduction</button>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer</button>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique Feature</button>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap</button>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored</button>
+                            <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team</button>
+                        </div>
+                        {/*<button className={styles.button}>*/}
+                        {/*    <LockIcon className={styles.lockIcon}/>*/}
+                        {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
+                        {/*</button>*/}
                     </div>
-                    {/*<button className={styles.button}>*/}
-                    {/*    <LockIcon className={styles.lockIcon}/>*/}
-                    {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                    {/*</button>*/}
-                </div>
-            ) : (
-                <div className={styles.contentBreak}>
-                    <menu className={styles.menu} onClick={changeIsShow}>
-                        <div className={styles.menuDiv}></div>
-                        <div className={styles.menuDiv}></div>
-                        <div className={styles.menuDiv}></div>
-                    </menu>
-                </div>
-            )}
-            {(isShowDropDown && isBreakpoint) ? (
-                <div className={styles.dropdownBlock} id = "dropdownBlock">
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,0)}>Home</div>
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,1)}>Introduction</div>
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,2)}>Trailer</div>
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,3)}>Unique Feature</div>
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,4)}>RoadMap</div>
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,5)}>Sponsored</div>
-                    <div className={styles.dropdown} onClick={(e)=>handleChange(e,6)}>Our Team</div>
-                    {/*<button className={styles.buttonDropDown}>*/}
-                    {/*    <LockIcon className={styles.lockIcon}/>*/}
-                    {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                    {/*</button>*/}
-                </div>
+                ) : (
+                    <div className={styles.contentBreak}>
+                        <menu className={styles.menu} onClick={changeIsShow}>
+                            <div className={styles.menuDiv}></div>
+                            <div className={styles.menuDiv}></div>
+                            <div className={styles.menuDiv}></div>
+                        </menu>
+                    </div>
+                )}
+                {(isShowDropDown && isBreakpoint) ? (
+                    <div className={styles.dropdownBlock} id = "dropdownBlock">
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,0)}>Home</div>
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,1)}>Introduction</div>
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,2)}>Trailer</div>
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,3)}>Unique Feature</div>
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,4)}>RoadMap</div>
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,5)}>Sponsored</div>
+                        <div className={styles.dropdown} onClick={(e)=>handleChange(e,6)}>Our Team</div>
+                        {/*<button className={styles.buttonDropDown}>*/}
+                        {/*    <LockIcon className={styles.lockIcon}/>*/}
+                        {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
+                        {/*</button>*/}
+                    </div>
 
-            ) : null}
+                ) : null}
+            </div>
         </div>
     );
 }
