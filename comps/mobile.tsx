@@ -207,7 +207,7 @@ const Mobile = () => {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                     content={"Co-founder, Strategic Advisor"}/>
+                                     content={"Strategic Advisor"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}

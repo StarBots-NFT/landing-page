@@ -339,7 +339,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                             content={"Co-founder, Strategic Advisor"}/>
+                                             content={"Strategic Advisor"}/>
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
@@ -402,7 +402,7 @@ function Home(props) {
                         <tr>
                             <th>
                                 <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                             content={"Co-founder, Strategic Advisor"}/>
+                                             content={"Strategic Advisor"}/>
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
@@ -455,7 +455,7 @@ function Home(props) {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                     content={"Co-founder, Strategic Advisor"}/>
+                                     content={"Strategic Advisor"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
