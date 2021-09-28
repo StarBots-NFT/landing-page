@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Open Sans-bold";
+    src:         url(font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans-regular";
+    src:         url(font/OpenSans-Regular.ttf);
+}
+
+
 .ourTeamItem {
     width:         218px;
     height:        234px;
@@ -6,7 +17,7 @@
 }
 
 .title {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans-bold";
     font-style:  normal;
     font-weight: bold;
     font-size:   20px;
@@ -16,7 +27,7 @@
 }
 
 .content {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans-regular";
     font-style:  normal;
     font-weight: normal;
     font-size:   16px;

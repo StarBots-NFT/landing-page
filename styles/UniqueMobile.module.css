@@ -1,10 +1,20 @@
+@font-face {
+    font-family: "Open Sans-bold";
+    src:         url(font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans-regular";
+    src:         url(font/OpenSans-Regular.ttf);
+}
+
 .unique {
     margin: 50px auto;
     width:  70%;
 }
 
 .title {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans-bold";
     font-style:  normal;
     font-weight: 800;
     font-size:   20px;
@@ -15,7 +25,7 @@
 
 .content {
     margin:        16px auto auto;
-    font-family:   "Open Sans", serif;
+    font-family:   "Open Sans-regular";
     font-style:    normal;
     font-weight:   normal;
     font-size:     16px;

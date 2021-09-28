@@ -3,6 +3,16 @@
     src:         url(font/BlenderPro-Bold.woff);
 }
 
+@font-face {
+    font-family: "Open Sans-bold";
+    src:         url(font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans-regular";
+    src:         url(font/OpenSans-Regular.ttf);
+}
+
 .bodyContent {
     background-image:      url("../public/BG.png");
     background-attachment: fixed;
@@ -65,10 +75,10 @@
 }
 
 .content {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans-regular";
     font-style:  normal;
     font-weight: normal;
-    font-size:   16px;
+    font-size:   18px;
     line-height: 160%;
     color:       var(--white);
     max-width:   800px;
