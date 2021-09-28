@@ -30,10 +30,10 @@
 }
 
 .navbarContent {
-    width: 100%;
+    width:      100%;
     text-align: left;
-    max-width: 1440px;
-    margin: auto;
+    max-width:  1440px;
+    margin:     auto;
 }
 
 .content {
@@ -120,6 +120,7 @@
 .menu {
     position: absolute;
     right:    10px;
+    top:      0
 }
 
 .menuDiv {
