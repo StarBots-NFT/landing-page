@@ -167,10 +167,12 @@ function Home(props) {
                 <div className={styles.roadmap} id={"map"}>
                     <div className={styles.roadmapText}>
                         <div className={styles.title}>Roadmap</div>
-                        <div className={styles.content}>Game Play & Whitepaper Release</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapTop}>
+                            <div className={styles.roadmapBodyTop}>
+                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                            </div>
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Dec"} year={"2021"}/>
                             </div>
@@ -191,6 +193,12 @@ function Home(props) {
                             <img src={line}/>
                         </div>
                         <div className={styles.roadmapBot}>
+                            <div className={styles.roadmapBodyBot}>
+                                <RoadMapGoal text={"Gameplay & Whitepaper Release"}/>
+                                <div className={styles.roadmapStar}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
                             <div className={styles.roadmapBodyBot}>
                                 <RoadMapGoal text={"BOT NFT Sale"}/>
                                 <div className={styles.roadmapStar}>
@@ -230,10 +238,17 @@ function Home(props) {
                 <div className={styles.roadmap} id={"map"}>
                     <div className={styles.roadmapText}>
                         <div className={styles.title}>Roadmap</div>
-                        <div className={styles.content}>Game Play & Whitepaper Release</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
+                            <div className={styles.roadmapBodyCol}>
+                                <div className={styles.roadmapBodyCol}>
+                                    <RoadMapGoal text={"Gameplay & Whitepaper Release"}/>
+                                </div>
+                                <div className={styles.roadmapStarCol}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapTime months={"Dec"} year={"2021"}/>
                                 <div className={styles.roadmapStarCol}>
@@ -269,6 +284,9 @@ function Home(props) {
                             <img src={frame}/>
                         </div>
                         <div className={styles.roadmapRight}>
+                            <div className={styles.roadmapBodyCol}>
+                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                            </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapGoal text={"BOT NFT Sale"}/>
                             </div>
@@ -512,7 +530,7 @@ function Home(props) {
                             <div className={styles.title}>Sponsored By</div>
                         </div>
                         <div className={styles.sponsoredIcon}>
-                            <img className={styles.sponsoredImage} src={gamee}/>  
+                            <img className={styles.sponsoredImage} src={gamee}/>
                             <img className={styles.sponsoredImage} src={lua}/>
                             <img className={styles.sponsoredImage} src={tomochain}/>
                         </div>

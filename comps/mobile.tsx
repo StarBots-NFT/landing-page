@@ -101,10 +101,15 @@ const Mobile = () => {
                 <div className={styles.roadmap} id={"map"}>
                     <div className={styles.roadmapText}>
                         <div className={styles.title}>Roadmap</div>
-                        <div className={styles.content}>Game Play & Whitepaper Release</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
+                            <div className={styles.roadmapBodyCol}>
+                                <RoadMapGoal text={"Gameplay & Whitepaper Release"}/>
+                                <div className={styles.roadmapStarCol}>
+                                    <img src={dot}/>
+                                </div>
+                            </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapTime months={"Dec"} year={"2021"}/>
                                 <div className={styles.roadmapStarCol}>
@@ -140,6 +145,9 @@ const Mobile = () => {
                             <img src={frame}/>
                         </div>
                         <div className={styles.roadmapRight}>
+                            <div className={styles.roadmapBodyCol}>
+                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                            </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapGoal text={"BOT NFT Sale"}/>
                             </div>

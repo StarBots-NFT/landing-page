@@ -131,7 +131,6 @@ table.uniqueLayout {
 
 .roadmap {
     text-align: center;
-    max-width:  1200px;
     margin:     var(--MarginBlock) auto 0;
 }
 
@@ -189,6 +188,10 @@ table.uniqueLayout {
     display:      inline-block;
     margin-right: 95px;
     margin-left:  95px;
+}
+
+.roadmapArtCol img {
+    height: 1000px;
 }
 
 .roadmapBodyCol {
