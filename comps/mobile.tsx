@@ -7,6 +7,7 @@ import playToEarn from '../public/Play to earn.svg'
 import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
+import gamee from '../public/gamee-logo-01.png'
 import frame from '../public/LineCol.png'
 
 import RoadMapTime from "./RoadMapTime";
@@ -162,6 +163,7 @@ const Mobile = () => {
                         <div className={styles.title}>Sponsored By</div>
                     </div>
                     <div className={styles.sponsoredIcon}>
+                        <img className={styles.sponsoredImage} src={gamee}/>
                         <img className={styles.sponsoredImage} src={lua}/>
                         <img className={styles.sponsoredImage} src={tomochain}/>
                     </div>

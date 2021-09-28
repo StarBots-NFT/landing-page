@@ -9,6 +9,7 @@ import line from '../public/Line.png'
 import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
+import gamee from '../public/gamee-logo-01.png'
 import kien from '../public/kien_vuong.png'
 import hung from '../public/hung_nguyen.png'
 import hong from '../public/hong_nguyen.png'
@@ -512,6 +513,7 @@ function Home(props) {
                             <div className={styles.title}>Sponsored By</div>
                         </div>
                         <div className={styles.sponsoredIcon}>
+                            <img className={styles.sponsoredImage} src={gamee}/>  
                             <img className={styles.sponsoredImage} src={lua}/>
                             <img className={styles.sponsoredImage} src={tomochain}/>
                         </div>
