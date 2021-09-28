@@ -174,19 +174,19 @@ function Home(props) {
                                 <RoadMapTime months={"Oct"} year={"2021"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapTime months={"Dec"} year={"2021"}/>
+                                <RoadMapGoal text={"BOT NFT Sale"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
+                                <RoadMapTime months={"Jan"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapTime months={"Q1"} year={"2022"}/>
+                                <RoadMapGoal text={"PvP Mode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapGoal text={"PvE StoryMode Release"}/>
+                                <RoadMapTime months={"Q3"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapTime months={"Q1"} year={"2023"}/>
+                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
                             </div>
                         </div>
                         <div className={styles.roadmapArt}>
@@ -200,31 +200,31 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapGoal text={"BOT NFT Sale"}/>
+                                <RoadMapTime months={"Dec"} year={"2021"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapTime months={"Jan"} year={"2022"}/>
+                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapGoal text={"PvP Mode Release"}/>
+                                <RoadMapTime months={"Q1"} year={"2022"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapTime months={"Q3"} year={"2022"}/>
+                                <RoadMapGoal text={"PvE StoryMode Release"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapTime months={"Q1"} year={"2023"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
@@ -243,38 +243,38 @@ function Home(props) {
                         <div className={styles.roadmapLeft}>
                             <div className={styles.roadmapBodyCol}>
                                 <div className={styles.roadmapBodyCol}>
-                                    <RoadMapGoal text={"Gameplay & Whitepaper Release"}/>
+                                    <RoadMapTime months={"Oct"} year={"2021"}/>
                                 </div>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Dec"} year={"2021"}/>
+                                <RoadMapGoal text={"BOT NFT Sale"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
+                                <RoadMapTime months={"Jan"} year={"2022"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q1"} year={"2022"}/>
+                                <RoadMapGoal text={"PvP Mode Release"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"PvE StoryMode Release"}/>
+                                <RoadMapTime months={"Q3"} year={"2022"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q1"} year={"2023"}/>
+                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -285,22 +285,22 @@ function Home(props) {
                         </div>
                         <div className={styles.roadmapRight}>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Oct"} year={"2021"}/>
+                                <RoadMapGoal text={"Gameplay & Whitepaper Release"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"BOT NFT Sale"}/>
+                                <RoadMapTime months={"Dec"} year={"2021"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Jan"} year={"2022"}/>
+                                <RoadMapGoal text={"BOT token introduction & IDO"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"PvP Mode Release"}/>
+                                <RoadMapTime months={"Q1"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q3"} year={"2022"}/>
+                                <RoadMapGoal text={"PvE StoryMode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapTime months={"Q1"} year={"2023"}/>
                             </div>
                         </div>
                     </div>
