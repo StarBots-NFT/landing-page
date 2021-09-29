@@ -16,7 +16,8 @@
 .bodyContent {
     background-image:      url("../public/BG.png");
     background-attachment: fixed;
-    background-size:       100% 100%
+    background-size:       cover;
+    background-position:   center;
 }
 
 
@@ -232,14 +233,15 @@ table.uniqueLayout {
 }
 
 .sponsored {
-    margin-top:        50px;
-    padding-bottom:    60px;
-    padding-top:       60px;
-    position:          relative;
-    text-align:        center;
-    background-image:  url("../public/background.png");
-    background-repeat: no-repeat;
-    background-size:   100% 100%;
+    margin-top:          50px;
+    padding-bottom:      60px;
+    padding-top:         60px;
+    position:            relative;
+    text-align:          center;
+    background-image:    url("../public/background.png");
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    background-position: center;
 }
 
 .sponsoredBackgroud {
