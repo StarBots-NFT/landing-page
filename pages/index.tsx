@@ -84,7 +84,7 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.title}>Unique Features</div>
                         <div className={styles.unique}>
                             <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."}/>
@@ -102,7 +102,7 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.title}>Unique Features</div>
                         <div className={styles.unique}>
                             <table className={styles.uniqueLayout}>
                                 <tr className={styles.featureTr}>
@@ -134,7 +134,7 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.title}>Unique Features</div>
                         <div className={styles.unique}>
                             <div>
                                 <Unique imgUrl={playToEarn} title={"Play to earn"}
@@ -346,7 +346,7 @@ function Home(props) {
                         <tr>
                             <th>
                                 <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                             content={"Concept Artist"}/>
+                                             content={"Founding Partner"}/>
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
@@ -405,7 +405,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                             content={"Concept Artist"}/>
+                                             content={"Founding Partner"}/>
                             </th>
                         </tr>
                         <tr>
@@ -462,7 +462,7 @@ function Home(props) {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                     content={"Concept Artist"}/>
+                                     content={"Founding Partner"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
@@ -496,9 +496,11 @@ function Home(props) {
                 <Mobile/>
             ) : (
                 <div className={styles.bodyContent}>
-                    <video autoPlay loop muted className={styles.banner}>
-                        <source src='/ShortVideoF3.mp4' type='video/mp4'/>
-                    </video>
+                    <div className={styles.videoBanner}>
+                        <video autoPlay loop muted className={styles.banner}>
+                            <source src='/ShortVideoF3.mp4' type='video/mp4'/>
+                        </video>
+                    </div>
                     <div id={"intro"} className={styles.gameIntro}>
                         <img className={styles.videoFooter} src={videoFooter}/>
                         <div className={styles.gameIntroText}>

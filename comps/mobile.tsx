@@ -78,7 +78,7 @@ const Mobile = () => {
                 </div>
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Feature</div>
+                        <div className={styles.title}>Unique Features</div>
                         <div className={styles.unique}>
                             <div>
                                 <UniqueMobile imgUrl={playToEarn} title={"Play to earn"}
@@ -205,7 +205,7 @@ const Mobile = () => {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                     content={"Concept Artist"}/>
+                                     content={"Founding Partner"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}

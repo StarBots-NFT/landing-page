@@ -116,7 +116,7 @@ const Navbar = () => {
                                     <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique
-                                        Feature
+                                        Features
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap
                                     </button>
@@ -142,7 +142,7 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 0)}>Home</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 1)}>Introduction</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 2)}>Trailer</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 3)}>Unique Feature
+                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 3)}>Unique Features
                                 </div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 4)}>RoadMap</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 5)}>Sponsored</div>
@@ -172,7 +172,7 @@ const Navbar = () => {
                                     <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique
-                                        Feature
+                                        Features
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap
                                     </button>
@@ -198,7 +198,7 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 0)}>Home</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 1)}>Introduction</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 2)}>Trailer</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 3)}>Unique Feature
+                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 3)}>Unique Features
                                 </div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 4)}>RoadMap</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 5)}>Sponsored</div>

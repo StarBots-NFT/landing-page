@@ -35,7 +35,7 @@
     line-height: 160%;
     width:       260px;
     word-break:  break-word;
-    color:       var(--white);
+    color:       var(--gray);
     flex:        none;
     order:       1;
     align-self:  stretch;

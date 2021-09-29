@@ -2,17 +2,18 @@
     /**
     color
      */
-    --dark: #011B3F;
-    --white: #FFFFFF;
+    --dark:          #011B3F;
+    --white:         #FFFFFF;
+    --gray:          #B7C0D0;
 
     /**
     layout
      */
-    --titleMobiW: 98vw;
-    --MarginBlock: 100px;
+    --titleMobiW:    98vw;
+    --MarginBlock:   100px;
 
     --MarginBlockMb: 50px;
 
-    --MaxWItem: 800px;
+    --MaxWItem:      800px;
 
 }

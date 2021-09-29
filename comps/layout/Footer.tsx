@@ -13,16 +13,15 @@ const Footer = () => {
                     <div className={styles.block}>
                         <div className={styles.about}>
                             <a className={styles.title}>About</a>
-                            <a className={styles.content}>Resources</a>
-                            <a className={styles.content}>Overview</a>
-                            <a className={styles.content}>Whitepaper</a>
-                            <a className={styles.content}>Documentation</a>
+                            <a className={styles.content}>News</a>
+                            <a href={"https://whitepaper.starbots.net"} className={styles.content}>Documentation</a>
                         </div>
                         <div className={styles.followUs}>
                             <a className={styles.title}>Follow us</a>
-                            <a className={styles.content}>Twitter</a>
-                            <a className={styles.content}>Discord</a>
-                            <a className={styles.content}>Telegram</a>
+                            <a className={styles.content} href={"https://twitter.com/Starbots_game"}>Twitter</a>
+                            <a className={styles.content} href={"https://discord.gg/arCt64m2ms"}>Discord</a>
+                            <a className={styles.content} href={"https://t.me/starbotsofficial"}>Telegram</a>
+                            <a className={styles.content} href={"https://www.youtube.com/channel/UCVvxZZeqPEysRBeX7rh_5NQ"}>Youtube</a>
                         </div>
                     </div>
                 </footer>
