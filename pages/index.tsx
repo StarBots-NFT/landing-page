@@ -93,7 +93,7 @@ function Home(props) {
                             <Unique imgUrl={flexibility} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
                             <Unique imgUrl={stratege} title={"Strategy"}
-                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."}/>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@ function Home(props) {
                                     </th>
                                     <th>
                                         <Unique imgUrl={stratege} title={"Strategy"}
-                                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."}/>
                                     </th>
                                 </tr>
                             </table>
@@ -151,7 +151,7 @@ function Home(props) {
                             </div>
 
                             <div><Unique imgUrl={stratege} title={"Strategy"}
-                                         content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                         content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."}/>
                             </div>
 
                         </div>
@@ -315,9 +315,6 @@ function Home(props) {
                 <div className={styles.ourTeam} id={"team"}>
                     <div className={styles.ourTeamIntro}>
                         <div className={styles.title}>Our Team</div>
-                        <div className={styles.content}>
-                            All the distinctive gaming features revolving around our ecosystem
-                        </div>
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tr>
@@ -346,7 +343,7 @@ function Home(props) {
                         <tr>
                             <th>
                                 <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                             content={"Founding Partner"}/>
+                                             content={"Concept Artist"}/>
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
@@ -362,7 +359,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                             content={"Marketing & Operation Advisor"}/>
+                                             content={"Founding Partner"}/>
                             </th>
                         </tr>
                     </table>
@@ -373,9 +370,6 @@ function Home(props) {
                 <div className={styles.ourTeam} id={"team"}>
                     <div className={styles.ourTeamIntro}>
                         <div className={styles.title}>Our Team</div>
-                        <div className={styles.content}>
-                            All the distinctive gaming features revolving around our ecosystem
-                        </div>
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tr>
@@ -405,7 +399,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                             content={"Founding Partner"}/>
+                                             content={"Concept Artist"}/>
                             </th>
                         </tr>
                         <tr>
@@ -425,7 +419,7 @@ function Home(props) {
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                             content={"Marketing & Operation Advisor"}/>
+                                             content={"Founding Partner"}/>
                             </th>
                         </tr>
                     </table>
@@ -436,9 +430,6 @@ function Home(props) {
                 <div className={styles.ourTeam} id={"team"}>
                     <div className={styles.ourTeamIntro}>
                         <div className={styles.title}>Our Team</div>
-                        <div className={styles.content}>
-                            All the distinctive gaming features revolving around our ecosystem
-                        </div>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
@@ -462,7 +453,7 @@ function Home(props) {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                     content={"Founding Partner"}/>
+                                     content={"Concept Artist"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
@@ -478,7 +469,7 @@ function Home(props) {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                     content={"Marketing & Operation Advisor"}/>
+                                     content={"Founding Partner"}/>
                     </div>
                 </div>
             )

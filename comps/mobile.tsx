@@ -93,7 +93,7 @@ const Mobile = () => {
                                         content={"Upgrade, repair and disassemble your fighting robot at any given time."}/>
                             </div>
                             <div><UniqueMobile imgUrl={stratege} title={"Strategy"}
-                                         content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation. es."}/>
+                                         content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."}/>
                             </div>
                         </div>
                     </div>
@@ -179,9 +179,6 @@ const Mobile = () => {
                 <div className={styles.ourTeam} id={"team"}>
                     <div className={styles.ourTeamIntro}>
                         <div className={styles.title}>Our Team</div>
-                        <div className={styles.content}>
-                            All the distinctive gaming features revolving around our ecosystem
-                        </div>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
@@ -205,7 +202,7 @@ const Mobile = () => {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                     content={"Founding Partner"}/>
+                                     content={"Concept Artist"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
@@ -221,7 +218,7 @@ const Mobile = () => {
                     </div>
                     <div>
                         <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                     content={"Marketing & Operation Advisor"}/>
+                                     content={"Founding Partner"}/>
                     </div>
                 </div>
             </div>
