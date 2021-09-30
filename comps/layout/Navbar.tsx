@@ -125,10 +125,10 @@ const Navbar = () => {
                                     <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
                                     </button>
                                 </div>
-                                {/*<button className={styles.button}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
+                                    <button className={styles.button}>
+                                        <LockIcon className={styles.lockIcon}/>
+                                        <span className={styles.buttonLabel}>Connect Wallet</span>
+                                    </button>
                             </div>
                         ) : (
                             <menu className={styles.menu} onClick={changeIsShow}>
@@ -147,10 +147,10 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 4)}>RoadMap</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 5)}>Sponsored</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 6)}>Our Team</div>
-                                {/*<button className={styles.buttonDropDown}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
+                                <button className={styles.buttonDropDown}>
+                                    <LockIcon className={styles.lockIcon}/>
+                                    <span className={styles.buttonLabel}>Connect Wallet</span>
+                                </button>
                             </div>
 
                         ) : null}
@@ -181,10 +181,10 @@ const Navbar = () => {
                                     <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
                                     </button>
                                 </div>
-                                {/*<button className={styles.button}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
+                                    <button className={styles.button}>
+                                        <LockIcon className={styles.lockIcon}/>
+                                        <span className={styles.buttonLabel}>Connect Wallet</span>
+                                    </button>
                             </div>
                         ) : (
                             <menu className={styles.menu} onClick={changeIsShow}>
