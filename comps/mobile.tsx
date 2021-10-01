@@ -28,6 +28,7 @@ import cuong_ph from "../public/cuong_phung.png";
 import truong from "../public/tr_nguyen.png";
 import long from "../public/long_vuong.png";
 import anhNg from "../public/anh_nguyen.png";
+import {useRouter} from "next/router";
 
 const Mobile = () => {
     const [isIos, setIos] = useState(false);
@@ -44,6 +45,35 @@ const Mobile = () => {
             });
         }
         setIos(detectIos)
+    })
+    const router = useRouter()
+    useEffect(()=> {
+        const navheight = document.getElementById("navbar").getBoundingClientRect().height
+        let dropdownH = 0;
+        if (router.query.id == 'intro') {
+            let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+            window.scrollTo(0, Y)
+        }
+        if (router.query.id == 'trailer') {
+            let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+            window.scrollTo(0, Y)
+        }
+        if (router.query.id == 'map') {
+            let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+            window.scrollTo(0, Y)
+        }
+        if (router.query.id == 'sponsored') {
+            let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+            window.scrollTo(0, Y)
+        }
+        if (router.query.id == 'team') {
+            let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+            window.scrollTo(0, Y)
+        }
+        if (router.query.id == 'feature') {
+            let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+            window.scrollTo(0, Y)
+        }
     })
     return (
             <div className={styles.bodyContent}>

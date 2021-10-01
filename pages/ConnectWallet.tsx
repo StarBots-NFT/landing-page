@@ -4,7 +4,9 @@ import {useEffect} from "react";
 
 declare const window: any;
 const ConnectWallet = () => {
-
+    useEffect(() => {
+        window.scrollTo(0,0)
+    })
     const connectPhanTom = () => {
         if (typeof window != "undefined") {
             if ("solana" in window) {

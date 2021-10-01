@@ -1,11 +1,14 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
 import LockIcon from '@material-ui/icons/Lock';
+import {router} from "next/client";
+import {useRouter} from "next/router";
 
 const Navbar = () => {
     const [value, setValue] = React.useState(0);
     const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const [isMobile, setMobile] = useState(false);
+    const router = useRouter()
     useEffect(() => {
         function detectMob() {
             const toMatch = [
@@ -42,31 +45,29 @@ const Navbar = () => {
         if (typeof document != "undefined" && typeof window != "undefined") {
             const navheight = document.getElementById("navbar").getBoundingClientRect().height
             if (newValue == 0) {
+                router.push({pathname: '/', query: {id: 'home'}})
                 window.scrollTo(0, 0)
             }
             if (newValue == 1) {
-                let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'intro'}})
             }
             if (newValue == 2) {
-                let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'trailer'}})
             }
             if (newValue == 3) {
-                let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'feature'}})
             }
             if (newValue == 4) {
-                let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'map'}})
             }
             if (newValue == 5) {
-                let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'sponsored'}})
             }
             if (newValue == 6) {
-                let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'team'}})
+            }
+            if (newValue == 7) {
+                router.push({pathname: '/ConnectWallet'})
             }
         }
     };
@@ -179,6 +180,8 @@ const Navbar = () => {
                                     <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
+                                    </button>
+                                    <button className="tablinks" onClick={(event) => handleChange(event, 7)}>Buy now
                                     </button>
                                 </div>
                                     <button className={styles.button}>
