@@ -212,7 +212,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapTime months={"Q1"} year={"2022"}/>
+                                <RoadMapTime months={"Q2"} year={"2022"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
@@ -294,7 +294,7 @@ function Home(props) {
                                 <RoadMapGoal text={"BOT token introduction & IDO"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q1"} year={"2022"}/>
+                                <RoadMapTime months={"Q2"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapGoal text={"PvE StoryMode Release"}/>
@@ -520,7 +520,7 @@ function Home(props) {
                     {map()}
                     <div className={styles.sponsored} id={"sponsored"}>
                         <div className={styles.sponsoredText}>
-                            <div className={styles.title}>Sponsored By</div>
+                            <div className={styles.title}>Partners & Investors</div>
                         </div>
                         <div className={styles.sponsoredIcon}>
                             <img className={styles.sponsoredImage} src={gamee}/>

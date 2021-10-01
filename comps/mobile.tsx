@@ -155,7 +155,7 @@ const Mobile = () => {
                                 <RoadMapGoal text={"BOT token introduction & IDO"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q1"} year={"2022"}/>
+                                <RoadMapTime months={"Q2"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
                                 <RoadMapGoal text={"PvE StoryMode Release"}/>
@@ -168,7 +168,7 @@ const Mobile = () => {
                 </div>
                 <div className={styles.sponsored} id={"sponsored"}>
                     <div className={styles.sponsoredText}>
-                        <div className={styles.title}>Sponsored By</div>
+                        <div className={styles.title}>Partners & Investors</div>
                     </div>
                     <div className={styles.sponsoredIcon}>
                         <img className={styles.sponsoredImage} src={gamee}/>
