@@ -1,6 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styles from '../../styles/Navbar.module.css'
 import LockIcon from '@material-ui/icons/Lock';
+import {router} from "next/client";
+import {useRouter} from "next/router";
 
 const Navbar = () => {
     const [value, setValue] = React.useState(0);
@@ -23,6 +25,7 @@ const Navbar = () => {
 
         setMobile(detectMob)
     })
+    const router = useRouter()
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
         var tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
         let dropdownH = 0;
@@ -40,33 +43,33 @@ const Navbar = () => {
         }
         setValue(newValue);
         if (typeof document != "undefined" && typeof window != "undefined") {
-            const navheight = document.getElementById("navbar").getBoundingClientRect().height
             if (newValue == 0) {
-                window.scrollTo(0, 0)
+                setTimeout(() => {
+                    router.push('/')
+                },100)
             }
             if (newValue == 1) {
-                let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                setTimeout(() => {
+                    router.push({pathname: '/', query: {id: 'intro'}})
+                }, 100)
             }
             if (newValue == 2) {
-                let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'trailer'}})
             }
             if (newValue == 3) {
-                let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'feature'}})
             }
             if (newValue == 4) {
-                let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'map'}})
             }
             if (newValue == 5) {
-                let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'sponsored'}})
             }
             if (newValue == 6) {
-                let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
-                window.scrollTo(0, Y)
+                router.push({pathname: '/', query: {id: 'team'}})
+            }
+            if (newValue == 7) {
+                router.push({pathname: '/buyNow'})
             }
         }
     };
@@ -124,6 +127,8 @@ const Navbar = () => {
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
                                     </button>
+                                    <button className="tablinks" onClick={(event) => handleChange(event, 7)}>Buy now
+                                    </button>
                                 </div>
                                 {/*<button className={styles.button}>*/}
                                 {/*    <LockIcon className={styles.lockIcon}/>*/}
@@ -147,6 +152,7 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 4)}>RoadMap</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 5)}>Sponsored</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(e, 6)}>Our Team</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 7)}>Buy now</div>
                                 {/*<button className={styles.buttonDropDown}>*/}
                                 {/*    <LockIcon className={styles.lockIcon}/>*/}
                                 {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
@@ -179,6 +185,8 @@ const Navbar = () => {
                                     <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
+                                    </button>
+                                    <button className="tablinks" onClick={(event) => handleChange(event, 7)}>Buy now
                                     </button>
                                 </div>
                                 {/*<button className={styles.button}>*/}
