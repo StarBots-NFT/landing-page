@@ -1,43 +1,63 @@
-.ConnectWallet {
+.buyNow {
     background-image:      url("../public/background.png");
     background-size:       cover;
     background-attachment: fixed;
     text-align:            center;
     height:                100vh;
-    display:               flex;
+    padding-top:           70px;
 }
 
-.table {
-    position:         relative;
-    margin:           auto;
-    width:            370px;
-    height:           250px;
-    background-color: #062444;
-    color:            white;
-    border-radius:    10px;
-    padding:          20px;
+.content {
+    display: block;
+    margin-top: 70px;
 }
 
-.close {
-    position: absolute;
-    top:      20px;
-    right:    20px;
+.reward {
+    margin-top: 53px;
 }
 
-.buttonlabel {
-    margin-top:       24px;
-    border-radius:    6px;
-    width:            330px;
-    height:           50px;
-    background-color: #314D72;
+.bought {
+    margin-top: 50px;
 }
 
-.buttonname {
+.countDown {
+
+}
+
+.timeItem {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.timeBlock {
+    display: inline-block;
+}
+
+.timeName {
+    margin-top: 20px;
     color: white;
 }
 
-.countdown {
-    margin:           auto;
-    width:            370px;
-    height:           250px;
+.dots {
+    display: inline-block;
+    vertical-align: top;
 }
+
+.dot {
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+}
+
+.dot:first-child {
+    margin-top: 20px;
+}
+
