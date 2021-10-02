@@ -58,6 +58,9 @@ function Home(props) {
         if (document.getElementById("dropdownBlock") != null) {
                 dropdownH = document.getElementById("dropdownBlock").getBoundingClientRect().height
         }
+        if (router.query.id == null) {
+            window.scrollTo(0, 0)
+        }
         if (router.query.id == 'intro') {
             setTimeout(() => {
                 let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
