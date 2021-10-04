@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Blender Pro";
-    src:         url(font/BlenderPro-Bold.woff);
-}
-
 .navbar {
     position:   fixed;
     overflow:   hidden;

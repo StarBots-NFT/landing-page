@@ -1,16 +1,10 @@
-@font-face {
-    font-family: "Blender Pro";
-    src:         url(font/BlenderPro-Bold.woff);
-}
-
-
 .content {
     left:        283px;
     top:         229px;
 
     /* H1/Bold */
 
-    font-family: "Blender Pro", serif;
+    font-family: "Aquire Bold", serif;
     font-style:  normal;
     font-weight: bold;
     font-size:   40px;

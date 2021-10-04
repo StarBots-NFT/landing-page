@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "Open Sans-bold";
-    src:         url(font/OpenSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: "Open Sans-regular";
-    src:         url(font/OpenSans-Regular.ttf);
-}
-
 .unique {
     margin: 50px auto;
     width:  70%;

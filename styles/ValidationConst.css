@@ -4,7 +4,7 @@
      */
     --dark:          #011B3F;
     --white:         #FFFFFF;
-    --gray:          #B7C0D0;
+    --gray:          #EBEBEB;
 
     /**
     layout
@@ -16,4 +16,42 @@
 
     --MaxWItem:      800px;
 
+}
+
+@font-face {
+    font-family: "Blender Pro";
+    src:         url(font/BlenderPro-Bold.woff);
+}
+
+@font-face {
+    font-family: "Open Sans-bold";
+    src:         url(font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans-regular";
+    src:         url(font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Aquire Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('font/Aquire-BW0ox.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Aquire Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('font/AquireLight-YzE0o.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Aquire Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aquire Bold'), url('font/AquireBold-8Ma60.woff') format('woff');
 }

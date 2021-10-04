@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "Open Sans-bold";
-    src:         url(font/OpenSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: "Open Sans-regular";
-    src:         url(font/OpenSans-Regular.ttf);
-}
-
 .unique {
     width:          260px;
     display:        inline-block;
