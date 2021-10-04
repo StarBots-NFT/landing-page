@@ -59,7 +59,7 @@ function Home(props) {
         if (document.getElementById("dropdownBlock") != null) {
                 dropdownH = document.getElementById("dropdownBlock").getBoundingClientRect().height
         }
-        if (router.query.id == null) {
+        if (router.query.id == 'home') {
             window.scrollTo(0, 0)
         }
         if (router.query.id == 'intro') {
@@ -536,7 +536,7 @@ function Home(props) {
                 <Mobile/>
             ) : (
                 <div className={styles.bodyContent}>
-                    <div className={styles.videoBanner}>
+                    <div id={"home"} className={styles.videoBanner}>
                         <video autoPlay loop muted className={styles.banner}>
                             <source src='/ShortVideoF3.mp4' type='video/mp4'/>
                         </video>
@@ -562,7 +562,7 @@ function Home(props) {
                             </div>
                         </div>
                         <div className={styles.trailerVideo}>
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A-lKEJKhYKo"/>
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L59B24YIYwE"/>
                         </div>
                     </div>
                     {feature()}

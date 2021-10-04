@@ -8,6 +8,59 @@ const Navbar = () => {
     const [value, setValue] = React.useState(0);
     const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const [isMobile, setMobile] = useState(false);
+    const router = useRouter()
+
+    //change colortext
+    let tablinks;
+    if (typeof document != "undefined") {
+        tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
+    }
+    function changeColorTextWhileReload(i: number) {
+        if (tablinks.length > 0) {
+            tablinks.forEach(e => {
+                e.style.color = '#FFFFFF'
+            })
+            tablinks[i].style.color = "#00E1D2";
+            setValue(i)
+        }
+    }
+
+    function addScrollAction() {
+        if (router.pathname == "/") {
+            window.onscroll = function () {
+                const home = document.getElementById("home").getBoundingClientRect().y
+                const homeH = document.getElementById("home").getBoundingClientRect().height
+                const intro = document.getElementById("intro").getBoundingClientRect().y
+                const introH = document.getElementById("intro").getBoundingClientRect().height
+                const trailer = document.getElementById("trailer").getBoundingClientRect().y
+                const trailerH = document.getElementById("trailer").getBoundingClientRect().height
+                const feature = document.getElementById("feature").getBoundingClientRect().y
+                const featureH = document.getElementById("feature").getBoundingClientRect().height
+                const map = document.getElementById("map").getBoundingClientRect().y
+                const mapH = document.getElementById("map").getBoundingClientRect().height
+                const sponsored = document.getElementById("sponsored").getBoundingClientRect().y
+                const sponsoredH = document.getElementById("sponsored").getBoundingClientRect().height
+                const team = document.getElementById("team").getBoundingClientRect().y
+                const teamH = document.getElementById("team").getBoundingClientRect().height
+                if (team <= (80 + sponsoredH) / 2  && team >= 71 ) {
+                    changeColorTextWhileReload(6)
+                }else if ( sponsored <= (80 + mapH) / 2 && sponsored >= 71 - sponsoredH) {
+                    changeColorTextWhileReload(5)
+                } else if (map <= (80 + featureH) / 2 && map >= 71 - mapH) {
+                    changeColorTextWhileReload(4)
+                } else if (feature <= (80 + trailerH) / 2 && feature >= 71 - featureH) {
+                    changeColorTextWhileReload(3)
+                }else if (trailer <= (80 + introH) / 2 && trailer >= 71 -trailerH) {
+                    changeColorTextWhileReload(2)
+                } else if (intro <= 80 && intro >= 71 - introH) {
+                    changeColorTextWhileReload(1)
+                } else if (home >= 71 - homeH) {
+                    changeColorTextWhileReload(0)
+                }
+            }
+        }
+    }
+
     useEffect(() => {
         function detectMob() {
             const toMatch = [
@@ -24,10 +77,40 @@ const Navbar = () => {
         }
 
         setMobile(detectMob)
+
+        if (typeof document != "undefined") {
+            if (router.query.id == 'home') {
+                changeColorTextWhileReload(0)
+                router.replace('/', undefined, { shallow: true });
+            }
+            if (router.query.id == "intro") {
+                changeColorTextWhileReload(1)
+                router.replace('/', undefined, { shallow: true });
+            }
+            if (router.query.id == "trailer") {
+                changeColorTextWhileReload(2)
+                router.replace('/', undefined, { shallow: true });
+            }
+            if (router.query.id == "feature") {
+                changeColorTextWhileReload(3)
+                router.replace('/', undefined, { shallow: true });
+            }
+            if (router.query.id == "map") {
+                changeColorTextWhileReload(4)
+                router.replace('/', undefined, { shallow: true });
+            }
+            if (router.query.id == "sponsored") {
+                changeColorTextWhileReload(5)
+                router.replace('/', undefined, { shallow: true });
+            }
+            if (router.query.id == "team") {
+                changeColorTextWhileReload(6)
+                router.replace('/', undefined, { shallow: true });
+            }
+        }
+        addScrollAction()
     })
-    const router = useRouter()
-    const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-        var tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
+    const handleChange = (newValue: number) => {
         let dropdownH = 0;
         for (var i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
@@ -42,35 +125,30 @@ const Navbar = () => {
             changeIsShow()
         }
         setValue(newValue);
-        if (typeof document != "undefined" && typeof window != "undefined") {
-            if (newValue == 0) {
-                setTimeout(() => {
-                    router.push('/')
-                },100)
-            }
-            if (newValue == 1) {
-                setTimeout(() => {
-                    router.push({pathname: '/', query: {id: 'intro'}})
-                }, 100)
-            }
-            if (newValue == 2) {
-                router.push({pathname: '/', query: {id: 'trailer'}})
-            }
-            if (newValue == 3) {
-                router.push({pathname: '/', query: {id: 'feature'}})
-            }
-            if (newValue == 4) {
-                router.push({pathname: '/', query: {id: 'map'}})
-            }
-            if (newValue == 5) {
-                router.push({pathname: '/', query: {id: 'sponsored'}})
-            }
-            if (newValue == 6) {
-                router.push({pathname: '/', query: {id: 'team'}})
-            }
-            if (newValue == 7) {
-                router.push({pathname: '/buyNow'})
-            }
+        if (newValue == 0) {
+            setTimeout(() => {
+                router.push({pathname: '/', query: {id: 'home'}})
+            }, 100)
+        }
+        if (newValue == 1) {
+            setTimeout(() => {
+                router.push({pathname: '/', query: {id: 'intro'}})
+            }, 100)
+        }
+        if (newValue == 2) {
+            router.push({pathname: '/', query: {id: 'trailer'}})
+        }
+        if (newValue == 3) {
+            router.push({pathname: '/', query: {id: 'feature'}})
+        }
+        if (newValue == 4) {
+            router.push({pathname: '/', query: {id: 'map'}})
+        }
+        if (newValue == 5) {
+            router.push({pathname: '/', query: {id: 'sponsored'}})
+        }
+        if (newValue == 6) {
+            router.push({pathname: '/', query: {id: 'team'}})
         }
     };
     const changeIsShow = () => {
@@ -111,29 +189,23 @@ const Navbar = () => {
                         {!isBreakpoint ? (
                             <div className={styles.content}>
                                 <div className={styles.tabs}>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 0)}>Home
+                                    <button className="tablinks" onClick={(event) => handleChange(0)}>Home
                                     </button>
                                     <button className="tablinks"
-                                            onClick={(event) => handleChange(event, 1)}>Introduction
+                                            onClick={(event) => handleChange(1)}>Introduction
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer
+                                    <button className="tablinks" onClick={(event) => handleChange(2)}>Trailer
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique
+                                    <button className="tablinks" onClick={(event) => handleChange(3)}>Unique
                                         Features
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap
+                                    <button className="tablinks" onClick={(event) => handleChange(4)}>RoadMap
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored
+                                    <button className="tablinks" onClick={(event) => handleChange(5)}>Partners
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
-                                    </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 7)}>Buy now
+                                    <button className="tablinks" onClick={(event) => handleChange(6)}>Our Team
                                     </button>
                                 </div>
-                                {/*<button className={styles.button}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
                             </div>
                         ) : (
                             <menu className={styles.menu} onClick={changeIsShow}>
@@ -144,19 +216,14 @@ const Navbar = () => {
                         )}
                         {(isShowDropDown && isBreakpoint) ? (
                             <div className={styles.dropdownBlock} id="dropdownBlock">
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 0)}>Home</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 1)}>Introduction</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 2)}>Trailer</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 3)}>Unique Features
+                                <div className={styles.dropdown} onClick={(e) => handleChange(0)}>Home</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(1)}>Introduction</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(2)}>Trailer</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(3)}>Unique Features
                                 </div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 4)}>RoadMap</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 5)}>Sponsored</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 6)}>Our Team</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 7)}>Buy now</div>
-                                {/*<button className={styles.buttonDropDown}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
+                                <div className={styles.dropdown} onClick={(e) => handleChange(4)}>RoadMap</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Partners</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(6)}>Our Team</div>
                             </div>
 
                         ) : null}
@@ -170,29 +237,23 @@ const Navbar = () => {
                         {!isBreakpoint ? (
                             <div className={styles.content}>
                                 <div className={styles.tabs}>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 0)}>Home
+                                    <button className="tablinks" onClick={(event) => handleChange(0)}>Home
                                     </button>
                                     <button className="tablinks"
-                                            onClick={(event) => handleChange(event, 1)}>Introduction
+                                            onClick={(event) => handleChange(1)}>Introduction
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 2)}>Trailer
+                                    <button className="tablinks" onClick={(event) => handleChange(2)}>Trailer
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 3)}>Unique
+                                    <button className="tablinks" onClick={(event) => handleChange(3)}>Unique
                                         Features
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 4)}>RoadMap
+                                    <button className="tablinks" onClick={(event) => handleChange(4)}>RoadMap
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 5)}>Sponsored
+                                    <button className="tablinks" onClick={(event) => handleChange(5)}>Partners
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 6)}>Our Team
-                                    </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(event, 7)}>Buy now
+                                    <button className="tablinks" onClick={(event) => handleChange(6)}>Our Team
                                     </button>
                                 </div>
-                                {/*<button className={styles.button}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
                             </div>
                         ) : (
                             <menu className={styles.menu} onClick={changeIsShow}>
@@ -203,18 +264,14 @@ const Navbar = () => {
                         )}
                         {(isShowDropDown && isBreakpoint) ? (
                             <div className={styles.dropdownBlock} id="dropdownBlock">
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 0)}>Home</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 1)}>Introduction</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 2)}>Trailer</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 3)}>Unique Features
+                                <div className={styles.dropdown} onClick={(e) => handleChange(0)}>Home</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(1)}>Introduction</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(2)}>Trailer</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(3)}>Unique Features
                                 </div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 4)}>RoadMap</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 5)}>Sponsored</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(e, 6)}>Our Team</div>
-                                {/*<button className={styles.buttonDropDown}>*/}
-                                {/*    <LockIcon className={styles.lockIcon}/>*/}
-                                {/*    <span className={styles.buttonLabel}>Connect Wallet</span>*/}
-                                {/*</button>*/}
+                                <div className={styles.dropdown} onClick={(e) => handleChange(4)}>RoadMap</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Partners</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(6)}>Our Team</div>
                             </div>
 
                         ) : null}

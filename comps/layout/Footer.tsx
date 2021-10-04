@@ -13,7 +13,7 @@ const Footer = () => {
                     <div className={styles.block}>
                         <div className={styles.about}>
                             <a className={styles.title}>About</a>
-                            <a className={styles.content}>News</a>
+                            <a href={"https://medium.com/@starbots_game"} className={styles.content} target="_blank">News</a>
                             <a href={"https://whitepaper.starbots.net"} className={styles.content} target="_blank">Documentation</a>
                         </div>
                         <div className={styles.followUs}>

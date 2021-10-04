@@ -4,7 +4,7 @@
      */
     --dark:          #011B3F;
     --white:         #FFFFFF;
-    --gray:          #B7C0D0;
+    --gray:          #EBEBEB;
 
     /**
     layout
@@ -17,3 +17,23 @@
     --MaxWItem:      800px;
 
 }
+
+@font-face {
+    font-family: "Blender Pro";
+    src:         url(font/BlenderPro-Bold.woff);
+}
+
+@font-face {
+    font-family: 'Aquire';
+    font-style: normal;
+    font-weight: normal;
+    src: url('font/AquireBold-8Ma60.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    src: url('font/Inter-Regular.ttf') format('woff');
+}
+
