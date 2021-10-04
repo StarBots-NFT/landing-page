@@ -73,7 +73,7 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div className={styles.trailerVideo}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A-lKEJKhYKo"/>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7AKzvScglhc"/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
