@@ -30,9 +30,12 @@ import OurTeamItem from "../comps/OurTeamItem";
 import Mobile from "../comps/mobile"
 
 import {useCallback, useEffect, useState} from 'react'
+import {useRouter} from "next/router";
 
 function Home(props) {
     const [isMobile, setMobile] = useState(false);
+    const router = useRouter()
+
     useEffect(() => {
         function detectMob() {
             const toMatch = [
@@ -49,6 +52,51 @@ function Home(props) {
         }
 
         setMobile(detectMob)
+
+        const navheight = document.getElementById("navbar").getBoundingClientRect().height
+        let dropdownH = 0;
+        if (document.getElementById("dropdownBlock") != null) {
+                dropdownH = document.getElementById("dropdownBlock").getBoundingClientRect().height
+        }
+        if (router.query.id == null) {
+            window.scrollTo(0, 0)
+        }
+        if (router.query.id == 'intro') {
+            setTimeout(() => {
+                let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+                window.scrollTo(0, Y)
+            }, 100)
+        }
+        if (router.query.id == 'trailer') {
+            setTimeout( () => {
+                let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+                window.scrollTo(0, Y)
+            }, 100)
+        }
+        if (router.query.id == 'feature') {
+            setTimeout( () => {
+                let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+                window.scrollTo(0, Y)
+            }, 100)
+        }
+        if (router.query.id == 'map') {
+            setTimeout( () => {
+                let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+                window.scrollTo(0, Y)
+            }, 100)
+        }
+        if (router.query.id == 'sponsored') {
+            setTimeout( () => {
+                let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+                window.scrollTo(0, Y)
+            }, 100)
+        }
+        if (router.query.id == 'team') {
+            setTimeout( () => {
+                let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
+                window.scrollTo(0, Y)
+            }, 100)
+        }
     })
 
 
