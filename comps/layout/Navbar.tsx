@@ -12,7 +12,9 @@ const Navbar = () => {
 
     //change colortext
     let tablinks;
-
+    if (typeof document != "undefined") {
+        tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
+    }
     function changeColorTextWhileReload(i: number) {
         if (tablinks.length > 0) {
             tablinks.forEach(e => {
@@ -26,28 +28,35 @@ const Navbar = () => {
     function addScrollAction() {
         if (router.pathname == "/") {
             window.onscroll = function () {
+                const home = document.getElementById("home").getBoundingClientRect().y
+                const homeH = document.getElementById("home").getBoundingClientRect().height
                 const intro = document.getElementById("intro").getBoundingClientRect().y
+                const introH = document.getElementById("intro").getBoundingClientRect().height
                 const trailer = document.getElementById("trailer").getBoundingClientRect().y
+                const trailerH = document.getElementById("trailer").getBoundingClientRect().height
                 const feature = document.getElementById("feature").getBoundingClientRect().y
+                const featureH = document.getElementById("feature").getBoundingClientRect().height
                 const map = document.getElementById("map").getBoundingClientRect().y
+                const mapH = document.getElementById("map").getBoundingClientRect().height
                 const sponsored = document.getElementById("sponsored").getBoundingClientRect().y
+                const sponsoredH = document.getElementById("sponsored").getBoundingClientRect().height
                 const team = document.getElementById("team").getBoundingClientRect().y
-                if (team <= 71) {
+                const teamH = document.getElementById("team").getBoundingClientRect().height
+                if (team <= (80 + sponsoredH) / 2  && team >= 71 ) {
                     changeColorTextWhileReload(6)
-                }else if ( sponsored <= 71) {
+                }else if ( sponsored <= (80 + mapH) / 2 && sponsored >= 71 - sponsoredH) {
                     changeColorTextWhileReload(5)
-                } else if (map <= 71) {
+                } else if (map <= (80 + featureH) / 2 && map >= 71 - mapH) {
                     changeColorTextWhileReload(4)
-                } else if (feature <= 71) {
+                } else if (feature <= (80 + trailerH) / 2 && feature >= 71 - featureH) {
                     changeColorTextWhileReload(3)
-                }else if (trailer <= 71) {
+                }else if (trailer <= (80 + introH) / 2 && trailer >= 71 -trailerH) {
                     changeColorTextWhileReload(2)
-                } else if (intro <= 71) {
+                } else if (intro <= 80 && intro >= 71 - introH) {
                     changeColorTextWhileReload(1)
-                }else {
+                } else if (home >= 71 - homeH) {
                     changeColorTextWhileReload(0)
                 }
-
             }
         }
     }
@@ -70,7 +79,6 @@ const Navbar = () => {
         setMobile(detectMob)
 
         if (typeof document != "undefined") {
-            tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
             if (router.query.id == 'home') {
                 changeColorTextWhileReload(0)
                 router.replace('/', undefined, { shallow: true });
@@ -193,7 +201,7 @@ const Navbar = () => {
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(4)}>RoadMap
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(5)}>Sponsored
+                                    <button className="tablinks" onClick={(event) => handleChange(5)}>Partners
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(6)}>Our Team
                                     </button>
@@ -214,7 +222,7 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(3)}>Unique Features
                                 </div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(4)}>RoadMap</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Sponsored</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Partners</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(6)}>Our Team</div>
                             </div>
 
@@ -241,7 +249,7 @@ const Navbar = () => {
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(4)}>RoadMap
                                     </button>
-                                    <button className="tablinks" onClick={(event) => handleChange(5)}>Sponsored
+                                    <button className="tablinks" onClick={(event) => handleChange(5)}>Partners
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(6)}>Our Team
                                     </button>
@@ -262,7 +270,7 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(3)}>Unique Features
                                 </div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(4)}>RoadMap</div>
-                                <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Sponsored</div>
+                                <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Partners</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(6)}>Our Team</div>
                             </div>
 
