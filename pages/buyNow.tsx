@@ -9,8 +9,8 @@ const BuyNow = () => {
     let distance;
     useEffect(() => {
         window.scrollTo(0, 0)
-
-        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+        document.getElementById("footer").style.display = 'none';
+        var countDownDate = new Date("Dec 1, 2021 00:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
@@ -28,8 +28,6 @@ const BuyNow = () => {
             var hours2st = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) % 10);
             var minutes1st = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60) / 10);
             var minutes2st = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60) % 10);
-            var seconds1st = Math.floor((distance % (1000 * 60)) / 1000);
-            var seconds2st = Math.floor((distance % (1000 * 60)) / 1000);
             var seconds1st = Math.floor((distance % (1000 * 60)) / 1000 / 10);
             var seconds2st = Math.floor((distance % (1000 * 60)) / 1000 % 10);
             if (document.getElementById("countDown") != null)
@@ -66,8 +64,10 @@ const BuyNow = () => {
                 </div>
                 <div className={styles.bought}>
                     <div className={styles.boughtImg}>
-                        <img src={countBought}/>
-                        <div id={"numbBought"} className={styles.numBought}/>
+                        <div className={styles.boughttext}>0/10000 OPENED</div>
+                    </div>
+                    <div className={styles.sliderBought}>
+                        <div className={styles.sliderCount}></div>
                     </div>
                 </div>
                 <div className={styles.content}>
@@ -107,7 +107,7 @@ const BuyNow = () => {
                             </div>
                         </div>
                         ): (
-                        <></>
+                        <div className={""}></div>
                         )}
                 </div>
             </div>

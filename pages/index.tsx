@@ -37,6 +37,7 @@ function Home(props) {
     const router = useRouter()
 
     useEffect(() => {
+        document.getElementById("footer").style.display = 'block';
         function detectMob() {
             const toMatch = [
                 /Android/i,
