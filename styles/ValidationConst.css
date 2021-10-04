@@ -24,39 +24,16 @@
 }
 
 @font-face {
-    font-family: "Open Sans-bold";
-    src:         url(font/OpenSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: "Open Sans-regular";
-    src:         url(font/OpenSans-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Open Sans-semibold";
-    src:         url(font/OpenSans-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: 'Aquire Regular';
+    font-family: 'Aquire';
     font-style: normal;
     font-weight: normal;
-    src: url('font/Aquire-BW0ox.woff') format('woff');
+    src: url('font/AquireBold-8Ma60.otf') format('woff');
 }
-
 
 @font-face {
-    font-family: 'Aquire Light';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: normal;
-    src: url('font/AquireLight-YzE0o.woff') format('woff');
+    src: url('font/Inter-Regular.ttf') format('woff');
 }
 
-
-@font-face {
-    font-family: 'Aquire Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Aquire Bold'), url('font/AquireBold-8Ma60.woff') format('woff');
-}
