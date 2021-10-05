@@ -28,6 +28,7 @@ const Navbar = () => {
     function addScrollAction() {
         if (router.pathname == "/") {
             window.onscroll = function () {
+                if (document.getElementById("home") == null) return;
                 const home = document.getElementById("home").getBoundingClientRect().y
                 const homeH = document.getElementById("home").getBoundingClientRect().height
                 const intro = document.getElementById("intro").getBoundingClientRect().y
