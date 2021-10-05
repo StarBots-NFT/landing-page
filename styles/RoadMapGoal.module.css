@@ -1,12 +1,13 @@
 .text {
-    font-family:   "Inter";
-    font-style:    normal;
-    font-weight:   800;
-    font-size:     20px;
-    line-height:   150%;
-    color:         var(--gray);
-    padding-left:  2px;
-    padding-right: 2px;
+    font-family:    "Inter";
+    font-style:     normal;
+    font-weight:    800;
+    font-size:      20px;
+    line-height:    150%;
+    color:          var(--gray);
+    padding-left:   2px;
+    padding-right:  2px;
+    letter-spacing: 0.02em;
 }
 
 .img {

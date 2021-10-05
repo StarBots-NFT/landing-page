@@ -60,14 +60,15 @@
 }
 
 .content {
-    font-family: "Inter";
-    font-style:  normal;
-    font-weight: normal;
-    font-size:   18px;
-    line-height: 160%;
-    color:       var(--gray);
-    max-width:   800px;
-    margin:      16px auto;
+    font-family:    "Inter";
+    font-style:     normal;
+    font-weight:    normal;
+    font-size:      18px;
+    line-height:    160%;
+    color:          var(--gray);
+    max-width:      800px;
+    margin:         16px auto;
+    letter-spacing: 0.02em;
 }
 
 .trailer {
@@ -296,7 +297,7 @@ table.uniqueLayout {
     }
 
     .gameIntroImg {
-        width:  100%;
+        width: 100%;
     }
 
     .trailerVideo {
