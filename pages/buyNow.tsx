@@ -1,5 +1,5 @@
 import styles from "../styles/buyNow.module.css"
-import reward from "../public/Group 41474.png"
+import reward from "../public/artificial intelligence.svg"
 import {useEffect, useState} from "react";
 
 declare const window: any;
@@ -15,7 +15,7 @@ const BuyNow = () => {
         var timeOffSet = new Date().getTimezoneOffset()
         var calCountDown = countDownDate + (7 * 60 + timeOffSet) * 60 * 1000
         // Update the count down every 1 second
-        var x = setInterval(function () {
+        var countDown = setInterval(function () {
 
             // Get today's date and time
             var now = new Date().getTime();
@@ -33,30 +33,38 @@ const BuyNow = () => {
             var seconds1st = Math.floor((distance % (1000 * 60)) / 1000 / 10);
             var seconds2st = Math.floor((distance % (1000 * 60)) / 1000 % 10);
             if (document.getElementById("countDown") != null) {
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("day1st").setAttribute("value", day1st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("day2st").setAttribute("value", day2st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("hours1st").setAttribute("value", hours1st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("hours2st").setAttribute("value", hours2st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("min1st").setAttribute("value", minutes1st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("min2st").setAttribute("value", minutes2st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("sec1st").setAttribute("value", seconds1st.toString());
-                document.getElementById("day1st").setAttribute("type", "text");
-                document.getElementById("sec2st").setAttribute("value", seconds2st.toString());
+
+                document.getElementById("day1st").textContent = day1st.toString();
+                document.getElementById("day2st").textContent = day2st.toString();
+                document.getElementById("hours1st").textContent = hours1st.toString();
+                document.getElementById("hours2st").textContent = hours2st.toString();
+                document.getElementById("min1st").textContent = minutes1st.toString();
+                document.getElementById("min2st").textContent = minutes2st.toString();
+                document.getElementById("sec1st").textContent = seconds1st.toString();
+                document.getElementById("sec2st").textContent = seconds2st.toString();
             }
             // If the count down is finished, write some text
             if (distance < 0) {
                 setCountDown(false)
-                clearInterval(x);
+                clearInterval(countDown);
+
+                // get count bought
+                let getCount = setInterval (function () {
+
+                })
             }
         }, 1000);
-    })
+
+        const tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
+        if (tablinks.length > 0) {
+            tablinks.forEach(e => {
+                e.style.color = '#FFFFFF'
+            })
+            tablinks[7].style.color = "#00E1D2";
+        }
+
+
+    }, [])
     const onConnectWalletChange = (boolean: boolean) => {
         setConncetDisplay(boolean)
     }
@@ -86,9 +94,7 @@ const BuyNow = () => {
                             <img src={reward}/>
                         </div>
                         <div className={styles.bought}>
-                            <div className={styles.boughtImg}>
-                                <div className={styles.boughttext}>0/10000 OPENED</div>
-                            </div>
+                            <div className={styles.boughttext}>0/10000 OPENED</div>
                             <div className={styles.sliderBought}>
                                 <div className={styles.sliderCount}></div>
                             </div>
@@ -97,35 +103,37 @@ const BuyNow = () => {
                             {isCountDown ? (
                                 <div className={styles.countDown} id={"countDown"}>
                                     <div className={styles.timeBlock}>
-                                        <input className={styles.timeItem} id={"day1st"}/>
-                                        <input className={styles.timeItem} id={"day2st"}/>
+                                        <label className={styles.timeItem} id={"day1st"}/>
+                                        <label className={styles.timeItem} id={"day2st"}/>
                                         <div className={styles.timeName}>Days</div>
                                     </div>
                                     <div className={styles.dots}>
-                                        <input className={styles.dot}></input>
-                                        <input className={styles.dot}></input>
+                                        <div className={styles.dotsBlock}>
+                                            <label className={styles.dot}></label>
+                                            <label className={styles.dot}></label>
+                                        </div>
                                     </div>
                                     <div className={styles.timeBlock}>
-                                        <input className={styles.timeItem} id={"hours1st"}/>
-                                        <input className={styles.timeItem} id={"hours2st"}/>
+                                        <label className={styles.timeItem} id={"hours1st"}/>
+                                        <label className={styles.timeItem} id={"hours2st"}/>
                                         <div className={styles.timeName}>Hours</div>
                                     </div>
                                     <div className={styles.dots}>
-                                        <input className={styles.dot}></input>
-                                        <input className={styles.dot}></input>
+                                        <label className={styles.dot}></label>
+                                        <label className={styles.dot}></label>
                                     </div>
                                     <div className={styles.timeBlock}>
-                                        <input className={styles.timeItem} id={"min1st"}/>
-                                        <input className={styles.timeItem} id={"min2st"}/>
+                                        <label className={styles.timeItem} id={"min1st"}/>
+                                        <label className={styles.timeItem} id={"min2st"}/>
                                         <div className={styles.timeName}>Minutes</div>
                                     </div>
                                     <div className={styles.dots}>
-                                        <input className={styles.dot}></input>
-                                        <input className={styles.dot}></input>
+                                        <label className={styles.dot}></label>
+                                        <label className={styles.dot}></label>
                                     </div>
                                     <div className={styles.timeBlock}>
-                                        <input className={styles.timeItem} id={"sec1st"}/>
-                                        <input className={styles.timeItem} id={"sec2st"}/>
+                                        <label className={styles.timeItem} id={"sec1st"}/>
+                                        <label className={styles.timeItem} id={"sec2st"}/>
                                         <div className={styles.timeName}>Seconds</div>
                                     </div>
                                 </div>

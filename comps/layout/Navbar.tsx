@@ -3,13 +3,14 @@ import styles from '../../styles/Navbar.module.css'
 import LockIcon from '@material-ui/icons/Lock';
 import {router} from "next/client";
 import {useRouter} from "next/router";
+import flow from "ast-types/def/flow";
+import {Link} from "@material-ui/core";
 
 const Navbar = () => {
     const [value, setValue] = React.useState(0);
     const [isShowDropDown, setIsShowDropDown] = React.useState(false);
     const [isMobile, setMobile] = useState(false);
     const router = useRouter()
-
     //change colortext
     let tablinks;
     if (typeof document != "undefined") {
@@ -26,46 +27,45 @@ const Navbar = () => {
         }
     }
 
-    function addScrollAction() {
-        if (router.pathname == "/") {
-            window.onscroll = function () {
-                if (document.getElementById("home") == null) return;
-            if (window.scrollY === 0) {
-                router.replace('/', undefined, {shallow: true});
-                changeColorTextWhileReload(0)
-            }
-            document.addEventListener("scroll", function () {
-                const home = document.getElementById("home").getBoundingClientRect().y
-                const intro = document.getElementById("intro").getBoundingClientRect().y
-                const introH = document.getElementById("intro").getBoundingClientRect().height
-                const trailer = document.getElementById("trailer").getBoundingClientRect().y
-                const trailerH = document.getElementById("trailer").getBoundingClientRect().height
-                const feature = document.getElementById("feature").getBoundingClientRect().y
-                const featureH = document.getElementById("feature").getBoundingClientRect().height
-                const map = document.getElementById("map").getBoundingClientRect().y
-                const mapH = document.getElementById("map").getBoundingClientRect().height
-                const sponsored = document.getElementById("sponsored").getBoundingClientRect().y
-                const sponsoredH = document.getElementById("sponsored").getBoundingClientRect().height
-                const team = document.getElementById("team").getBoundingClientRect().y
-                router.replace('/', undefined, {shallow: true});
-                if (team <= (80 + sponsoredH) / 2) {
-                    changeColorTextWhileReload(6)
-                } else if (sponsored <= (80 + mapH) / 2 && sponsored >= 71 - sponsoredH) {
-                    changeColorTextWhileReload(5)
-                } else if (map <= (80 + featureH) / 2 && map >= 71 - mapH) {
-                    changeColorTextWhileReload(4)
-                } else if (feature <= (80 + trailerH) / 2 && feature >= 71 - featureH) {
-                    changeColorTextWhileReload(3)
-                } else if (trailer <= (80 + introH) / 2 && trailer >= 71 - trailerH) {
-                    changeColorTextWhileReload(2)
-                } else if (intro <= 80 && intro >= 71 - introH) {
-                    changeColorTextWhileReload(1)
-                } else if (home <= 0) {
-                    changeColorTextWhileReload(0)
-                }
-            })
-
+    const scrollAction = () => {
+        if (document.getElementById("home") == null) return;
+        const home = document.getElementById("home").getBoundingClientRect().y
+        const intro = document.getElementById("intro").getBoundingClientRect().y
+        const introH = document.getElementById("intro").getBoundingClientRect().height
+        const trailer = document.getElementById("trailer").getBoundingClientRect().y
+        const trailerH = document.getElementById("trailer").getBoundingClientRect().height
+        const feature = document.getElementById("feature").getBoundingClientRect().y
+        const featureH = document.getElementById("feature").getBoundingClientRect().height
+        const map = document.getElementById("map").getBoundingClientRect().y
+        const mapH = document.getElementById("map").getBoundingClientRect().height
+        const sponsored = document.getElementById("sponsored").getBoundingClientRect().y
+        const sponsoredH = document.getElementById("sponsored").getBoundingClientRect().height
+        const team = document.getElementById("team").getBoundingClientRect().y
+        router.replace('/', undefined, {shallow: true});
+        if (team <= (80 + sponsoredH) / 2) {
+            changeColorTextWhileReload(6)
+        } else if (sponsored <= (80 + mapH) / 2 && sponsored >= 71 - sponsoredH) {
+            changeColorTextWhileReload(5)
+        } else if (map <= (80 + featureH) / 2 && map >= 71 - mapH) {
+            changeColorTextWhileReload(4)
+        } else if (feature <= (80 + trailerH) / 2 && feature >= 71 - featureH) {
+            changeColorTextWhileReload(3)
+        } else if (trailer <= (80 + introH) / 2 && trailer >= 71 - trailerH) {
+            changeColorTextWhileReload(2)
+        } else if (intro <= 80 && intro >= 71 - introH) {
+            changeColorTextWhileReload(1)
+        } else if (home <= 0) {
+            changeColorTextWhileReload(0)
         }
+    }
+
+    function addScrollAction() {
+        if (window.scrollY === 0 && document.getElementById("home") != null) {
+            router.replace('/', undefined, {shallow: true});
+            changeColorTextWhileReload(0)
+        }
+        window.removeEventListener('scroll', scrollAction, false)
+        window.addEventListener('scroll', scrollAction, false)
     }
 
     useEffect(() => {
@@ -120,29 +120,34 @@ const Navbar = () => {
         }
         setValue(newValue);
         if (newValue == 0) {
-            setTimeout(() => {
-                router.push({pathname: '/', query: {id: 'home'}})
-            }, 100)
+            router.push({pathname: '/', query: {id: 'home'}})
+            addScrollAction()
+            router.replace('/', undefined, {shallow: true});
+            changeColorTextWhileReload(0)
         }
         if (newValue == 1) {
-            setTimeout(() => {
-                router.push({pathname: '/', query: {id: 'intro'}})
-            }, 100)
+            router.push({pathname: '/', query: {id: 'intro'}})
+            addScrollAction()
         }
         if (newValue == 2) {
             router.push({pathname: '/', query: {id: 'trailer'}})
+            addScrollAction()
         }
         if (newValue == 3) {
             router.push({pathname: '/', query: {id: 'feature'}})
+            addScrollAction()
         }
         if (newValue == 4) {
             router.push({pathname: '/', query: {id: 'map'}})
+            addScrollAction()
         }
         if (newValue == 5) {
             router.push({pathname: '/', query: {id: 'sponsored'}})
+            addScrollAction()
         }
         if (newValue == 6) {
             router.push({pathname: '/', query: {id: 'team'}})
+            addScrollAction()
         }
     };
     const changeIsShow = () => {
@@ -199,6 +204,10 @@ const Navbar = () => {
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(6)}>Our Team
                                     </button>
+                                    <Link href={"/buyNow"}>
+                                        <button className="tablinks" onClick={(event) => handleChange(7)}>Buy now
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         ) : (
@@ -247,6 +256,10 @@ const Navbar = () => {
                                     </button>
                                     <button className="tablinks" onClick={(event) => handleChange(6)}>Our Team
                                     </button>
+                                    <Link href={"/buyNow"}>
+                                        <button className="tablinks" onClick={(event) => handleChange(7)}>Buy now
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         ) : (
