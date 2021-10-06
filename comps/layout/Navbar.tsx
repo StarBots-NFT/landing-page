@@ -15,6 +15,7 @@ const Navbar = () => {
     if (typeof document != "undefined") {
         tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
     }
+
     function changeColorTextWhileReload(i: number) {
         if (tablinks.length > 0) {
             tablinks.forEach(e => {
@@ -29,8 +30,12 @@ const Navbar = () => {
         if (router.pathname == "/") {
             window.onscroll = function () {
                 if (document.getElementById("home") == null) return;
+            if (window.scrollY === 0) {
+                router.replace('/', undefined, {shallow: true});
+                changeColorTextWhileReload(0)
+            }
+            document.addEventListener("scroll", function () {
                 const home = document.getElementById("home").getBoundingClientRect().y
-                const homeH = document.getElementById("home").getBoundingClientRect().height
                 const intro = document.getElementById("intro").getBoundingClientRect().y
                 const introH = document.getElementById("intro").getBoundingClientRect().height
                 const trailer = document.getElementById("trailer").getBoundingClientRect().y
@@ -42,23 +47,24 @@ const Navbar = () => {
                 const sponsored = document.getElementById("sponsored").getBoundingClientRect().y
                 const sponsoredH = document.getElementById("sponsored").getBoundingClientRect().height
                 const team = document.getElementById("team").getBoundingClientRect().y
-                const teamH = document.getElementById("team").getBoundingClientRect().height
-                if (team <= (80 + sponsoredH) / 2  && team >= 71 ) {
+                router.replace('/', undefined, {shallow: true});
+                if (team <= (80 + sponsoredH) / 2) {
                     changeColorTextWhileReload(6)
-                }else if ( sponsored <= (80 + mapH) / 2 && sponsored >= 71 - sponsoredH) {
+                } else if (sponsored <= (80 + mapH) / 2 && sponsored >= 71 - sponsoredH) {
                     changeColorTextWhileReload(5)
                 } else if (map <= (80 + featureH) / 2 && map >= 71 - mapH) {
                     changeColorTextWhileReload(4)
                 } else if (feature <= (80 + trailerH) / 2 && feature >= 71 - featureH) {
                     changeColorTextWhileReload(3)
-                }else if (trailer <= (80 + introH) / 2 && trailer >= 71 -trailerH) {
+                } else if (trailer <= (80 + introH) / 2 && trailer >= 71 - trailerH) {
                     changeColorTextWhileReload(2)
                 } else if (intro <= 80 && intro >= 71 - introH) {
                     changeColorTextWhileReload(1)
-                } else if (home >= 71 - homeH) {
+                } else if (home <= 0) {
                     changeColorTextWhileReload(0)
                 }
-            }
+            })
+
         }
     }
 
@@ -82,44 +88,31 @@ const Navbar = () => {
         if (typeof document != "undefined") {
             if (router.query.id == 'home') {
                 changeColorTextWhileReload(0)
-                router.replace('/', undefined, { shallow: true });
             }
             if (router.query.id == "intro") {
                 changeColorTextWhileReload(1)
-                router.replace('/', undefined, { shallow: true });
             }
             if (router.query.id == "trailer") {
                 changeColorTextWhileReload(2)
-                router.replace('/', undefined, { shallow: true });
             }
             if (router.query.id == "feature") {
                 changeColorTextWhileReload(3)
-                router.replace('/', undefined, { shallow: true });
             }
             if (router.query.id == "map") {
                 changeColorTextWhileReload(4)
-                router.replace('/', undefined, { shallow: true });
             }
             if (router.query.id == "sponsored") {
                 changeColorTextWhileReload(5)
-                router.replace('/', undefined, { shallow: true });
             }
             if (router.query.id == "team") {
                 changeColorTextWhileReload(6)
-                router.replace('/', undefined, { shallow: true });
             }
         }
         addScrollAction()
-    })
+    }, [])
     const handleChange = (newValue: number) => {
         let dropdownH = 0;
-        for (var i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-            tablinks[i].style.color = "#FFFFFF";
-        }
-        if (tablinks.length > 0) {
-            tablinks[newValue].style.color = "#00E1D2";
-        } else {
+        if (tablinks.length <= 0) {
             if (isShowDropDown) {
                 dropdownH = document.getElementById("dropdownBlock").getBoundingClientRect().height
             }

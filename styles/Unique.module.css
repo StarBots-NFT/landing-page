@@ -17,22 +17,23 @@
 }
 
 .content {
-    margin:      16px auto auto;
-    font-family: "Inter";
-    font-style:  normal;
-    font-weight: normal;
-    font-size:   16px;
-    line-height: 160%;
-    width:       260px;
-    word-break:  break-word;
-    color:       var(--gray);
-    flex:        none;
-    order:       1;
-    align-self:  stretch;
-    flex-grow:   0;
+    margin:         16px auto auto;
+    font-family:    "Inter";
+    font-style:     normal;
+    font-weight:    normal;
+    font-size:      16px;
+    line-height:    160%;
+    width:          260px;
+    word-break:     break-word;
+    color:          var(--gray);
+    flex:           none;
+    order:          1;
+    align-self:     stretch;
+    flex-grow:      0;
+    letter-spacing: 0.015em;
 }
 
 .img {
     margin: 40px auto auto;
-    width:      170px;
+    width:  170px;
 }
