@@ -561,7 +561,7 @@ function Home(props) {
                             </div>
                         </div>
                         <div className={styles.trailerVideo}>
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L59B24YIYwE"/>
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AMXtJckmByA"/>
                         </div>
                     </div>
                     {feature()}

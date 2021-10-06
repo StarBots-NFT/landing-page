@@ -44,16 +44,18 @@ const Mobile = () => {
             });
         }
         setIos(detectIos)
-    })
+    }, [])
     return (
             <div className={styles.bodyContent}>
-                {isIos ? (
-                    <img className={styles.banner} src={gift} />
-                ) : (
-                    <video autoPlay loop muted className={styles.banner}>
-                        <source src='/ShortVideoF3.mp4' type='video/mp4' />
-                    </video>
-                )}
+                <div id={"home"}>
+                    {isIos ? (
+                        <img className={styles.banner} src={gift} />
+                    ) : (
+                        <video autoPlay loop muted className={styles.banner}>
+                            <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                        </video>
+                    )}
+                </div>
                 <div id={"intro"} className={styles.gameIntro}>
                     <img className={styles.videoFooter} src={videoFooter}/>
                     <div className={styles.gameIntroText}>
@@ -73,7 +75,7 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div className={styles.trailerVideo}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L59B24YIYwE"/>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AMXtJckmByA"/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
