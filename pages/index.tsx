@@ -66,37 +66,37 @@ function Home(props) {
             setTimeout(() => {
                 let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 100)
+            }, 800)
         }
         if (router.query.id == 'trailer') {
             setTimeout( () => {
                 let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 100)
+            }, 800)
         }
         if (router.query.id == 'feature') {
             setTimeout( () => {
                 let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 100)
+            }, 800)
         }
         if (router.query.id == 'map') {
             setTimeout( () => {
                 let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 800)
         }
         if (router.query.id == 'sponsored') {
             setTimeout( () => {
                 let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 800)
         }
         if (router.query.id == 'team') {
             setTimeout( () => {
                 let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 800)
         }
     }, [router])
 
