@@ -98,7 +98,7 @@ function Home(props) {
                 window.scrollTo(0, Y)
             }, 100)
         }
-    })
+    }, [router])
 
 
     const useMediaQuery = (width) => {

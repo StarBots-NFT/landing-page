@@ -1,6 +1,9 @@
 import styles from "../styles/buyNow.module.css"
 import reward from "../public/artificial intelligence.svg"
+import rewardMB from "../public/artificial intelligence mobile.svg"
 import {useEffect, useState} from "react";
+import useSwr from 'swr'
+import {wait} from "next/dist/build/output/log";
 
 declare const window: any;
 
@@ -8,10 +11,28 @@ const BuyNow = () => {
     const [isCountDown, setCountDown] = useState(true);
     const [isConnectDisplay, setConncetDisplay] = useState(false)
     const [countBought, setCountBought] = useState(0)
+    const [isMobile, setMobile] = useState(false);
     let distance;
     useEffect(() => {
         window.scrollTo(0, 0)
         document.getElementById("footer").style.display = 'none';
+        function detectMob() {
+            const toMatch = [
+                /Android/i,
+                /webOS/i,
+                /iPhone/i,
+                /BlackBerry/i,
+                /Windows Phone/i
+            ];
+
+            return toMatch.some((toMatchItem) => {
+                return navigator.userAgent.match(toMatchItem);
+            });
+        }
+
+        setMobile(detectMob)
+
+        //countdown
         var countDownDate = new Date("Dec 1, 2021 00:00:00").getTime();
         var timeOffSet = new Date().getTimezoneOffset()
         var calCountDown = countDownDate + (7 * 60 + timeOffSet) * 60 * 1000
@@ -83,20 +104,28 @@ const BuyNow = () => {
     }
     return (
         <>
-            <div className={styles.buyNow}>
+            {isMobile ? (
+                <div className={styles.buyNowMB}>
                 {!isConnectDisplay ? (
                     <>
-                        <div className={styles.reward}>
-                            <img src={reward}/>
+                        <div className={styles.rewardMb}>
+                            {isMobile ? (<img src={rewardMB}/>) : (<img src={reward}/>)}
                         </div>
                         <div className={styles.bought}>
                             <div className={styles.boughttext}>0/10000 OPENED</div>
-                            <div className={styles.sliderBought}>
-                                <div className={styles.sliderCount}></div>
+                            <div className={styles.sliderBlock}>
+                                <div className={styles.sliderBought}>
+                                    <div className={styles.sliderCount}></div>
+                                </div>
                             </div>
                         </div>
                         <div className={styles.content}>
-                            {isCountDown ? (
+                            {!isCountDown ? (
+                                <div className={styles.buyNowButton}>
+                                    <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX
+                                    </button>
+                                </div>
+                            ) : (
                                 <div className={styles.countDown} id={"countDown"}>
                                     <div className={styles.timeBlock}>
                                         <div className={styles.timeItem} id={"day1st"}/>
@@ -137,11 +166,6 @@ const BuyNow = () => {
                                         <div className={styles.timeName}>Seconds</div>
                                     </div>
                                 </div>
-                            ) : (
-                                <div className={styles.buyNowButton}>
-                                    <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX
-                                    </button>
-                                </div>
                             )}
                         </div>
                     </>
@@ -160,8 +184,88 @@ const BuyNow = () => {
                         </button>
                     </div>
                 )}
-            </div>
-
+            </div>) : (
+                <div className={styles.buyNow}>
+                    {!isConnectDisplay ? (
+                        <>
+                            <div className={styles.reward}>
+                                {isMobile ? (<img src={rewardMB}/>) : (<img src={reward}/>)}
+                            </div>
+                            <div className={styles.bought}>
+                                <div className={styles.boughttext}>0/10000 OPENED</div>
+                                <div className={styles.sliderBlock}>
+                                    <div className={styles.sliderBought}>
+                                        <div className={styles.sliderCount}></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.content}>
+                                {!isCountDown ? (
+                                    <div className={styles.buyNowButton}>
+                                        <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <div className={styles.countDown} id={"countDown"}>
+                                        <div className={styles.timeBlock}>
+                                            <div className={styles.timeItem} id={"day1st"}/>
+                                            <div className={styles.timeItem} id={"day2st"}/>
+                                            <div className={styles.timeName}>Days</div>
+                                        </div>
+                                        <div className={styles.dots}>
+                                            <div className={styles.dotsBlock}>
+                                                <label className={styles.dot}></label>
+                                                <label className={styles.dot}></label>
+                                            </div>
+                                        </div>
+                                        <div className={styles.timeBlock}>
+                                            <label className={styles.timeItem} id={"hours1st"}/>
+                                            <label className={styles.timeItem} id={"hours2st"}/>
+                                            <div className={styles.timeName}>Hours</div>
+                                        </div>
+                                        <div className={styles.dots}>
+                                            <div className={styles.dotsBlock}>
+                                                <label className={styles.dot}></label>
+                                                <label className={styles.dot}></label>
+                                            </div>
+                                        </div>
+                                        <div className={styles.timeBlock}>
+                                            <label className={styles.timeItem} id={"min1st"}/>
+                                            <label className={styles.timeItem} id={"min2st"}/>
+                                            <div className={styles.timeName}>Minutes</div>
+                                        </div>
+                                        <div className={styles.dots}>
+                                            <div className={styles.dotsBlock}>
+                                                <label className={styles.dot}></label>
+                                                <label className={styles.dot}></label>
+                                            </div>
+                                        </div>
+                                        <div className={styles.timeBlock}>
+                                            <label className={styles.timeItem} id={"sec1st"}/>
+                                            <label className={styles.timeItem} id={"sec2st"}/>
+                                            <div className={styles.timeName}>Seconds</div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </>
+                    ) : (
+                        <div className={styles.table} id={"table"}>
+                            <div className={styles.title}>
+                                CONNECT YOUR WALLET
+                            </div>
+                            <div className={styles.content}>
+                                Connect with one of our available wallet
+                            </div>
+                            <div className={styles.close} onClick={e => onCloesConnectWallet()}/>
+                            <button className={styles.buttonlabel} onClick={() => connectPhanTom()}>
+                                <div className={styles.icon}></div>
+                                <div className={styles.buttonname}>PhanTom</div>
+                            </button>
+                        </div>
+                    )}
+                </div>
+            )}
         </>
     )
 }
