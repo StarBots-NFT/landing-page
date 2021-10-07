@@ -24,7 +24,7 @@ import cuong from "../public/cuong_nguyen.png";
 import quang from "../public/quang_nguyen.png";
 import anh from "../public/anh_cong.png";
 import giang from "../public/giang_nguyen.png";
-import truong from "../public/tr_nguyen.png";
+import truong from "../public/truong_nguyen.png";
 import long from "../public/long_vuong.png";
 import anhNg from "../public/anh_nguyen.png";
 
