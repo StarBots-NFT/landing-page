@@ -87,25 +87,39 @@ const Navbar = () => {
 
         if (typeof document != "undefined") {
             if (router.query.id == 'home') {
-                changeColorTextWhileReload(0)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(0)
+                }, 100)
             }
             if (router.query.id == "intro") {
-                changeColorTextWhileReload(1)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(1)
+                }, 100)
             }
             if (router.query.id == "trailer") {
-                changeColorTextWhileReload(2)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(2)
+                }, 100)
             }
             if (router.query.id == "feature") {
-                changeColorTextWhileReload(3)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(3)
+                }, 100)
             }
             if (router.query.id == "map") {
-                changeColorTextWhileReload(4)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(4)
+                }, 100)
             }
             if (router.query.id == "sponsored") {
-                changeColorTextWhileReload(5)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(5)
+                }, 100)
             }
             if (router.query.id == "team") {
-                changeColorTextWhileReload(6)
+                setTimeout(()=> {
+                    changeColorTextWhileReload(6)
+                }, 100)
             }
         }
         addScrollAction()
