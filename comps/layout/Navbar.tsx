@@ -108,6 +108,7 @@ const Navbar = () => {
                 changeColorTextWhileReload(6)
             }
         }
+        scrollAction()
         addScrollAction()
     }, [])
     const handleChange = (newValue: number) => {
