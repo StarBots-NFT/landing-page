@@ -14,7 +14,6 @@ import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
 import UniqueMobile from "./UniqueMobile";
 import OurTeamItem from "./OurTeamItem";
-import ourTeamIcon from "../public/Polygon 8.png";
 import {useEffect, useState} from "react";
 import gift from "../public/ezgif.com-gif-maker.gif"
 import videoFooter from "../public/bannerFooter.png";
@@ -24,7 +23,7 @@ import hong from "../public/hong_nguyen.png";
 import cuong from "../public/cuong_nguyen.png";
 import quang from "../public/quang_nguyen.png";
 import anh from "../public/anh_cong.png";
-import cuong_ph from "../public/cuong_phung.png";
+import giang from "../public/giang_nguyen.png";
 import truong from "../public/tr_nguyen.png";
 import long from "../public/long_vuong.png";
 import anhNg from "../public/anh_nguyen.png";
@@ -44,16 +43,18 @@ const Mobile = () => {
             });
         }
         setIos(detectIos)
-    })
+    }, [])
     return (
             <div className={styles.bodyContent}>
-                {isIos ? (
-                    <img className={styles.banner} src={gift} />
-                ) : (
-                    <video autoPlay loop muted className={styles.banner}>
-                        <source src='/ShortVideoF3.mp4' type='video/mp4' />
-                    </video>
-                )}
+                <div id={"home"}>
+                    {isIos ? (
+                        <img className={styles.banner} src={gift} />
+                    ) : (
+                        <video autoPlay loop muted className={styles.banner}>
+                            <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                        </video>
+                    )}
+                </div>
                 <div id={"intro"} className={styles.gameIntro}>
                     <img className={styles.videoFooter} src={videoFooter}/>
                     <div className={styles.gameIntroText}>
@@ -73,7 +74,7 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div className={styles.trailerVideo}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L59B24YIYwE"/>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AMXtJckmByA"/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
@@ -201,16 +202,16 @@ const Mobile = () => {
                                      content={"Game Developer"}/>
                     </div>
                     <div>
+                        <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                     content={"Fullstack Developer"}/>
+                    </div>
+                    <div>
                         <OurTeamItem imgUrl={anh} title={"Anh Cong"}
                                      content={"Concept Artist"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={cuong_ph} title={"Cuong Phung"}
-                                     content={"Character Artist"}/>
-                    </div>
-                    <div>
-                        <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
-                                     content={"Fullstack Developer"}/>
+                        <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
+                                     content={"Game Advisor"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={long} title={"Long Vuong"}
