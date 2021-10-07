@@ -228,6 +228,9 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(4)}>RoadMap</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Partners</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(6)}>Our Team</div>
+                                <Link href={"/buyNow"}>
+                                    <div className={styles.dropdown} onClick={(e) => handleChange(7)}>Buy now</div>
+                                </Link>
                             </div>
 
                         ) : null}
@@ -280,6 +283,9 @@ const Navbar = () => {
                                 <div className={styles.dropdown} onClick={(e) => handleChange(4)}>RoadMap</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(5)}>Partners</div>
                                 <div className={styles.dropdown} onClick={(e) => handleChange(6)}>Our Team</div>
+                                <Link href={"/buyNow"}>
+                                    <div className={styles.dropdown} onClick={(e) => handleChange(7)}>Buy now</div>
+                                </Link>
                             </div>
 
                         ) : null}
