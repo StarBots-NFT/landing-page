@@ -7,6 +7,7 @@ declare const window: any;
 const BuyNow = () => {
     const [isCountDown, setCountDown] = useState(true);
     const [isConnectDisplay, setConncetDisplay] = useState(false)
+    const [countBought, setCountBought] = useState(0)
     let distance;
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -34,7 +35,7 @@ const BuyNow = () => {
             var seconds2st = Math.floor((distance % (1000 * 60)) / 1000 % 10);
             if (document.getElementById("countDown") != null) {
 
-                document.getElementById("day1st").textContent = day1st.toString();
+                document.getElementById("day1st").innerHTML = day1st.toString();
                 document.getElementById("day2st").textContent = day2st.toString();
                 document.getElementById("hours1st").textContent = hours1st.toString();
                 document.getElementById("hours2st").textContent = hours2st.toString();
@@ -47,11 +48,6 @@ const BuyNow = () => {
             if (distance < 0) {
                 setCountDown(false)
                 clearInterval(countDown);
-
-                // get count bought
-                let getCount = setInterval (function () {
-
-                })
             }
         }, 1000);
 
@@ -83,7 +79,7 @@ const BuyNow = () => {
     }
 
     const onCloesConnectWallet = () => {
-      setConncetDisplay(false)
+        setConncetDisplay(false)
     }
     return (
         <>
@@ -103,8 +99,8 @@ const BuyNow = () => {
                             {isCountDown ? (
                                 <div className={styles.countDown} id={"countDown"}>
                                     <div className={styles.timeBlock}>
-                                        <label className={styles.timeItem} id={"day1st"}/>
-                                        <label className={styles.timeItem} id={"day2st"}/>
+                                        <div className={styles.timeItem} id={"day1st"}/>
+                                        <div className={styles.timeItem} id={"day2st"}/>
                                         <div className={styles.timeName}>Days</div>
                                     </div>
                                     <div className={styles.dots}>
@@ -119,8 +115,10 @@ const BuyNow = () => {
                                         <div className={styles.timeName}>Hours</div>
                                     </div>
                                     <div className={styles.dots}>
-                                        <label className={styles.dot}></label>
-                                        <label className={styles.dot}></label>
+                                        <div className={styles.dotsBlock}>
+                                            <label className={styles.dot}></label>
+                                            <label className={styles.dot}></label>
+                                        </div>
                                     </div>
                                     <div className={styles.timeBlock}>
                                         <label className={styles.timeItem} id={"min1st"}/>
@@ -128,8 +126,10 @@ const BuyNow = () => {
                                         <div className={styles.timeName}>Minutes</div>
                                     </div>
                                     <div className={styles.dots}>
-                                        <label className={styles.dot}></label>
-                                        <label className={styles.dot}></label>
+                                        <div className={styles.dotsBlock}>
+                                            <label className={styles.dot}></label>
+                                            <label className={styles.dot}></label>
+                                        </div>
                                     </div>
                                     <div className={styles.timeBlock}>
                                         <label className={styles.timeItem} id={"sec1st"}/>
