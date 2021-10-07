@@ -84,19 +84,19 @@ function Home(props) {
             setTimeout( () => {
                 let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 100)
+            }, 500)
         }
         if (router.query.id == 'sponsored') {
             setTimeout( () => {
                 let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 100)
+            }, 500)
         }
         if (router.query.id == 'team') {
             setTimeout( () => {
                 let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 100)
+            }, 500)
         }
     }, [router])
 
