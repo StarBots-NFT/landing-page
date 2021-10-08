@@ -1,36 +1,28 @@
 .buyNow {
-    text-align:            center;
-    min-height:            calc(100vh - 70px);
-    padding-top:           70px;
-    background-image:      url("../public/BG 2.png");
-    background-color:      #212C42;
-    background-position:   center;
+    text-align: center;
+    min-height: calc(100vh - 70px);
+    padding-top: 70px;
+    background-image: url("../public/BG 2.png");
+    background-color: #212C42;
+    background-position: center;
     background-attachment: fixed;
-    background-repeat:     no-repeat;
+    background-repeat: no-repeat;
 }
 
 .buyNowMB {
-    text-align:          center;
-    min-height:          calc(100vh - 70px);
-    background-image:    url("../public/BG mobile.svg"), linear-gradient(180deg, #000000 10%, #000000 10%, #212C42);
-    padding-top:         62px;
+    text-align: center;
+    min-height: calc(100vh - 70px);
+    background-image: url("../public/BG mobile.svg");
+    background-color: #212C42;
+    padding-top: 62px;
     background-position: center;
-    background-size:     cover;
-    background-repeat:   no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .content {
-    display:    block;
+    display: block;
     margin-top: 70px;
-}
-
-.reward {
-    margin-top: 53px;
-    border:     0;
-}
-
-.rewardMb {
-    border: 0;
 }
 
 .bought {
@@ -38,210 +30,267 @@
 }
 
 .boughttext {
-    width:         270px;
-    height:        40px;
-    padding-top:   8px;
-    background:    linear-gradient(270deg, #2D7FEB 0%, #B036D3 100%);
+    width: 270px;
+    height: 40px;
+    padding-top: 8px;
+    background: linear-gradient(270deg, #2D7FEB 0%, #B036D3 100%);
     border-radius: 24px 24px 0px 0px;
-    color:         white;
-    text-align:    center;
-    margin:        auto;
-    font-family:   "Blender Pro", serif;
-    font-style:    normal;
-    font-weight:   800;
-    font-size:     24px;
-    line-height:   150%;
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-family: "Blender Pro", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.boughttextMb {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 4px;
+    background: linear-gradient(270deg, #2D7FEB 0%, #B036D3 100%);
+    border-radius: 24px 24px 0px 0px;
+    color: white;
+    text-align: center;
+    font-family: "Blender Pro", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 150%;
 }
 
 .sliderBlock {
-    margin:        0 auto 0;
-    max-width:     571px;
-    min-width:     341px;
-    width:         41vw;
-    height:        18px;
+    margin: 0 auto 0;
+    max-width: 571px;
+    min-width: 341px;
+    width: 41vw;
+    height: 18px;
     border-radius: 10px;
-    padding:       2px;
-    position:      relative;
-    background:    linear-gradient(270deg, #6795C6 0%, #8DA7D3 18.23%, #D2D7E3 35.42%, #BABAD7 52.6%, #90A1D3 69.79%, #BCC4E0 85.42%, #D5D6E5 100%);
+    padding: 2px;
+    position: relative;
+    background: linear-gradient(270deg, #6795C6 0%, #8DA7D3 18.23%, #D2D7E3 35.42%, #BABAD7 52.6%, #90A1D3 69.79%, #BCC4E0 85.42%, #D5D6E5 100%);
+}
+
+.sliderBlockMb {
+    height: 18px;
+    border-radius: 10px;
+    margin-left: 16px;
+    margin-right: 16px;
+    position: relative;
+    background: linear-gradient(270deg, #6795C6 0%, #8DA7D3 18.23%, #D2D7E3 35.42%, #BABAD7 52.6%, #90A1D3 69.79%, #BCC4E0 85.42%, #D5D6E5 100%);
 }
 
 .sliderBought {
-    margin:        0 auto 0;
-    max-width:     570px;
-    min-width:     343px;
-    width:         40vw;
-    height:        18px;
+    margin: 0 auto 0;
+    max-width: 570px;
+    min-width: 343px;
+    width: 40vw;
+    height: 18px;
     border-radius: 10px;
-    background:    linear-gradient(270deg, rgba(45, 127, 235, 0.2) 0%, rgba(176, 54, 211, 0.2) 100%);
+    background: linear-gradient(270deg, rgba(45, 127, 235, 0.2) 0%, rgba(176, 54, 211, 0.2) 100%);
+}
+
+.sliderBoughtMb {
+    margin: 0 auto 0;
+    height: 18px;
+    border-radius: 10px;
+    background: linear-gradient(270deg, rgba(45, 127, 235, 0.2) 0%, rgba(176, 54, 211, 0.2) 100%);
 
 }
 
 .sliderCount {
     background-color: red;
-    position:         relative;
-    width:            0%;
-    height:           100%;
-    border-radius:    8px;
+    position: relative;
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .countDown {
-    width:      100%;
-    max-width:  1440px;
-    margin:     auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
     text-align: center;
 }
 
 .timeItem {
     background-image: url("../public/time_computer.svg");
-    background-size:  cover;
-    display:          inline-block;
-    width:            70px;
-    height:           70px;
-    color:            white;
-    margin-left:      0.4vw;
-    margin-right:     0.4vw;
-    flex-direction:   column;
-    justify-content:  center;
-    align-items:      center;
-    position:         static;
-    left:             0;
-    right:            54.84%;
-    top:              0;
-    bottom:           0;
-    border-radius:    8px;
-    font-family:      "Blender Pro", serif;
-    font-style:       normal;
-    font-weight:      800;
-    font-size:        40px;
-    line-height:      140%;
+    background-size: cover;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    color: white;
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    left: 0;
+    right: 54.84%;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+    font-family: "Blender Pro", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 140%;
     /* identical to box height, or 56px */
 
 
 }
 
+.timeItemMobile {
+    background-image: url("../public/time_mobile.svg");
+    background-size: cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    left: 0;
+    right: 54.84%;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+    font-family: "Blender Pro", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 140%;
+    /* identical to box height, or 56px */
+}
+
 
 .timeBlock {
-    display:   inline-block;
-    width:     20%;
+    display: inline-block;
+    width: 24%;
     max-width: 200px;
 }
 
 .timeName {
-    margin-top:  20px;
-    color:       white;
+    margin-top: 20px;
+    color: white;
     font-family: "Blender Pro", serif;
-    font-style:  normal;
+    font-style: normal;
     font-weight: bold;
-    font-size:   24px;
+    font-size: 24px;
     line-height: 150%;
     /* identical to box height, or 36px */
 
-    text-align:  center;
+    text-align: center;
 
 }
 
 .dots {
-    display:        inline-block;
+    display: inline-block;
     vertical-align: top;
-    height:         62px;
-    min-height:     30px;
+    height: 62px;
+    min-height: 30px;
 }
 
 .dotsBlock {
-    height:          100%;
-    display:         flex;
-    flex-flow:       column;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
     justify-content: center;
 }
 
 .dot {
-    width:            0.8vw;
-    height:           0.8vw;
-    max-height:       7px;
-    max-width:        7px;
+    width: 0.8vw;
+    height: 0.8vw;
+    max-height: 7px;
+    max-width: 7px;
     background-color: white;
-    margin-top:       5px;
-    display:          block;
+    margin-top: 5px;
+    display: block;
 }
 
 .buyNowButton {
-    position:   relative;
+    position: relative;
     text-align: center;
 }
 
 .buyNowButtonLeft {
-    z-index:       0;
-    position:      absolute;
-    height:        24px;
-    width:         50%;
-    top:           25%;
-    text-align:    center;
-    background:    linear-gradient(270deg, rgba(0, 42, 155, 0) 0%, #003E9B 34.9%, rgba(0, 240, 255, 0.3) 100%);
+    z-index: 0;
+    position: absolute;
+    height: 24px;
+    width: 50%;
+    top: 25%;
+    text-align: center;
+    background: linear-gradient(270deg, rgba(0, 42, 155, 0) 0%, #003E9B 34.9%, rgba(0, 240, 255, 0.3) 100%);
     border-radius: 100px;
-    transform:     matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .buyNowButtonRight {
-    z-index:       0;
-    position:      absolute;
-    width:         50%;
-    top:           25%;
-    right:         0;
-    height:        24px;
-    text-align:    center;
-    background:    linear-gradient(270deg, rgba(0, 42, 155, 0) 0%, #003E9B 34.9%, rgba(0, 240, 255, 0.3) 100%);
+    z-index: 0;
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    right: 0;
+    height: 24px;
+    text-align: center;
+    background: linear-gradient(270deg, rgba(0, 42, 155, 0) 0%, #003E9B 34.9%, rgba(0, 240, 255, 0.3) 100%);
     border-radius: 100px;
 }
 
 .buyNowButton button {
-    position:      relative;
-    background:    #00E1D2;
-    box-shadow:    0 0 16px #00E1D2;
+    position: relative;
+    background: #00E1D2;
+    box-shadow: 0 0 16px #00E1D2;
     border-radius: 20px;
-    width:         263px;
-    height:        55px;
-    font-family:   "Blender Pro", serif;
-    font-style:    normal;
-    font-weight:   800;
-    font-size:     28px;
-    line-height:   140%;
+    width: 263px;
+    height: 55px;
+    font-family: "Blender Pro", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 140%;
     /* or 39px */
 
-    text-align:    center;
+    text-align: center;
 
     /* Option 1/Gerneral/#333333 */
 
-    color:         #333333;
-    z-index:       1;
+    color: #333333;
+    z-index: 1;
 }
 
 
 .table {
-    position:         relative;
-    margin:           auto;
-    width:            370px;
-    height:           250px;
+    position: relative;
+    margin: auto;
+    width: 370px;
+    height: 250px;
     background-color: #062444;
-    color:            white;
-    border-radius:    10px;
-    padding:          20px;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .close {
-    position:         absolute;
-    top:              20px;
-    right:            20px;
-    width:            24px;
-    height:           24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
     background-color: transparent;
     background-image: url("../public/exit.png");
 }
 
 .buttonlabel {
-    margin-top:       24px;
-    border-radius:    6px;
-    width:            330px;
-    height:           50px;
+    margin-top: 24px;
+    border-radius: 6px;
+    width: 330px;
+    height: 50px;
     background-color: #314D72;
 }
 
@@ -251,22 +300,22 @@
 
 .countdown {
     margin: auto;
-    width:  370px;
+    width: 370px;
     height: 250px;
 }
 
 @media only screen and (min-width: 1440px) {
     .timeItemBlock {
         margin-right: 7px;
-        margin-left:  7px;
+        margin-left: 7px;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .timeItem {
         font-size: 20px;
-        width:     30px;
-        height:    30px;
+        width: 30px;
+        height: 30px;
         border-radius: 4px;
     }
 

@@ -1,7 +1,7 @@
 import styles from "../styles/buyNow.module.css"
-import reward from "../public/artificial intelligence.svg"
-import rewardMB from "../public/artificial intelligence mobile.svg"
-import {useEffect, useState} from "react";
+import {Link} from "@material-ui/core";
+import { useEffect, useState } from "react";
+import NftReward from "../comps/NftReward";
 
 declare const window: any;
 
@@ -31,7 +31,7 @@ const BuyNow = () => {
         setMobile(detectMob)
 
         //countdown
-        var countDownDate = new Date("Dec 1, 2021 00:00:00").getTime();
+        var countDownDate = new Date("Dec 1, 2020 00:00:00").getTime();
         var timeOffSet = new Date().getTimezoneOffset()
         var calCountDown = countDownDate + (7 * 60 + timeOffSet) * 60 * 1000
         // Update the count down every 1 second
@@ -72,7 +72,7 @@ const BuyNow = () => {
 
         const tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
         if (tablinks.length > 0) {
-            for (var i = 1; i < tablinks.length - 1; i++){
+            for (var i = 1; i < tablinks.length - 1; i++) {
                 tablinks[i].style.color = '#FFFFFF'
                 tablinks[i].style.display = 'none'
             }
@@ -104,95 +104,13 @@ const BuyNow = () => {
         <>
             {isMobile ? (
                 <div className={styles.buyNowMB}>
-                {!isConnectDisplay ? (
-                    <>
-                        <div className={styles.rewardMb}>
-                            {isMobile ? (<img src={rewardMB}/>) : (<img src={reward}/>)}
-                        </div>
-                        <div className={styles.bought}>
-                            <div className={styles.boughttext}>0/10000 OPENED</div>
-                            <div className={styles.sliderBlock}>
-                                <div className={styles.sliderBought}>
-                                    <div className={styles.sliderCount}></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.content}>
-                            {!isCountDown ? (
-                                <div className={styles.buyNowButton}>
-                                    <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX
-                                    </button>
-                                </div>
-                            ) : (
-                                <div className={styles.countDown} id={"countDown"}>
-                                    <div className={styles.timeBlock}>
-                                        <div className={styles.timeItem} id={"day1st"}/>
-                                        <div className={styles.timeItem} id={"day2st"}/>
-                                        <div className={styles.timeName}>Days</div>
-                                    </div>
-                                    <div className={styles.dots}>
-                                        <div className={styles.dotsBlock}>
-                                            <label className={styles.dot}></label>
-                                            <label className={styles.dot}></label>
-                                        </div>
-                                    </div>
-                                    <div className={styles.timeBlock}>
-                                        <label className={styles.timeItem} id={"hours1st"}/>
-                                        <label className={styles.timeItem} id={"hours2st"}/>
-                                        <div className={styles.timeName}>Hours</div>
-                                    </div>
-                                    <div className={styles.dots}>
-                                        <div className={styles.dotsBlock}>
-                                            <label className={styles.dot}></label>
-                                            <label className={styles.dot}></label>
-                                        </div>
-                                    </div>
-                                    <div className={styles.timeBlock}>
-                                        <label className={styles.timeItem} id={"min1st"}/>
-                                        <label className={styles.timeItem} id={"min2st"}/>
-                                        <div className={styles.timeName}>Minutes</div>
-                                    </div>
-                                    <div className={styles.dots}>
-                                        <div className={styles.dotsBlock}>
-                                            <label className={styles.dot}></label>
-                                            <label className={styles.dot}></label>
-                                        </div>
-                                    </div>
-                                    <div className={styles.timeBlock}>
-                                        <label className={styles.timeItem} id={"sec1st"}/>
-                                        <label className={styles.timeItem} id={"sec2st"}/>
-                                        <div className={styles.timeName}>Seconds</div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </>
-                ) : (
-                    <div className={styles.table} id={"table"}>
-                        <div className={styles.title}>
-                            CONNECT YOUR WALLET
-                        </div>
-                        <div className={styles.content}>
-                            Connect with one of our available wallet
-                        </div>
-                        <div className={styles.close} onClick={e => onCloesConnectWallet()}/>
-                        <button className={styles.buttonlabel} onClick={() => connectPhanTom()}>
-                            <div className={styles.icon}></div>
-                            <div className={styles.buttonname}>PhanTom</div>
-                        </button>
-                    </div>
-                )}
-            </div>) : (
-                <div className={styles.buyNow}>
                     {!isConnectDisplay ? (
                         <>
-                            <div className={styles.reward}>
-                                {isMobile ? (<img src={rewardMB}/>) : (<img src={reward}/>)}
-                            </div>
+                            <NftReward isMobile={isMobile}></NftReward>
                             <div className={styles.bought}>
-                                <div className={styles.boughttext}>0/10000 OPENED</div>
-                                <div className={styles.sliderBlock}>
-                                    <div className={styles.sliderBought}>
+                                <div className={styles.boughttextMb}>0/10000 OPENED</div>
+                                <div className={styles.sliderBlockMb}>
+                                    <div className={styles.sliderBoughtMb}>
                                         <div className={styles.sliderCount}></div>
                                     </div>
                                 </div>
@@ -200,15 +118,16 @@ const BuyNow = () => {
                             <div className={styles.content}>
                                 {!isCountDown ? (
                                     <div className={styles.buyNowButton}>
-                                        <div className={styles.buyNowButtonLeft}/>
-                                        <div className={styles.buyNowButtonRight}/>
-                                        <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX</button>
+                                        <Link href= {'/login'}>
+                                            <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX
+                                            </button>
+                                        </Link>
                                     </div>
                                 ) : (
                                     <div className={styles.countDown} id={"countDown"}>
                                         <div className={styles.timeBlock}>
-                                            <div className={styles.timeItem} id={"day1st"}/>
-                                            <div className={styles.timeItem} id={"day2st"}/>
+                                            <div className={styles.timeItemMobile} id={"day1st"} />
+                                            <div className={styles.timeItemMobile} id={"day2st"} />
                                             <div className={styles.timeName}>Days</div>
                                         </div>
                                         <div className={styles.dots}>
@@ -218,8 +137,8 @@ const BuyNow = () => {
                                             </div>
                                         </div>
                                         <div className={styles.timeBlock}>
-                                            <label className={styles.timeItem} id={"hours1st"}/>
-                                            <label className={styles.timeItem} id={"hours2st"}/>
+                                            <label className={styles.timeItemMobile} id={"hours1st"} />
+                                            <label className={styles.timeItemMobile} id={"hours2st"} />
                                             <div className={styles.timeName}>Hours</div>
                                         </div>
                                         <div className={styles.dots}>
@@ -229,8 +148,8 @@ const BuyNow = () => {
                                             </div>
                                         </div>
                                         <div className={styles.timeBlock}>
-                                            <label className={styles.timeItem} id={"min1st"}/>
-                                            <label className={styles.timeItem} id={"min2st"}/>
+                                            <label className={styles.timeItemMobile} id={"min1st"} />
+                                            <label className={styles.timeItemMobile} id={"min2st"} />
                                             <div className={styles.timeName}>Minutes</div>
                                         </div>
                                         <div className={styles.dots}>
@@ -240,8 +159,8 @@ const BuyNow = () => {
                                             </div>
                                         </div>
                                         <div className={styles.timeBlock}>
-                                            <label className={styles.timeItem} id={"sec1st"}/>
-                                            <label className={styles.timeItem} id={"sec2st"}/>
+                                            <label className={styles.timeItemMobile} id={"sec1st"} />
+                                            <label className={styles.timeItemMobile} id={"sec2st"} />
                                             <div className={styles.timeName}>Seconds</div>
                                         </div>
                                     </div>
@@ -256,7 +175,90 @@ const BuyNow = () => {
                             <div className={styles.content}>
                                 Connect with one of our available wallet
                             </div>
-                            <div className={styles.close} onClick={e => onCloesConnectWallet()}/>
+                            <div className={styles.close} onClick={e => onCloesConnectWallet()} />
+                            <button className={styles.buttonlabel} onClick={() => connectPhanTom()}>
+                                <div className={styles.icon}></div>
+                                <div className={styles.buttonname}>PhanTom</div>
+                            </button>
+                        </div>
+                    )}
+                </div>) : (
+                <div className={styles.buyNow}>
+                    {!isConnectDisplay ? (
+                        <>
+                            <div className={styles.reward}>
+                                <NftReward isMobile = {isMobile}></NftReward>
+                            </div>
+                            <div className={styles.bought}>
+                                <div className={styles.boughttext}>0/10000 OPENED</div>
+                                <div className={styles.sliderBlock}>
+                                    <div className={styles.sliderBought}>
+                                        <div className={styles.sliderCount}></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.content}>
+                                {!isCountDown ? (
+                                    <div className={styles.buyNowButton}>
+                                        <div className={styles.buyNowButtonLeft} />
+                                        <div className={styles.buyNowButtonRight} />
+                                        <Link href="/login">
+                                        <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX</button>
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div className={styles.countDown} id={"countDown"}>
+                                        <div className={styles.timeBlock}>
+                                            <div className={styles.timeItem} id={"day1st"} />
+                                            <div className={styles.timeItem} id={"day2st"} />
+                                            <div className={styles.timeName}>Days</div>
+                                        </div>
+                                        <div className={styles.dots}>
+                                            <div className={styles.dotsBlock}>
+                                                <label className={styles.dot}></label>
+                                                <label className={styles.dot}></label>
+                                            </div>
+                                        </div>
+                                        <div className={styles.timeBlock}>
+                                            <label className={styles.timeItem} id={"hours1st"} />
+                                            <label className={styles.timeItem} id={"hours2st"} />
+                                            <div className={styles.timeName}>Hours</div>
+                                        </div>
+                                        <div className={styles.dots}>
+                                            <div className={styles.dotsBlock}>
+                                                <label className={styles.dot}></label>
+                                                <label className={styles.dot}></label>
+                                            </div>
+                                        </div>
+                                        <div className={styles.timeBlock}>
+                                            <label className={styles.timeItem} id={"min1st"} />
+                                            <label className={styles.timeItem} id={"min2st"} />
+                                            <div className={styles.timeName}>Minutes</div>
+                                        </div>
+                                        <div className={styles.dots}>
+                                            <div className={styles.dotsBlock}>
+                                                <label className={styles.dot}></label>
+                                                <label className={styles.dot}></label>
+                                            </div>
+                                        </div>
+                                        <div className={styles.timeBlock}>
+                                            <label className={styles.timeItem} id={"sec1st"} />
+                                            <label className={styles.timeItem} id={"sec2st"} />
+                                            <div className={styles.timeName}>Seconds</div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </>
+                    ) : (
+                        <div className={styles.table} id={"table"}>
+                            <div className={styles.title}>
+                                CONNECT YOUR WALLET
+                            </div>
+                            <div className={styles.content}>
+                                Connect with one of our available wallet
+                            </div>
+                            <div className={styles.close} onClick={e => onCloesConnectWallet()} />
                             <button className={styles.buttonlabel} onClick={() => connectPhanTom()}>
                                 <div className={styles.icon}></div>
                                 <div className={styles.buttonname}>PhanTom</div>

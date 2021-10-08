@@ -1,29 +1,29 @@
 .FooterBlock {
     background-color: var(--dark);
-    text-align:       center;
+    text-align: center;
 }
 
 .Footer {
-    width:      100%;
-    max-width:  1440px;
-    margin:     auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
     text-align: left
 }
 
 .FooterContent {
     background-color: var(--dark);
-    padding-top:      40px;
-    padding-bottom:   40px;
-    margin-left:      131px;
-    text-align:       left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 131px;
+    text-align: left;
 }
 
 .starBot {
     vertical-align: top;
-    text-align:     left;
-    display:        inline-block;
-    margin-right:   8vw;
-    margin-bottom:  20px;
+    text-align: left;
+    display: inline-block;
+    margin-right: 8vw;
+    margin-bottom: 20px;
 }
 
 .block {
@@ -31,38 +31,38 @@
 }
 
 .about {
-    text-align:     left;
-    display:        inline-block;
+    text-align: left;
+    display: inline-block;
     vertical-align: top;
-    margin-right:   11vw;
+    margin-right: 11vw;
 }
 
 .followUs {
     vertical-align: top;
-    text-align:     left;
-    display:        inline-block;
+    text-align: left;
+    display: inline-block;
 }
 
 .title {
-    font-family:   "Blender Pro", serif;
-    font-style:    normal;
-    font-weight:   bold;
-    font-size:     20px;
-    line-height:   130%;
-    color:         var(--white);
-    display:       block;
+    font-family: "Blender Pro", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--white);
+    display: block;
     margin-bottom: 20px;
 }
 
 .content {
-    font-family:    "Inter";
-    font-style:     normal;
-    font-weight:    normal;
-    font-size:      16px;
-    line-height:    160%;
-    color:          var(--white);
-    display:        block;
-    margin-bottom:  20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--white);
+    display: block;
+    margin-bottom: 20px;
     letter-spacing: 0.015em;
 }
 
