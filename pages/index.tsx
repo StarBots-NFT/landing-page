@@ -36,8 +36,17 @@ function Home(props) {
     const [isMobile, setMobile] = useState(false);
     const router = useRouter()
 
-    useEffect(() => {
+    if (typeof document != "undefined") {
         document.getElementById("footer").style.display = 'block';
+        const tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
+        if (tablinks.length > 0) {
+            for (var i = 0; i < tablinks.length; i++){
+                tablinks[i].style.display = 'inline-block'
+            }
+        }
+    }
+    useEffect(() => {
+
         function detectMob() {
             const toMatch = [
                 /Android/i,
@@ -66,37 +75,37 @@ function Home(props) {
             setTimeout(() => {
                 let Y = document.getElementById("intro").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 100)
         }
         if (router.query.id == 'trailer') {
             setTimeout( () => {
                 let Y = document.getElementById("trailer").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 100)
         }
         if (router.query.id == 'feature') {
             setTimeout( () => {
                 let Y = document.getElementById("feature").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 100)
         }
         if (router.query.id == 'map') {
             setTimeout( () => {
                 let Y = document.getElementById("map").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 100)
         }
         if (router.query.id == 'sponsored') {
             setTimeout( () => {
                 let Y = document.getElementById("sponsored").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 100)
         }
         if (router.query.id == 'team') {
             setTimeout( () => {
                 let Y = document.getElementById("team").getBoundingClientRect().y - navheight + window.scrollY + dropdownH
                 window.scrollTo(0, Y)
-            }, 500)
+            }, 100)
         }
     }, [router])
 

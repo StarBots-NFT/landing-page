@@ -2,8 +2,6 @@ import styles from "../styles/buyNow.module.css"
 import reward from "../public/artificial intelligence.svg"
 import rewardMB from "../public/artificial intelligence mobile.svg"
 import {useEffect, useState} from "react";
-import useSwr from 'swr'
-import {wait} from "next/dist/build/output/log";
 
 declare const window: any;
 
@@ -74,13 +72,13 @@ const BuyNow = () => {
 
         const tablinks = Array.from(document.getElementsByClassName('tablinks') as HTMLCollectionOf<HTMLElement>)
         if (tablinks.length > 0) {
-            tablinks.forEach(e => {
-                e.style.color = '#FFFFFF'
-            })
+            for (var i = 1; i < tablinks.length - 1; i++){
+                tablinks[i].style.color = '#FFFFFF'
+                tablinks[i].style.display = 'none'
+            }
+            tablinks[0].style.color = "#FFFFFF";
             tablinks[7].style.color = "#00E1D2";
         }
-
-
     }, [])
     const onConnectWalletChange = (boolean: boolean) => {
         setConncetDisplay(boolean)
@@ -202,8 +200,9 @@ const BuyNow = () => {
                             <div className={styles.content}>
                                 {!isCountDown ? (
                                     <div className={styles.buyNowButton}>
-                                        <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX
-                                        </button>
+                                        <div className={styles.buyNowButtonLeft}/>
+                                        <div className={styles.buyNowButtonRight}/>
+                                        <button onClick={(e) => onConnectWalletChange(true)}>BUY LOOT BOX</button>
                                     </div>
                                 ) : (
                                     <div className={styles.countDown} id={"countDown"}>
