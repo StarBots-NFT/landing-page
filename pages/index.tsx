@@ -10,6 +10,7 @@ import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
 import gamee from '../public/gamee-logo-01.png'
+import defi from '../public/defi.png'
 import kien from '../public/kien_vuong.png'
 import hung from '../public/hung_nguyen.png'
 import hong from '../public/hong_nguyen.png'
@@ -574,6 +575,7 @@ function Home(props) {
                             <img className={styles.sponsoredImage} src={gamee}/>
                             <img className={styles.sponsoredImage} src={lua}/>
                             <img className={styles.sponsoredImage} src={tomochain}/>
+                            <img className={styles.sponsoredImage} src={defi}/>
                         </div>
                     </div>
                     {team()}
