@@ -573,9 +573,9 @@ function Home(props) {
                         </div>
                         <div className={styles.sponsoredIcon}>
                             <img className={styles.sponsoredImage} src={gamee}/>
-                            <img className={styles.sponsoredImage} src={lua}/>
-                            <img className={styles.sponsoredImage} src={tomochain}/>
                             <img className={styles.sponsoredImage} src={defi}/>
+                            <img className={styles.sponsoredImage} src={tomochain}/>
+                            <img className={styles.sponsoredImage} src={lua}/>
                         </div>
                     </div>
                     {team()}
