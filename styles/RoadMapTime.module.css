@@ -12,3 +12,7 @@
     /* or 73px */
     color:       var(--white);
 }
+
+.month {
+    height: 31px;
+}

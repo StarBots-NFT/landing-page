@@ -14,7 +14,7 @@ import defi from '../public/defi.png'
 import kien from '../public/kien_vuong.png'
 import hung from '../public/hung_nguyen.png'
 import hong from '../public/hong_nguyen.png'
-import cuong from '../public/cuong_nguyen.png'
+import tu_chu from '../public/tu_chu.png'
 import quang from '../public/quang_nguyen.png'
 import anh from '../public/anh_cong.png'
 import giang from '../public/giang_nguyen.png'
@@ -125,7 +125,7 @@ function Home(props) {
 
         return targetReached;
     };
-    const isBreakpointPc = useMediaQuery(1250)
+    const isBreakpointPc = useMediaQuery(1350)
     const isBreakpointMb = useMediaQuery(680)
 
     function feature() {
@@ -235,7 +235,7 @@ function Home(props) {
                                 <RoadMapTime months={"Q3"} year={"2022"}/>
                             </div>
                             <div className={styles.roadmapBodyTop}>
-                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapGoal text={"Starbots Universe"}/>
                             </div>
                         </div>
                         <div className={styles.roadmapArt}>
@@ -273,7 +273,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyBot}>
-                                <RoadMapTime months={"Q1"} year={"2023"}/>
+                                <RoadMapTime months={""} year={"2023"}/>
                                 <div className={styles.roadmapStar}>
                                     <img src={dot}/>
                                 </div>
@@ -323,7 +323,7 @@ function Home(props) {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapGoal text={"Starbots Universe"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -349,7 +349,7 @@ function Home(props) {
                                 <RoadMapGoal text={"PvE StoryMode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q1"} year={"2023"}/>
+                                <RoadMapTime months={"\n"} year={"2023"}/>
                             </div>
                         </div>
                     </div>
@@ -381,8 +381,8 @@ function Home(props) {
                                              content={"Head of Communications"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
-                                             content={"Art Lead"}/>
+                                <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
+                                             content={"Head of Engineering"}/>
                             </th>
                             <th>
                                 <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
@@ -437,8 +437,8 @@ function Home(props) {
                                              content={"Head of Communications"}/>
                             </th>
                             <th>
-                                <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
-                                             content={"Art Lead"}/>
+                                <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
+                                             content={"Head of Engineering"}/>
                             </th>
                         </tr>
                         <tr>
@@ -493,8 +493,8 @@ function Home(props) {
                                      content={"Head of Communications"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
-                                     content={"Art Lead"}/>
+                        <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
+                                     content={"Head of Engineering"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
