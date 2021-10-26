@@ -33,11 +33,17 @@ import Mobile from "../comps/mobile"
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from "next/router";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Home(props) {
     const [isMobile, setMobile] = useState(false);
     const router = useRouter()
 
     useEffect(() => {
+        AOS.init({
+            duration: 1200,
+        });
         function detectMob() {
             const toMatch = [
                 /Android/i,
@@ -133,8 +139,8 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Features</div>
-                        <div className={styles.unique}>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
+                        <div className={styles.unique} data-aos="fade-down">
                             <Unique imgUrl={playToEarn} title={"Play to earn"}
                                 content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                             <Unique imgUrl={weapons} title={"Customisable Weapons"}
@@ -151,10 +157,10 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Features</div>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
                             <table className={styles.uniqueLayout}>
-                                <tr className={styles.featureTr}>
+                                <tr className={styles.featureTr} data-aos="fade-right">
                                     <th>
                                         <Unique imgUrl={playToEarn} title={"Play to earn"}
                                             content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
@@ -164,7 +170,7 @@ function Home(props) {
                                             content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
                                     </th>
                                 </tr>
-                                <tr className={styles.featureTr}>
+                                <tr className={styles.featureTr} data-aos="fade-left">
                                     <th>
                                         <Unique imgUrl={flexibility} title={"Flexibility"}
                                             content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
@@ -183,24 +189,25 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Features</div>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
-                            <div>
+                            <div data-aos="fade-right">
                                 <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                             </div>
-                            <div>
+                            <div data-aos="fade-right">
                                 <Unique imgUrl={weapons} title={"Customisable Weapons"}
                                     content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
                             </div>
 
-                            <div>
+                            <div data-aos="fade-left">
                                 <Unique imgUrl={flexibility} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
                             </div>
 
-                            <div><Unique imgUrl={stratege} title={"Strategy"}
-                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
+                            <div data-aos="fade-left">
+                                <Unique imgUrl={stratege} title={"Strategy"}
+                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
                             </div>
 
                         </div>
@@ -213,7 +220,7 @@ function Home(props) {
     function map() {
         if (!isBreakpointPc) {
             return (
-                <div className={styles.roadmap} id={"map"}>
+                <div className={styles.roadmap} id={"map"} data-aos="fade-up">
                     <div className={styles.roadmapText}>
                         <div className={styles.title}>Roadmap</div>
                     </div>
@@ -284,7 +291,7 @@ function Home(props) {
             )
         } else {
             return (
-                <div className={styles.roadmap} id={"map"}>
+                <div className={styles.roadmap} id={"map"} data-aos="fade-up">
                     <div className={styles.roadmapText}>
                         <div className={styles.title}>Roadmap</div>
                     </div>
@@ -361,9 +368,9 @@ function Home(props) {
     function team() {
         if (!isBreakpointPc) {
             return (
-                <div className={styles.ourTeam} id={"team"}>
+                <div className={styles.ourTeam} id={"team"} data-aos="fade-up">
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.title} >Our Team</div>
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tr>
@@ -416,9 +423,9 @@ function Home(props) {
             )
         } else if (isBreakpointPc && !isBreakpointMb) {
             return (
-                <div className={styles.ourTeam} id={"team"}>
+                <div className={styles.ourTeam} id={"team"} data-aos="fade-up">
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.title} >Our Team</div>
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tr>
@@ -476,7 +483,7 @@ function Home(props) {
             )
         } else {
             return (
-                <div className={styles.ourTeam} id={"team"}>
+                <div className={styles.ourTeam} id={"team"} data-aos="fade-up">
                     <div className={styles.ourTeamIntro}>
                         <div className={styles.title}>Our Team</div>
                     </div>
@@ -541,7 +548,7 @@ function Home(props) {
                             <source src='/ShortVideoF3.mp4' type='video/mp4' />
                         </video>
                     </div>
-                    <div id={"intro"} className={styles.gameIntro}>
+                    <div id={"intro"} className={styles.gameIntro} data-aos="fade-up">
                         <img className={styles.videoFooter} src={videoFooter} />
                         <div className={styles.gameIntroText}>
                             <div className={styles.title}>Game Introduction</div>
@@ -553,7 +560,7 @@ function Home(props) {
                         </div>
                         <img className={styles.gameIntroImg} src={"/game_introduction.png"} />
                     </div>
-                    <div className={styles.trailer} id={"trailer"}>
+                    <div className={styles.trailer} id={"trailer"} data-aos="fade-up">
                         <div className={styles.trailerText}>
                             <div className={styles.title}>Trailer</div>
                             <div className={styles.content}>The constant sounds of metals crashing and grenades
@@ -568,10 +575,10 @@ function Home(props) {
                     {feature()}
                     {map()}
                     <div className={styles.sponsored} id={"sponsored"}>
-                        <div className={styles.sponsoredText}>
+                        <div className={styles.sponsoredText} data-aos="fade-up">
                             <div className={styles.title}>Partners & Investors</div>
                         </div>
-                        <div className={styles.sponsoredIcon}>
+                        <div className={styles.sponsoredIcon} data-aos="fade-up">
                             <img className={styles.sponsoredImage} src={gamee} />
                             <img className={styles.sponsoredImage} src={defi} />
                             <img className={styles.sponsoredImage} src={tomochain} />

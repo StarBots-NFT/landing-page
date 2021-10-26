@@ -1,64 +1,64 @@
 .bodyContent {
-    background-image:      url("../public/BG.jpg");
-    background-size:       cover;
+    background-image: url("../public/BG.jpg");
+    background-size: cover;
     background-attachment: fixed;
-    background-position:   center;
+    background-position: center;
 }
 
 .banner {
-    left:  0;
+    left: 0;
     width: 100%;
 }
 
 .gameIntro {
     text-align: center;
-    margin:     40px auto auto;
-    position:   relative;
+    margin: 40px auto auto;
+    position: relative;
 }
 
 .videoFooter {
     position: absolute;
-    top:      -90px;
-    left:     0;
-    width:    100%;
-    height:   52px;
-    z-index:  2;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 2;
 }
 
 .gameIntroImg {
-    width:      100%;
+    width: 100%;
     margin-top: 8px;
 }
 
 .gameIntroText {
     vertical-align: top;
-    margin:         auto auto;
-    text-align:     center;
-    width:          var(--titleMobiW);
-    word-break:     break-word;
-    color:          var(--white);
+    margin: auto auto;
+    text-align: center;
+    width: var(--titleMobiW);
+    word-break: break-word;
+    color: var(--white);
 }
 
 .title {
     font-family: "Aquire", serif;
-    font-style:  normal;
+    font-style: normal;
     font-weight: bold;
-    font-size:   32px;
+    font-size: 32px;
     line-height: 130%;
-    color:       var(--white);
-    max-width:   800px;
-    margin:      auto;
+    color: var(--white);
+    max-width: 800px;
+    margin: auto;
 }
 
 .content {
-    font-family:    "Inter";
-    font-style:     normal;
-    font-weight:    normal;
-    font-size:      16px;
-    line-height:    160%;
-    color:          var(--gray);
-    max-width:      800px;
-    margin:         16px auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 16px auto;
     letter-spacing: 0.02em;
 }
 
@@ -68,31 +68,32 @@
 }
 
 .trailerText {
-    margin:     auto;
+    margin: auto;
     text-align: center;
-    width:      var(--titleMobiW);
+    width: var(--titleMobiW);
     word-break: break-word;
 }
 
 .trailerVideo {
-    width:      98vw;
-    height:     55vw;
-    max-width:  var(--MaxWItem);
+    width: 98vw;
+    height: 55vw;
+    max-width: var(--MaxWItem);
     max-height: 450px;
-    margin:     60px auto auto;
+    margin: 60px auto auto;
     text-align: center;
 }
 
 .featureText {
     text-align: center;
-    width:      var(--titleMobiW);
-    margin:     var(--MarginBlockMb) auto 0;
+    width: var(--titleMobiW);
+    margin: var(--MarginBlockMb) auto 0;
 }
 
 .roadmap {
     text-align: center;
-    max-width:  1200px;
-    margin:     var(--MarginBlockMb) auto 0;
+    max-width: 1200px;
+    margin: var(--MarginBlockMb) auto 0;
+    overflow: hidden;
 }
 
 .roadmapText {
@@ -101,30 +102,30 @@
 
 .roadmapContent {
     margin-top: 20px;
-    display:    inline-block;
+    display: inline-block;
 }
 
 .roadmapLeft {
-    display:        inline-block;
+    display: inline-block;
     vertical-align: top;
-    text-align:     right;
-    width:          33vw;
-    margin-top:     40px;
+    text-align: right;
+    width: 33vw;
+    margin-top: 40px;
 }
 
 .roadmapRight {
-    text-align:     left;
-    display:        inline-block;
+    text-align: left;
+    display: inline-block;
     vertical-align: top;
-    width:          33vw;
-    margin-top:     40px;
+    width: 33vw;
+    margin-top: 40px;
 }
 
 .roadmapArtCol {
-    display:      inline-block;
+    display: inline-block;
     margin-right: 30px;
-    margin-left:  30px;
-    margin-top:   20px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
 
 .roadmapArtCol img {
@@ -132,58 +133,58 @@
 }
 
 .roadmapBodyCol {
-    position:      relative;
-    height:        113px;
+    position: relative;
+    height: 113px;
     margin-bottom: 50px;
 }
 
 .roadmapStarCol {
     position: absolute;
-    top:      27%;
-    right:    -59px;
+    top: 27%;
+    right: -59px;
 }
 
 .sponsored {
-    margin-top:        var(--MarginBlockMb);
-    padding-bottom:    40px;
-    padding-top:       40px;
-    position:          relative;
-    text-align:        center;
-    background-image:  url("../public/Sponsor.png");
+    margin-top: var(--MarginBlockMb);
+    padding-bottom: 40px;
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    background-image: url("../public/Sponsor.png");
     background-repeat: no-repeat;
-    background-size:   100% 100%;
+    background-size: 100% 100%;
 }
 
 .sponsoredBackgroud {
     position: absolute;
-    width:    100%;
-    z-index:  -1;
-    left:     0;
-    top:      0;
-    height:   100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
 }
 
 .sponsoredText {
     text-align: center;
-    max-width:  800px;
+    max-width: 800px;
     word-break: break-word;
-    margin:     auto;
+    margin: auto;
 }
 
 .sponsoredIcon {
     text-align: center;
-    max-width:  800px;
-    margin:     30px auto 0;
+    max-width: 800px;
+    margin: 30px auto 0;
 }
 
 .sponsoredImage {
-    display:        inline-block;
-    margin-right:   15px;
-    margin-left:    15px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
     vertical-align: middle;
-    width:          11.8vw;
-    max-width:      300px;
-    min-width:      150px;
+    width: 11.8vw;
+    max-width: 300px;
+    min-width: 150px;
 }
 
 .ourTeam {
@@ -192,19 +193,18 @@
 }
 
 .ourTeamIntro {
-    width:     55.56vw;
+    width: 55.56vw;
     max-width: var(--MaxWItem);
-    margin:    auto auto 40px;
+    margin: auto auto 40px;
 }
 
 .btn {
-    display:       block;
-    width:         150px;
-    padding:       8px 0;
-    margin:        20px auto;
-    background:    #4979ff;
+    display: block;
+    width: 150px;
+    padding: 8px 0;
+    margin: 20px auto;
+    background: #4979ff;
     border-radius: 4px;
-    color:         white;
-    text-align:    center;
+    color: white;
+    text-align: center;
 }
-

@@ -11,6 +11,7 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "aos": "^2.3.4",
     "browserslist": "^4.17.1",
     "next": "10.0.4",
     "next-images": "^1.8.1",
