@@ -65,7 +65,7 @@ const Mobile = () => {
             </div>
             <div id={"intro"} className={styles.gameIntro}>
                 <img className={styles.videoFooter} src={videoFooter} />
-                <div className={styles.gameIntroText}>
+                <div className={styles.gameIntroText} data-aos="zoom-in">
                     <div className={styles.title}>Game Introduction</div>
                     <div className={styles.content}>Starbots is the first-ever robot battle NFT game where players
                         gain GEAR tokens through strategically assembling their own robots, winning battles,
@@ -74,8 +74,8 @@ const Mobile = () => {
                 </div>
                 <img className={styles.gameIntroImg} src={"/game_introduction.png"} />
             </div>
-            <div className={styles.trailer} id={"trailer"} data-aos="fade-up">
-                <div className={styles.trailerText}>
+            <div className={styles.trailer} id={"trailer"} >
+                <div className={styles.trailerText} data-aos="fade-up">
                     <div className={styles.title}>Trailer</div>
                     <div className={styles.content}>The constant sounds of metals crashing and grenades exploding
                         won't stop until there's only one left standing - the one to conquer all lands.
@@ -114,37 +114,37 @@ const Mobile = () => {
                 </div>
                 <div className={styles.roadmapContent}>
                     <div className={styles.roadmapLeft}>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-right">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapTime months={"Oct"} year={"2021"} />
                             <div className={styles.roadmapStarCol} >
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-right">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapGoal text={"BOT NFT Slae"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-right">
+                        <div className={styles.roadmapBodyCol}>
                             <RoadMapTime months={"Jan"} year={"2022"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-right">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapGoal text={"PvP Mode Release"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-right">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapTime months={"Q3"} year={"2022"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-right">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapGoal text={"Starbots Universe"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
@@ -155,22 +155,22 @@ const Mobile = () => {
                         <img src={frame} />
                     </div>
                     <div className={styles.roadmapRight}>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-left">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapGoal text={"Gameplay & Whitepaper Release"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-left">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapTime months={"Dec"} year={"2021"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-left">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapGoal text={"BOT token introduction & IDO"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-left">
+                        <div className={styles.roadmapBodyCol}>
                             <RoadMapTime months={"Q2"} year={"2022"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-left">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapGoal text={"PvE StoryMode Release"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} data-aos="fade-left">
+                        <div className={styles.roadmapBodyCol} >
                             <RoadMapTime months={"\n"} year={"2023"} />
                         </div>
                     </div>

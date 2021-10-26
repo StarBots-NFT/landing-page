@@ -140,7 +140,7 @@ function Home(props) {
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique} data-aos="fade-down">
+                        <div className={styles.unique}>
                             <Unique imgUrl={playToEarn} title={"Play to earn"}
                                 content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                             <Unique imgUrl={weapons} title={"Customisable Weapons"}
@@ -160,7 +160,7 @@ function Home(props) {
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
                             <table className={styles.uniqueLayout}>
-                                <tr className={styles.featureTr} data-aos="fade-right">
+                                <tr className={styles.featureTr}>
                                     <th>
                                         <Unique imgUrl={playToEarn} title={"Play to earn"}
                                             content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
@@ -170,7 +170,7 @@ function Home(props) {
                                             content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
                                     </th>
                                 </tr>
-                                <tr className={styles.featureTr} data-aos="fade-left">
+                                <tr className={styles.featureTr}>
                                     <th>
                                         <Unique imgUrl={flexibility} title={"Flexibility"}
                                             content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
@@ -191,21 +191,21 @@ function Home(props) {
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
-                            <div data-aos="fade-right">
+                            <div>
                                 <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                             </div>
-                            <div data-aos="fade-right">
+                            <div >
                                 <Unique imgUrl={weapons} title={"Customisable Weapons"}
                                     content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
                             </div>
 
-                            <div data-aos="fade-left">
+                            <div >
                                 <Unique imgUrl={flexibility} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
                             </div>
 
-                            <div data-aos="fade-left">
+                            <div >
                                 <Unique imgUrl={stratege} title={"Strategy"}
                                     content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
                             </div>
@@ -220,9 +220,9 @@ function Home(props) {
     function map() {
         if (!isBreakpointPc) {
             return (
-                <div className={styles.roadmap} id={"map"} data-aos="fade-up">
+                <div className={styles.roadmap} id={"map"} >
                     <div className={styles.roadmapText}>
-                        <div className={styles.title}>Roadmap</div>
+                        <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapTop}>
@@ -291,9 +291,9 @@ function Home(props) {
             )
         } else {
             return (
-                <div className={styles.roadmap} id={"map"} data-aos="fade-up">
+                <div className={styles.roadmap} id={"map"} >
                     <div className={styles.roadmapText}>
-                        <div className={styles.title}>Roadmap</div>
+                        <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
@@ -368,9 +368,9 @@ function Home(props) {
     function team() {
         if (!isBreakpointPc) {
             return (
-                <div className={styles.ourTeam} id={"team"} data-aos="fade-up">
+                <div className={styles.ourTeam} id={"team"} >
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title} >Our Team</div>
+                        <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tr>
@@ -423,9 +423,9 @@ function Home(props) {
             )
         } else if (isBreakpointPc && !isBreakpointMb) {
             return (
-                <div className={styles.ourTeam} id={"team"} data-aos="fade-up">
+                <div className={styles.ourTeam} id={"team"}>
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title} >Our Team</div>
+                        <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tr>
@@ -483,9 +483,9 @@ function Home(props) {
             )
         } else {
             return (
-                <div className={styles.ourTeam} id={"team"} data-aos="fade-up">
+                <div className={styles.ourTeam} id={"team"} >
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
@@ -548,9 +548,9 @@ function Home(props) {
                             <source src='/ShortVideoF3.mp4' type='video/mp4' />
                         </video>
                     </div>
-                    <div id={"intro"} className={styles.gameIntro} data-aos="fade-up">
+                    <div id={"intro"} className={styles.gameIntro}>
                         <img className={styles.videoFooter} src={videoFooter} />
-                        <div className={styles.gameIntroText}>
+                        <div className={styles.gameIntroText} data-aos="fade-up">
                             <div className={styles.title}>Game Introduction</div>
                             <div className={styles.content}>Starbots is the first-ever robot battle NFT game where
                                 players
@@ -560,8 +560,8 @@ function Home(props) {
                         </div>
                         <img className={styles.gameIntroImg} src={"/game_introduction.png"} />
                     </div>
-                    <div className={styles.trailer} id={"trailer"} data-aos="fade-up">
-                        <div className={styles.trailerText}>
+                    <div className={styles.trailer} id={"trailer"}>
+                        <div className={styles.trailerText} data-aos="fade-up">
                             <div className={styles.title}>Trailer</div>
                             <div className={styles.content}>The constant sounds of metals crashing and grenades
                                 exploding
