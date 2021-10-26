@@ -39,6 +39,7 @@ const Mobile = () => {
         AOS.init({
             duration: 1200,
         });
+        AOS.refresh();
         if (typeof window != "undefined") window.scrollTo(0, 1);
         function detectIos() {
             const toMatch = [
@@ -72,7 +73,7 @@ const Mobile = () => {
                         completing missions, and conquering new lands.
                     </div>
                 </div>
-                <img className={styles.gameIntroImg} src={"/game_introduction.png"} />
+                <Image width="100%" height="50%" layout="responsive" objectFit="contain" className={styles.gameIntroImg} src={"/game_introduction.png"} />
             </div>
             <div className={styles.trailer} id={"trailer"} >
                 <div className={styles.trailerText} data-aos="fade-up">
@@ -191,43 +192,43 @@ const Mobile = () => {
                 <div className={styles.ourTeamIntro} data-aos="fade-up">
                     <div className={styles.title}>Our Team</div>
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
                         content={"CEO"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
                         content={"Creative Director"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
                         content={"Head of Communications"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
                         content={"Head of Engineering"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
                         content={"Game Developer"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
                         content={"Fullstack Developer"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={anh} title={"Anh Cong"}
                         content={"Concept Artist"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
                         content={"Game Advisor"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={long} title={"Long Vuong"}
                         content={"Strategic Advisor"} />
                 </div>
-                <div data-aos="fade-up">
+                <div>
                     <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
                         content={"Founding Partner"} />
                 </div>
