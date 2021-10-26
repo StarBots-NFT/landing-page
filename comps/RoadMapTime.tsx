@@ -8,7 +8,7 @@ interface RoadMapTimeProps {
 const RoadMapTime = ({months, year}: RoadMapTimeProps) => {
     return (
         <div className={styles.content}>
-            <div>{months}</div>
+            {months == "\n" ? (<div className={styles.month}></div>) : (<div>{months}</div>)}
             <div>{year}</div>
         </div>
     )

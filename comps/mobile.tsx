@@ -8,6 +8,7 @@ import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
 import gamee from '../public/gamee-logo-01.png'
+import defi from '../public/defi.png'
 import frame from '../public/LineCol.png'
 
 import RoadMapTime from "./RoadMapTime";
@@ -20,7 +21,7 @@ import videoFooter from "../public/bannerFooter.png";
 import kien from "../public/kien_vuong.png";
 import hung from "../public/hung_nguyen.png";
 import hong from "../public/hong_nguyen.png";
-import cuong from "../public/cuong_nguyen.png";
+import tu_chu from "../public/tu_chu.png";
 import quang from "../public/quang_nguyen.png";
 import anh from "../public/anh_cong.png";
 import giang from "../public/giang_nguyen.png";
@@ -74,7 +75,7 @@ const Mobile = () => {
                         </div>
                     </div>
                     <div className={styles.trailerVideo}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AMXtJckmByA"/>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fPQBve0SMes"/>
                     </div>
                 </div>
                 <div className={styles.feature} id={"feature"}>
@@ -136,7 +137,7 @@ const Mobile = () => {
                                 </div>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapGoal text={"Universe Map Release (Planet Sale)"}/>
+                                <RoadMapGoal text={"Starbots Universe"}/>
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot}/>
                                 </div>
@@ -162,7 +163,7 @@ const Mobile = () => {
                                 <RoadMapGoal text={"PvE StoryMode Release"}/>
                             </div>
                             <div className={styles.roadmapBodyCol}>
-                                <RoadMapTime months={"Q1"} year={"2023"}/>
+                                <RoadMapTime months={"\n"} year={"2023"}/>
                             </div>
                         </div>
                     </div>
@@ -173,8 +174,9 @@ const Mobile = () => {
                     </div>
                     <div className={styles.sponsoredIcon}>
                         <img className={styles.sponsoredImage} src={gamee}/>
-                        <img className={styles.sponsoredImage} src={lua}/>
+                        <img className={styles.sponsoredImage} src={defi}/>
                         <img className={styles.sponsoredImage} src={tomochain}/>
+                        <img className={styles.sponsoredImage} src={lua}/>
                     </div>
                 </div>
                 <div className={styles.ourTeam} id={"team"}>
@@ -194,8 +196,8 @@ const Mobile = () => {
                                      content={"Head of Communications"}/>
                     </div>
                     <div>
-                        <OurTeamItem imgUrl={cuong} title={"Cuong Nguyen"}
-                                     content={"Art Lead"}/>
+                        <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
+                                     content={"Head of Engineering"}/>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}

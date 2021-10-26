@@ -248,7 +248,9 @@ table.uniqueLayout {
 .sponsoredIcon {
     text-align: center;
     max-width:  800px;
+    width: 40vw;
     margin:     40px auto 0;
+    min-width: 430px;
 }
 
 .sponsoredImage {
