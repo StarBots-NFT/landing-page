@@ -208,3 +208,14 @@
     color: white;
     text-align: center;
 }
+
+.itemFade {
+    transform: translateY(6rem);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.fadeInBtm {
+    transform: translateY(0px);
+    opacity: 1;
+}

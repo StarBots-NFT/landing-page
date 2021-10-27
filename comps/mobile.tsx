@@ -53,6 +53,29 @@ const Mobile = () => {
         }
         setIos(detectIos)
     }, [])
+    if (typeof document !== 'undefined') {
+        //test
+        const fadeup = document.querySelectorAll(".mobile_itemFade__2bgv3");
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                const currentIndex = Array.from(fadeup).indexOf(entry.target);
+                if (entry.isIntersecting) {
+                    fadeup[currentIndex].classList.add("mobile_fadeInBtm__k4z2R")
+                } else {
+                    if (entry.boundingClientRect.y > 0) {
+                        fadeup[currentIndex].classList.remove("mobile_fadeInBtm__k4z2R")
+                    }
+                }
+            })
+        }, {
+            threshold: 0.1,
+        })
+
+        fadeup.forEach(fadeup => {
+            observer.observe(fadeup)
+        })
+        //test
+    }
     return (
         <div className={styles.bodyContent}>
             <div id={"home"}>
@@ -66,7 +89,7 @@ const Mobile = () => {
             </div>
             <div id={"intro"} className={styles.gameIntro}>
                 <img className={styles.videoFooter} src={videoFooter} />
-                <div className={styles.gameIntroText} data-aos="zoom-in">
+                <div className={`${styles.gameIntroText} ${styles.itemFade}`}>
                     <div className={styles.title}>Game Introduction</div>
                     <div className={styles.content}>Starbots is the first-ever robot battle NFT game where players
                         gain GEAR tokens through strategically assembling their own robots, winning battles,
@@ -76,7 +99,7 @@ const Mobile = () => {
                 <Image width="100%" height="50%" layout="responsive" objectFit="contain" className={styles.gameIntroImg} src={"/game_introduction.png"} />
             </div>
             <div className={styles.trailer} id={"trailer"} >
-                <div className={styles.trailerText} data-aos="fade-up">
+                <div className={`${styles.trailerText} ${styles.itemFade}`}>
                     <div className={styles.title}>Trailer</div>
                     <div className={styles.content}>The constant sounds of metals crashing and grenades exploding
                         won't stop until there's only one left standing - the one to conquer all lands.
@@ -88,21 +111,21 @@ const Mobile = () => {
             </div>
             <div className={styles.feature} id={"feature"}>
                 <div className={styles.featureText}>
-                    <div className={styles.title} data-aos="fade-up">Unique Features</div>
+                    <div className={`${styles.title} ${styles.itemFade}`}>Unique Features</div>
                     <div className={styles.unique}>
-                        <div data-aos="fade-up">
+                        <div className={`${styles.itemFade}`}>
                             <UniqueMobile imgUrl={playToEarn} title={"Play to earn"}
                                 content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                         </div>
-                        <div data-aos="fade-up">
+                        <div className={`${styles.itemFade}`}>
                             <UniqueMobile imgUrl={weapons} title={"Customisable Weapons"}
                                 content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
                         </div>
-                        <div data-aos="fade-up">
+                        <div className={`${styles.itemFade}`}>
                             <UniqueMobile imgUrl={flexibility} title={"Flexibility"}
                                 content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
                         </div>
-                        <div data-aos="fade-up">
+                        <div className={`${styles.itemFade}`}>
                             <UniqueMobile imgUrl={stratege} title={"Strategy"}
                                 content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
                         </div>
@@ -111,7 +134,7 @@ const Mobile = () => {
             </div>
             <div className={styles.roadmap} id={"map"}>
                 <div className={styles.roadmapText}>
-                    <div className={styles.title} data-aos="fade-up">Roadmap</div>
+                    <div className={`${styles.title} ${styles.itemFade}`}>Roadmap</div>
                 </div>
                 <div className={styles.roadmapContent}>
                     <div className={styles.roadmapLeft}>
@@ -178,10 +201,10 @@ const Mobile = () => {
                 </div>
             </div>
             <div className={styles.sponsored} id={"sponsored"}>
-                <div className={styles.sponsoredText} data-aos="fade-up">
+                <div className={`${styles.sponsoredText} ${styles.itemFade}`}>
                     <div className={styles.title}>Partners & Investors</div>
                 </div>
-                <div className={styles.sponsoredIcon} data-aos="fade-up">
+                <div className={`${styles.sponsoredIcon} ${styles.itemFade}`}>
                     <img className={styles.sponsoredImage} src={gamee} />
                     <img className={styles.sponsoredImage} src={defi} />
                     <img className={styles.sponsoredImage} src={tomochain} />
@@ -189,7 +212,7 @@ const Mobile = () => {
                 </div>
             </div>
             <div className={styles.ourTeam} id={"team"}>
-                <div className={styles.ourTeamIntro} data-aos="fade-up">
+                <div className={`${styles.ourTeamIntro} ${styles.itemFade}`}>
                     <div className={styles.title}>Our Team</div>
                 </div>
                 <div>

@@ -1,43 +1,63 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    color: #333;
-    font-family: "Nunito", serif;
-    margin: 0;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-.content {
-    margin: 80px 0 0 0;
-}
-
-nav {
-    margin: 10px auto 80px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin-right: 120px;
-}
-
-nav .logo {
-    margin: auto;
-}
-
-.not-found {
-    text-align: center;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        color: #333;
+        font-family: "Nunito", serif;
+        margin: 0;
+    }
+    
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .content {
+        margin: 80px 0 0 0;
+    }
+    
+    nav {
+        margin: 10px auto 80px;
+        padding: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    nav a {
+        margin-right: 120px;
+    }
+    
+    nav .logo {
+        margin: auto;
+    }
+    
+    .not-found {
+        text-align: center;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .fadeInLeft {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+    .fadeInRight {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+    .fadeInBtm {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+    .zoomIn {
+        transform: scale(1);
+        opacity: 1;
+    }
