@@ -1,9 +1,9 @@
 import styles from '../styles/mobile.module.css'
 
 import stratege from '../public/Strategy 1.png'
-import weapons from '../public/Customisable Weapons.svg'
-import flexibility from '../public/Flexibility.svg'
-import playToEarn from '../public/Play to earn.svg'
+import weapons from '../public/Customisable Weapons.png'
+import flexibility from '../public/Flexibility.png'
+import playToEarn from '../public/Play to earn.png'
 import dot from '../public/dot.png'
 import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
