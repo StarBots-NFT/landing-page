@@ -110,37 +110,37 @@ const Mobile = () => {
                 </div>
                 <div className={styles.roadmapContent}>
                     <div className={styles.roadmapLeft}>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up" >
                             <RoadMapTime months={"Oct"} year={"2021"} />
                             <div className={styles.roadmapStarCol} >
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up" >
                             <RoadMapGoal text={"BOT NFT Slae"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol}>
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapTime months={"Jan"} year={"2022"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up" >
                             <RoadMapGoal text={"PvP Mode Release"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapTime months={"Q3"} year={"2022"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up" >
                             <RoadMapGoal text={"Starbots Universe"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
@@ -151,22 +151,22 @@ const Mobile = () => {
                         <img src={frame} />
                     </div>
                     <div className={styles.roadmapRight}>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapGoal text={"Gameplay & Whitepaper Release"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapTime months={"Dec"} year={"2021"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapGoal text={"BOT token introduction & IDO"} />
                         </div>
-                        <div className={styles.roadmapBodyCol}>
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapTime months={"Q2"} year={"2022"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapGoal text={"PvE StoryMode Release"} />
                         </div>
-                        <div className={styles.roadmapBodyCol} >
+                        <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapTime months={"\n"} year={"2023"} />
                         </div>
                     </div>
@@ -187,43 +187,43 @@ const Mobile = () => {
                 <div className={styles.ourTeamIntro} data-aos="fade-up">
                     <div className={styles.title}>Our Team</div>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
                         content={"CEO"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
                         content={"Creative Director"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
                         content={"Head of Communications"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
                         content={"Head of Engineering"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
                         content={"Game Developer"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
                         content={"Fullstack Developer"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={anh} title={"Anh Cong"}
                         content={"Concept Artist"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
                         content={"Game Advisor"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={long} title={"Long Vuong"}
                         content={"Strategic Advisor"} />
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
                         content={"Founding Partner"} />
                 </div>
