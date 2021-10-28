@@ -16,7 +16,6 @@ import RoadMapGoal from "./RoadMapGoal"
 import UniqueMobile from "./UniqueMobile";
 import OurTeamItem from "./OurTeamItem";
 import { useEffect, useState } from "react";
-import gift from "../public/ezgif.com-gif-maker.gif"
 import videoFooter from "../public/bannerFooter.png";
 import kien from "../public/kien_vuong.png";
 import hung from "../public/hung_nguyen.png";
@@ -56,13 +55,9 @@ const Mobile = () => {
     return (
         <div className={styles.bodyContent}>
             <div id={"home"}>
-                {isIos ? (
-                    <img className={styles.banner} src={gift} />
-                ) : (
-                    <video autoPlay loop muted className={styles.banner}>
-                        <source src='/ShortVideoF3.mp4' type='video/mp4' />
-                    </video>
-                )}
+                <video autoPlay loop muted playsInline className={styles.banner}>
+                    <source src='/ShortVideoF3.mp4' type='video/mp4' />
+                </video>
             </div>
             <div id={"intro"} className={styles.gameIntro}>
                 <img className={styles.videoFooter} src={videoFooter} />
