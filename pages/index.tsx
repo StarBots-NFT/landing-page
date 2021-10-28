@@ -141,7 +141,7 @@ function Home(props) {
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique}>
+                        <div className={styles.unique} data-aos="fade-down">
                             <Unique imgUrl={playToEarn} title={"Play to earn"}
                                 content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                             <Unique imgUrl={weapons} title={"Customisable Weapons"}
@@ -159,7 +159,7 @@ function Home(props) {
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique}>
+                        <div className={styles.unique} data-aos="fade-down">
                             <table className={styles.uniqueLayout}>
                                 <tbody>
                                     <tr className={styles.featureTr}>
@@ -193,7 +193,7 @@ function Home(props) {
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique}>
+                        <div className={styles.unique} data-aos="fade-down">
                             <div>
                                 <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
@@ -227,8 +227,8 @@ function Home(props) {
                     <div className={styles.roadmapText}>
                         <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
-                    <div className={styles.roadmapContent}>
-                        <div className={styles.roadmapTop}>
+                    <div className={styles.roadmapContent} >
+                        <div className={styles.roadmapTop} data-aos="fade-up">
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Oct"} year={"2021"} />
                             </div>
@@ -251,7 +251,7 @@ function Home(props) {
                         <div className={styles.roadmapArt}>
                             <img src={line} />
                         </div>
-                        <div className={styles.roadmapBot}>
+                        <div className={styles.roadmapBot} data-aos="fade-up">
                             <div className={styles.roadmapBodyBot}>
                                 <RoadMapGoal text={"Gameplay & Whitepaper Release"} />
                                 <div className={styles.roadmapStar}>
@@ -300,7 +300,7 @@ function Home(props) {
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <div className={styles.roadmapBodyCol}>
                                     <RoadMapTime months={"Oct"} year={"2021"} />
                                 </div>
@@ -308,31 +308,31 @@ function Home(props) {
                                     <img src={dot} />
                                 </div>
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapGoal text={"BOT NFT Sale"} />
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot} />
                                 </div>
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapTime months={"Jan"} year={"2022"} />
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot} />
                                 </div>
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapGoal text={"PvP Mode Release"} />
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot} />
                                 </div>
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapTime months={"Q3"} year={"2022"} />
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot} />
                                 </div>
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapGoal text={"Starbots Universe"} />
                                 <div className={styles.roadmapStarCol}>
                                     <img src={dot} />
@@ -343,22 +343,22 @@ function Home(props) {
                             <img src={frame} />
                         </div>
                         <div className={styles.roadmapRight}>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapGoal text={"Gameplay & Whitepaper Release"} />
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapTime months={"Dec"} year={"2021"} />
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapGoal text={"BOT token introduction & IDO"} />
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapTime months={"Q2"} year={"2022"} />
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapGoal text={"PvE StoryMode Release"} />
                             </div>
-                            <div className={styles.roadmapBodyCol}>
+                            <div className={styles.roadmapBodyCol} data-aos="fade-up">
                                 <RoadMapTime months={"\n"} year={"2023"} />
                             </div>
                         </div>
@@ -377,7 +377,7 @@ function Home(props) {
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tbody>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
                                         content={"CEO"} />
@@ -400,7 +400,7 @@ function Home(props) {
                                         content={"Game Developer"} />
                                 </th>
                             </tr>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
                                         content={"Fullstack Developer"} />
@@ -434,7 +434,7 @@ function Home(props) {
                     </div>
                     <table className={styles.ourTeamLayout}>
                         <tbody>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
                                         content={"CEO"} />
@@ -444,7 +444,7 @@ function Home(props) {
                                         content={"Creative Director"} />
                                 </th>
                             </tr>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
                                         content={"Head of Communications"} />
@@ -454,7 +454,7 @@ function Home(props) {
                                         content={"Head of Engineering"} />
                                 </th>
                             </tr>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
                                         content={"Game Developer"} />
@@ -464,7 +464,7 @@ function Home(props) {
                                         content={"Fullstack Developer"} />
                                 </th>
                             </tr>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={anh} title={"Anh Cong"}
                                         content={"Concept Artis"} />
@@ -474,7 +474,7 @@ function Home(props) {
                                         content={"Game Advisor"} />
                                 </th>
                             </tr>
-                            <tr>
+                            <tr data-aos="fade-up">
                                 <th>
                                     <OurTeamItem imgUrl={long} title={"Long Vuong"}
                                         content={"Strategic Advisor"} />
@@ -494,43 +494,43 @@ function Home(props) {
                     <div className={styles.ourTeamIntro}>
                         <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
                             content={"CEO"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
                             content={"Creative Director"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
                             content={"Head of Communications"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
                             content={"Head of Engineering"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
                             content={"Game Developer"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
                             content={"Fullstack Developer"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={anh} title={"Anh Cong"}
                             content={"Concept Artis"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
                             content={"Game Advisor"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={long} title={"Long Vuong"}
                             content={"Strategic Advisor"} />
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
                             content={"Founding Partner"} />
                     </div>
@@ -545,6 +545,7 @@ function Home(props) {
                 <title>Starbots | The first-ever robot battle NFT game</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
+                <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
             </Head>
             {isMobile ? (
                 <Mobile />
