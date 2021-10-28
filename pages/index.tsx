@@ -2,9 +2,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import stratege from '../public/Strategy 1.png'
-import weapons from '../public/Customisable Weapons.svg'
-import flexibility from '../public/Flexibility.svg'
-import playToEarn from '../public/Play to earn.svg'
+import weapons from '../public/Customisable Weapons.png'
+import flexibility from '../public/Flexibility.png'
+import playToEarn from '../public/Play to earn.png'
 import line from '../public/Line.png'
 import dot from '../public/dot.png'
 import lua from '../public/lua.png'
@@ -33,11 +33,18 @@ import Mobile from "../comps/mobile"
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from "next/router";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Home(props) {
     const [isMobile, setMobile] = useState(false);
     const router = useRouter()
 
     useEffect(() => {
+        AOS.init({
+            duration: 1200,
+        });
+        AOS.refresh();
         function detectMob() {
             const toMatch = [
                 /Android/i,
@@ -133,7 +140,7 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Features</div>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
                             <Unique imgUrl={playToEarn} title={"Play to earn"}
                                 content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
@@ -151,29 +158,31 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Features</div>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
                             <table className={styles.uniqueLayout}>
-                                <tr className={styles.featureTr}>
-                                    <th>
-                                        <Unique imgUrl={playToEarn} title={"Play to earn"}
-                                            content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
-                                    </th>
-                                    <th>
-                                        <Unique imgUrl={weapons} title={"Customisable Weapons"}
-                                            content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
-                                    </th>
-                                </tr>
-                                <tr className={styles.featureTr}>
-                                    <th>
-                                        <Unique imgUrl={flexibility} title={"Flexibility"}
-                                            content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
-                                    </th>
-                                    <th>
-                                        <Unique imgUrl={stratege} title={"Strategy"}
-                                            content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
-                                    </th>
-                                </tr>
+                                <tbody>
+                                    <tr className={styles.featureTr}>
+                                        <th>
+                                            <Unique imgUrl={playToEarn} title={"Play to earn"}
+                                                content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
+                                        </th>
+                                        <th>
+                                            <Unique imgUrl={weapons} title={"Customisable Weapons"}
+                                                content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
+                                        </th>
+                                    </tr>
+                                    <tr className={styles.featureTr}>
+                                        <th>
+                                            <Unique imgUrl={flexibility} title={"Flexibility"}
+                                                content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
+                                        </th>
+                                        <th>
+                                            <Unique imgUrl={stratege} title={"Strategy"}
+                                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
+                                        </th>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -183,24 +192,25 @@ function Home(props) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
-                        <div className={styles.title}>Unique Features</div>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
                         <div className={styles.unique}>
                             <div>
                                 <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
                             </div>
-                            <div>
+                            <div >
                                 <Unique imgUrl={weapons} title={"Customisable Weapons"}
                                     content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
                             </div>
 
-                            <div>
+                            <div >
                                 <Unique imgUrl={flexibility} title={"Flexibility"}
                                     content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
                             </div>
 
-                            <div><Unique imgUrl={stratege} title={"Strategy"}
-                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
+                            <div >
+                                <Unique imgUrl={stratege} title={"Strategy"}
+                                    content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
                             </div>
 
                         </div>
@@ -213,9 +223,9 @@ function Home(props) {
     function map() {
         if (!isBreakpointPc) {
             return (
-                <div className={styles.roadmap} id={"map"}>
+                <div className={styles.roadmap} id={"map"} >
                     <div className={styles.roadmapText}>
-                        <div className={styles.title}>Roadmap</div>
+                        <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapTop}>
@@ -284,9 +294,9 @@ function Home(props) {
             )
         } else {
             return (
-                <div className={styles.roadmap} id={"map"}>
+                <div className={styles.roadmap} id={"map"} >
                     <div className={styles.roadmapText}>
-                        <div className={styles.title}>Roadmap</div>
+                        <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
                     <div className={styles.roadmapContent}>
                         <div className={styles.roadmapLeft}>
@@ -361,56 +371,58 @@ function Home(props) {
     function team() {
         if (!isBreakpointPc) {
             return (
-                <div className={styles.ourTeam} id={"team"}>
+                <div className={styles.ourTeam} id={"team"} >
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
                     <table className={styles.ourTeamLayout}>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
-                                    content={"CEO"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                    content={"Creative Director"} />
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
+                                        content={"CEO"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
+                                        content={"Creative Director"} />
 
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
-                                    content={"Head of Communications"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
-                                    content={"Head of Engineering"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
-                                    content={"Game Developer"} />
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
-                                    content={"Fullstack Developer"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                    content={"Concept Artist"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
-                                    content={"Game Advisor"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                    content={"Strategic Advisor"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                    content={"Founding Partner"} />
-                            </th>
-                        </tr>
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
+                                        content={"Head of Communications"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
+                                        content={"Head of Engineering"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
+                                        content={"Game Developer"} />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                        content={"Fullstack Developer"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={anh} title={"Anh Cong"}
+                                        content={"Concept Artist"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
+                                        content={"Game Advisor"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={long} title={"Long Vuong"}
+                                        content={"Strategic Advisor"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
+                                        content={"Founding Partner"} />
+                                </th>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             )
@@ -418,67 +430,69 @@ function Home(props) {
             return (
                 <div className={styles.ourTeam} id={"team"}>
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
                     <table className={styles.ourTeamLayout}>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
-                                    content={"CEO"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
-                                    content={"Creative Director"} />
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
-                                    content={"Head of Communications"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
-                                    content={"Head of Engineering"} />
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
-                                    content={"Game Developer"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
-                                    content={"Fullstack Developer"} />
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={anh} title={"Anh Cong"}
-                                    content={"Concept Artis"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
-                                    content={"Game Advisor"} />
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <OurTeamItem imgUrl={long} title={"Long Vuong"}
-                                    content={"Strategic Advisor"} />
-                            </th>
-                            <th>
-                                <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                    content={"Founding Partner"} />
-                            </th>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
+                                        content={"CEO"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={hung} title={"Hung Nguyen"}
+                                        content={"Creative Director"} />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={hong} title={"Hong Nguyen"}
+                                        content={"Head of Communications"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={tu_chu} title={"Tu Chu"}
+                                        content={"Head of Engineering"} />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={quang} title={"Quang Nguyen"}
+                                        content={"Game Developer"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={truong} title={"Truong Nguyen"}
+                                        content={"Fullstack Developer"} />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={anh} title={"Anh Cong"}
+                                        content={"Concept Artis"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={giang} title={"Giang Nguyen"}
+                                        content={"Game Advisor"} />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <OurTeamItem imgUrl={long} title={"Long Vuong"}
+                                        content={"Strategic Advisor"} />
+                                </th>
+                                <th>
+                                    <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
+                                        content={"Founding Partner"} />
+                                </th>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             )
         } else {
             return (
-                <div className={styles.ourTeam} id={"team"}>
+                <div className={styles.ourTeam} id={"team"} >
                     <div className={styles.ourTeamIntro}>
-                        <div className={styles.title}>Our Team</div>
+                        <div className={styles.title} data-aos="fade-up">Our Team</div>
                     </div>
                     <div>
                         <OurTeamItem imgUrl={kien} title={"Kien Vuong"}
@@ -543,7 +557,7 @@ function Home(props) {
                     </div>
                     <div id={"intro"} className={styles.gameIntro}>
                         <img className={styles.videoFooter} src={videoFooter} />
-                        <div className={styles.gameIntroText}>
+                        <div className={styles.gameIntroText} data-aos="fade-up">
                             <div className={styles.title}>Game Introduction</div>
                             <div className={styles.content}>Starbots is the first-ever robot battle NFT game where
                                 players
@@ -554,7 +568,7 @@ function Home(props) {
                         <img className={styles.gameIntroImg} src={"/game_introduction.png"} />
                     </div>
                     <div className={styles.trailer} id={"trailer"}>
-                        <div className={styles.trailerText}>
+                        <div className={styles.trailerText} data-aos="fade-up">
                             <div className={styles.title}>Trailer</div>
                             <div className={styles.content}>The constant sounds of metals crashing and grenades
                                 exploding
@@ -568,10 +582,10 @@ function Home(props) {
                     {feature()}
                     {map()}
                     <div className={styles.sponsored} id={"sponsored"}>
-                        <div className={styles.sponsoredText}>
+                        <div className={styles.sponsoredText} data-aos="fade-up">
                             <div className={styles.title}>Partners & Investors</div>
                         </div>
-                        <div className={styles.sponsoredIcon}>
+                        <div className={styles.sponsoredIcon} data-aos="fade-up">
                             <img className={styles.sponsoredImage} src={gamee} />
                             <img className={styles.sponsoredImage} src={defi} />
                             <img className={styles.sponsoredImage} src={tomochain} />

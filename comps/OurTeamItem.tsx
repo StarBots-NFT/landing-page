@@ -1,15 +1,15 @@
 import styles from '../styles/OurTeamItem.module.css'
-
+import Image from 'next/image'
 interface OutTeamItemProps {
     imgUrl: string;
     title: string;
     content: string
 }
 
-const OutTeamItem = ({title, content, imgUrl}: OutTeamItemProps) => {
+const OutTeamItem = ({ title, content, imgUrl }: OutTeamItemProps) => {
     return (
         <div className={styles.ourTeamItem}>
-            <img src={imgUrl} />
+            <img src={imgUrl} alt="Picture of the author" />
             <div>
                 <div className={styles.title}>
                     {title}
