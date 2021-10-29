@@ -227,8 +227,8 @@ function Home(props) {
                     <div className={styles.roadmapText}>
                         <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
-                    <div className={styles.roadmapContent} >
-                        <div className={styles.roadmapTop} data-aos="fade-up">
+                    <div className={styles.roadmapContent} data-aos="fade-down">
+                        <div className={styles.roadmapTop}>
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Oct"} year={"2021"} />
                             </div>
@@ -251,7 +251,7 @@ function Home(props) {
                         <div className={styles.roadmapArt}>
                             <img src={line} />
                         </div>
-                        <div className={styles.roadmapBot} data-aos="fade-up">
+                        <div className={styles.roadmapBot}>
                             <div className={styles.roadmapBodyBot}>
                                 <RoadMapGoal text={"Gameplay & Whitepaper Release"} />
                                 <div className={styles.roadmapStar}>
