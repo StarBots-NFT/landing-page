@@ -419,7 +419,7 @@ function Home(props) {
                                 </th>
                                 <th>
                                     <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                        content={"Founding Partner"} />
+                                        content={"Operation Advisor"} />
                                 </th>
                             </tr>
                         </tbody>
@@ -481,7 +481,7 @@ function Home(props) {
                                 </th>
                                 <th>
                                     <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                                        content={"Founding Partner"} />
+                                        content={"Operation Advisor"} />
                                 </th>
                             </tr>
                         </tbody>
@@ -532,7 +532,7 @@ function Home(props) {
                     </div>
                     <div data-aos="fade-up">
                         <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                            content={"Founding Partner"} />
+                            content={"Operation Advisor"} />
                     </div>
                 </div>
             )
