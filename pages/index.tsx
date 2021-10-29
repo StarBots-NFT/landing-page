@@ -137,29 +137,29 @@ function Home(props) {
 
     function feature() {
         if (!isBreakpointPc) {
-            return (
-                <div className={styles.feature} id={"feature"}>
-                    <div className={styles.featureText}>
-                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique} data-aos="fade-down">
-                            <Unique imgUrl={playToEarn} title={"Play to earn"}
-                                content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
-                            <Unique imgUrl={weapons} title={"Customisable Weapons"}
-                                content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
-                            <Unique imgUrl={flexibility} title={"Flexibility"}
-                                content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
-                            <Unique imgUrl={stratege} title={"Strategy"}
-                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
-                        </div>
+        return (
+            <div className={styles.feature} id={"feature"}>
+                <div className={styles.featureText}>
+                    <div className={styles.title} data-aos="fade-up">Unique Features</div>
+                    <div className={styles.unique} data-aos="fade-up">
+                        <Unique imgUrl={playToEarn} title={"Play to earn"}
+                            content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
+                        <Unique imgUrl={weapons} title={"Customisable Weapons"}
+                            content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
+                        <Unique imgUrl={flexibility} title={"Flexibility"}
+                            content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
+                        <Unique imgUrl={stratege} title={"Strategy"}
+                            content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
                     </div>
                 </div>
-            )
+            </div>
+        )
         } else if (isBreakpointPc && !isBreakpointMb) {
             return (
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique} data-aos="fade-down">
+                        <div className={styles.unique} data-aos="fade-up">
                             <table className={styles.uniqueLayout}>
                                 <tbody>
                                     <tr className={styles.featureTr}>
@@ -193,7 +193,7 @@ function Home(props) {
                 <div className={styles.feature} id={"feature"}>
                     <div className={styles.featureText}>
                         <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                        <div className={styles.unique} data-aos="fade-down">
+                        <div className={styles.unique} data-aos="fade-up">
                             <div>
                                 <Unique imgUrl={playToEarn} title={"Play to earn"}
                                     content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
@@ -227,7 +227,7 @@ function Home(props) {
                     <div className={styles.roadmapText}>
                         <div className={styles.title} data-aos="fade-up">Roadmap</div>
                     </div>
-                    <div className={styles.roadmapContent} data-aos="fade-down">
+                    <div className={styles.roadmapContent} data-aos="fade-up">
                         <div className={styles.roadmapTop}>
                             <div className={styles.roadmapBodyTop}>
                                 <RoadMapTime months={"Oct"} year={"2021"} />
