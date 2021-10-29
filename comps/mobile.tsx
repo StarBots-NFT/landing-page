@@ -225,7 +225,7 @@ const Mobile = () => {
                 </div>
                 <div data-aos="fade-up">
                     <OurTeamItem imgUrl={anhNg} title={"Anh Nguyen"}
-                        content={"Founding Partner"} />
+                        content={"Operation Advisor"} />
                 </div>
             </div>
         </div>
