@@ -241,13 +241,17 @@ table.uniqueLayout {
     max-width: 800px;
     word-break: break-word;
     margin: auto;
+    margin-bottom: 2rem;
 }
 
 .sponsoredIcon {
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: auto;
+    gap: 1.5rem;
 }
 
 .sponsoredImage {
@@ -255,9 +259,11 @@ table.uniqueLayout {
     margin-right: 30px;
     margin-left: 30px;
     vertical-align: middle;
-    width: 11.8vw;
+    width: 12rem;
+    max-height: 100px;
     max-width: 300px;
     min-width: 150px;
+    cursor: pointer;
 }
 
 .ourTeam {

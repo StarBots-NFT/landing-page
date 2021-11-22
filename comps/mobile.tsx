@@ -14,6 +14,12 @@ import bigcoin from '../public/bigcoin_logo.png'
 import impo_logo from '../public/impo.png'
 import kyros from '../public/kyros.png'
 import parsiq from '../public/parsiq.png'
+import kyber_logo from '../public/kyber_logo.svg'
+import solar_logo from '../public/solar_logo.png'
+import solscan_logo from '../public/solscan_logo.svg'
+import good_game_logo from '../public/good_game_logo.png'
+import ex_logo from '../public/ex_logo.png'
+import hub_logo from '../public/hub_logo.png'
 import tkv from '../public/TKV_logo.png'
 import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
@@ -181,15 +187,51 @@ const Mobile = () => {
                     <div className={styles.title}>Partners & Investors</div>
                 </div>
                 <div className={styles.sponsoredIcon} data-aos="fade-up">
-                    <img className={styles.sponsoredImage} src={gamee} />
-                    <img className={styles.sponsoredImage} src={defi} />
-                    <img className={styles.sponsoredImage} src={tomochain} />
-                    <img className={styles.sponsoredImage} src={lua} />
-                    <img className={styles.sponsoredImage} src={bigcoin} />
-                    <img className={styles.sponsoredImage} src={kyros} />
-                    <img className={styles.sponsoredImage} src={parsiq} />
-                    <img className={styles.sponsoredImage} src={tkv} />
-                    <img className={styles.sponsoredImage} src={impo_logo} />
+                    <a href="https://www.defialliance.co/" target={'_blank'}>
+                        <img className={styles.sponsoredImage} src={defi} />
+                    </a>
+                    <a href="https://impossible.finance/" target={'_blank'}>
+                        <img className={styles.sponsoredImage} src={impo_logo} />
+                    </a>
+                    <a href="https://tomochain.com/" target={'_blank'}>
+                        <img className={styles.sponsoredImage} src={tomochain} />
+                    </a>
+                    <a href="https://gameestudio.com/" target={'_blank'}>
+                        <img className={styles.sponsoredImage} src={gamee} />
+                    </a>
+                    <a href="https://www.solarecofund.com/" target="_blank">
+                        <img className={styles.sponsoredImage} src={solar_logo} />
+                    </a>
+                    <a href="https://kyros.ventures/" target="_blank">
+                        <img className={styles.sponsoredImage} src={kyros} />
+                    </a>
+                    <a href="https://goodgamesguild.com/" target="_blank">
+                        <img className={styles.sponsoredImage} src={good_game_logo} />
+                    </a>
+                    <a href="https://solscan.io/" target="_blank">
+                        <img className={styles.sponsoredImage} src={solscan_logo} />
+                    </a>
+                    <a href="https://www.parsiq.net/" target="_blank">
+                        <img className={styles.sponsoredImage} src={parsiq} />
+                    </a>
+                    <a href="https://kyber.network/" target="_blank">
+                        <img className={styles.sponsoredImage} src={kyber_logo} />
+                    </a>
+                    <a href="https://www.luaventures.xyz/" target="_blank">
+                        <img className={styles.sponsoredImage} src={lua} />
+                    </a>
+                    <a href="https://bigcoincapital.org/" target="_blank">
+                        <img className={styles.sponsoredImage} src={bigcoin} />
+                    </a>
+                    <a href="https://tk.ventures/" target="_blank">
+                        <img className={styles.sponsoredImage} src={tkv} />
+                    </a>
+                    <a href="https://exnetworkcapital.com/" target="_blank">
+                        <img className={styles.sponsoredImage} src={ex_logo} />
+                    </a>
+                    <a href="https://www.hubglobal.io/" target="_blank">
+                        <img className={styles.sponsoredImage} src={hub_logo} />
+                    </a>
                 </div>
             </div>
             <div className={styles.ourTeam} id={"team"}>
