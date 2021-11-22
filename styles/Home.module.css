@@ -1,73 +1,72 @@
 .bodyContent {
-    background-image:      url("../public/BG.jpg");
+    background-image: url("../public/BG.jpg");
     background-attachment: fixed;
-    background-size:       cover;
-    background-position:   center;
+    background-size: cover;
+    background-position: center;
 }
-
 
 .videoBanner {
     position: relative;
-    width:    100%;
+    width: 100%;
 }
 
 .videoFooter {
     position: absolute;
-    top:      -152px;
-    left:     0;
-    width:    100%;
-    height:   52px;
-    z-index:  2;
+    top: -152px;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 2;
 }
 
 .banner {
-    left:  0;
+    left: 0;
     width: 100%;
 }
 
 .gameIntro {
     text-align: center;
-    margin:     var(--MarginBlock) auto auto;
-    position:   relative;
+    margin: var(--MarginBlock) auto auto;
+    position: relative;
 }
 
 .gameIntroImg {
-    width:      52vw;
-    max-width:  1041px;
+    width: 52vw;
+    max-width: 1041px;
     max-height: 523px;
-    min-width:  450px;
+    min-width: 450px;
     margin-top: 8px;
 }
 
 .gameIntroText {
     vertical-align: top;
-    margin:         auto auto;
-    text-align:     center;
-    width:          var(--titleMobiW);
-    word-break:     break-word;
-    color:          var(--white);
+    margin: auto auto;
+    text-align: center;
+    width: var(--titleMobiW);
+    word-break: break-word;
+    color: var(--white);
 }
 
 .title {
     font-family: "Aquire", serif;
-    font-style:  normal;
+    font-style: normal;
     font-weight: 800;
-    font-size:   48px;
+    font-size: 48px;
     line-height: 130%;
-    color:       var(--white);
-    max-width:   800px;
-    margin:      auto;
+    color: var(--white);
+    max-width: 800px;
+    margin: auto;
 }
 
 .content {
-    font-family:    "Inter";
-    font-style:     normal;
-    font-weight:    normal;
-    font-size:      18px;
-    line-height:    160%;
-    color:          var(--gray);
-    max-width:      800px;
-    margin:         16px auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 16px auto;
     letter-spacing: 0.02em;
 }
 
@@ -77,24 +76,24 @@
 }
 
 .trailerText {
-    margin:     auto;
+    margin: auto;
     text-align: center;
-    width:      52vw;
+    width: 52vw;
     word-break: break-word;
 }
 
 .trailerVideo {
-    width:      55.6vw;
-    height:     31.25vw;
-    max-width:  var(--MaxWItem);
+    width: 55.6vw;
+    height: 31.25vw;
+    max-width: var(--MaxWItem);
     max-height: 450px;
-    margin:     60px auto auto;
+    margin: 60px auto auto;
     text-align: center;
 }
 
 .feature {
     max-width: 1200px;
-    margin:    auto;
+    margin: auto;
 }
 
 .featureText {
@@ -102,13 +101,12 @@
     margin-top: var(--MarginBlock);
 }
 
-.unique {
-}
+.unique {}
 
 table.uniqueLayout {
     table-layout: fixed;
-    margin:       auto;
-    width:        76%;
+    margin: auto;
+    width: 76%;
 }
 
 .featureTr {
@@ -117,7 +115,7 @@ table.uniqueLayout {
 
 .roadmap {
     text-align: center;
-    margin:     var(--MarginBlock) auto 0;
+    margin: var(--MarginBlock) auto 0;
 }
 
 .roadmapText {
@@ -126,43 +124,43 @@ table.uniqueLayout {
 
 .roadmapContent {
     margin-top: 20px;
-    display:    inline-block;
+    display: inline-block;
 }
 
 .roadmapLeft {
-    display:        inline-block;
+    display: inline-block;
     vertical-align: top;
-    text-align:     right;
-    width:          17vw;
-    margin-top:     40px;
+    text-align: right;
+    width: 17vw;
+    margin-top: 40px;
 }
 
 .roadmapTop {
-    display:        inline-block;
+    display: inline-block;
     vertical-align: top;
-    margin-top:     20px;
-    width:          95%;
+    margin-top: 20px;
+    width: 95%;
 }
 
 .roadmapBot {
-    display:        inline-block;
+    display: inline-block;
     vertical-align: top;
-    margin-top:     20px;
-    margin-bottom:  50px;
-    width:          95%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 95%;
 }
 
 .roadmapRight {
-    text-align:     left;
-    display:        inline-block;
+    text-align: left;
+    display: inline-block;
     vertical-align: top;
-    width:          17vw;
-    margin-top:     40px;
+    width: 17vw;
+    margin-top: 40px;
 }
 
 .roadmapArt {
-    display:       inline-block;
-    margin-top:    40px;
+    display: inline-block;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -171,9 +169,9 @@ table.uniqueLayout {
 }
 
 .roadmapArtCol {
-    display:      inline-block;
+    display: inline-block;
     margin-right: 95px;
-    margin-left:  95px;
+    margin-left: 95px;
 }
 
 .roadmapArtCol img {
@@ -181,86 +179,85 @@ table.uniqueLayout {
 }
 
 .roadmapBodyCol {
-    position:      relative;
-    height:        113px;
+    position: relative;
+    height: 113px;
     margin-bottom: 50px;
 }
 
 .roadmapBodyTop {
-    position:     relative;
-    text-align:   center;
-    display:      inline-block;
-    width:        170px;
-    margin-left:  20px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 170px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 
 .roadmapBodyBot {
-    position:       relative;
-    text-align:     center;
-    display:        inline-block;
-    width:          170px;
-    margin-left:    20px;
-    margin-right:   20px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 170px;
+    margin-left: 20px;
+    margin-right: 20px;
     vertical-align: top;
 }
 
 .roadmapStar {
     position: absolute;
-    top:      -75px;
-    right:    40%;
+    top: -75px;
+    right: 40%;
 }
 
 .roadmapStarCol {
     position: absolute;
-    top:      26%;
-    right:    -125px;
+    top: 26%;
+    right: -125px;
 }
 
 .sponsored {
-    margin-top:          50px;
-    padding-bottom:      60px;
-    padding-top:         60px;
-    position:            relative;
-    text-align:          center;
-    background-image:    url("../public/background.png");
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    margin-top: 50px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    position: relative;
+    text-align: center;
+    background-image: url("../public/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
 }
 
 .sponsoredBackgroud {
     position: absolute;
-    width:    100%;
-    z-index:  -1;
-    left:     0;
-    top:      0;
-    height:   100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
 }
 
 .sponsoredText {
     text-align: center;
-    max-width:  800px;
+    max-width: 800px;
     word-break: break-word;
-    margin:     auto;
+    margin: auto;
 }
 
 .sponsoredIcon {
-    text-align: center;
-    max-width:  800px;
-    width: 40vw;
-    margin:     40px auto 0;
-    min-width: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .sponsoredImage {
-    display:        inline-block;
-    margin-right:   30px;
-    margin-left:    30px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 30px;
     vertical-align: middle;
-    width:          11.8vw;
-    max-width:      300px;
-    min-width:      150px;
+    width: 11.8vw;
+    max-width: 300px;
+    min-width: 150px;
 }
 
 .ourTeam {
@@ -269,46 +266,41 @@ table.uniqueLayout {
 }
 
 .ourTeamIntro {
-    width:     55.56vw;
+    width: 55.56vw;
     max-width: var(--MaxWItem);
-    margin:    auto;
+    margin: auto;
 }
 
 .ourTeamLayout {
     table-layout: fixed;
-    width:        86%;
-    margin:       40px auto 0;
-    max-width:    1200px;
+    width: 86%;
+    margin: 40px auto 0;
+    max-width: 1200px;
 }
 
 .btn {
-    display:       block;
-    width:         150px;
-    padding:       8px 0;
-    margin:        20px auto;
-    background:    #4979ff;
+    display: block;
+    width: 150px;
+    padding: 8px 0;
+    margin: 20px auto;
+    background: #4979ff;
     border-radius: 4px;
-    color:         white;
-    text-align:    center;
+    color: white;
+    text-align: center;
 }
-
 
 @media only screen and (max-width: 820px) {
     .gameIntroText {
         width: 100%;
     }
-
     .gameIntroImg {
         width: 100%;
     }
-
     .trailerVideo {
-        width:  98%;
+        width: 98%;
         height: 55.125vw;
     }
-
     .trailerText {
         width: 100%;
     }
 }
-
