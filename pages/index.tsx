@@ -11,6 +11,11 @@ import lua from '../public/lua.png'
 import tomochain from '../public/tomochain.png'
 import gamee from '../public/gamee-logo-01.png'
 import defi from '../public/defi.png'
+import bigcoin from '../public/bigcoin_logo.png'
+import impo_logo from '../public/impo.png'
+import kyros from '../public/kyros.png'
+import parsiq from '../public/parsiq.png'
+import tkv from '../public/TKV_logo.png'
 import kien from '../public/kien_vuong.png'
 import hung from '../public/hung_nguyen.png'
 import hong from '../public/hong_nguyen.png'
@@ -137,23 +142,23 @@ function Home(props) {
 
     function feature() {
         if (!isBreakpointPc) {
-        return (
-            <div className={styles.feature} id={"feature"}>
-                <div className={styles.featureText}>
-                    <div className={styles.title} data-aos="fade-up">Unique Features</div>
-                    <div className={styles.unique} data-aos="fade-up">
-                        <Unique imgUrl={playToEarn} title={"Play to earn"}
-                            content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
-                        <Unique imgUrl={weapons} title={"Customisable Weapons"}
-                            content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
-                        <Unique imgUrl={flexibility} title={"Flexibility"}
-                            content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
-                        <Unique imgUrl={stratege} title={"Strategy"}
-                            content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
+            return (
+                <div className={styles.feature} id={"feature"}>
+                    <div className={styles.featureText}>
+                        <div className={styles.title} data-aos="fade-up">Unique Features</div>
+                        <div className={styles.unique} data-aos="fade-up">
+                            <Unique imgUrl={playToEarn} title={"Play to earn"}
+                                content={"Gain GEAR tokens while exploring planets full of battles and missions."} />
+                            <Unique imgUrl={weapons} title={"Customisable Weapons"}
+                                content={"Customize your battle robots to your own liking using a diverse selection of body parts."} />
+                            <Unique imgUrl={flexibility} title={"Flexibility"}
+                                content={"Upgrade, repair and disassemble your fighting robot at any given time."} />
+                            <Unique imgUrl={stratege} title={"Strategy"}
+                                content={"Logically combine different weapons and body parts to produce a robot with the winning principle of operation."} />
+                        </div>
                     </div>
                 </div>
-            </div>
-        )
+            )
         } else if (isBreakpointPc && !isBreakpointMb) {
             return (
                 <div className={styles.feature} id={"feature"}>
@@ -591,6 +596,11 @@ function Home(props) {
                             <img className={styles.sponsoredImage} src={defi} />
                             <img className={styles.sponsoredImage} src={tomochain} />
                             <img className={styles.sponsoredImage} src={lua} />
+                            <img className={styles.sponsoredImage} src={bigcoin} />
+                            <img className={styles.sponsoredImage} src={kyros} />
+                            <img className={styles.sponsoredImage} src={parsiq} />
+                            <img className={styles.sponsoredImage} src={tkv} />
+                            <img className={styles.sponsoredImage} src={impo_logo} />
                         </div>
                     </div>
                     {team()}

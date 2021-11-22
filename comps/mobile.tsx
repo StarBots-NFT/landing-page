@@ -10,7 +10,11 @@ import tomochain from '../public/tomochain.png'
 import gamee from '../public/gamee-logo-01.png'
 import defi from '../public/defi.png'
 import frame from '../public/LineCol.png'
-
+import bigcoin from '../public/bigcoin_logo.png'
+import impo_logo from '../public/impo.png'
+import kyros from '../public/kyros.png'
+import parsiq from '../public/parsiq.png'
+import tkv from '../public/TKV_logo.png'
 import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
 import UniqueMobile from "./UniqueMobile";
@@ -181,6 +185,11 @@ const Mobile = () => {
                     <img className={styles.sponsoredImage} src={defi} />
                     <img className={styles.sponsoredImage} src={tomochain} />
                     <img className={styles.sponsoredImage} src={lua} />
+                    <img className={styles.sponsoredImage} src={bigcoin} />
+                    <img className={styles.sponsoredImage} src={kyros} />
+                    <img className={styles.sponsoredImage} src={parsiq} />
+                    <img className={styles.sponsoredImage} src={tkv} />
+                    <img className={styles.sponsoredImage} src={impo_logo} />
                 </div>
             </div>
             <div className={styles.ourTeam} id={"team"}>
