@@ -169,6 +169,7 @@
     max-width: 800px;
     word-break: break-word;
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 .sponsoredIcon {

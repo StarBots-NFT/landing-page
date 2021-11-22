@@ -14,6 +14,12 @@ import bigcoin from '../public/bigcoin_logo.png'
 import impo_logo from '../public/impo.png'
 import kyros from '../public/kyros.png'
 import parsiq from '../public/parsiq.png'
+import kyber_logo from '../public/kyber_logo.svg'
+import solar_logo from '../public/solar_logo.png'
+import solscan_logo from '../public/solscan_logo.svg'
+import good_game_logo from '../public/good_game_logo.png'
+import ex_logo from '../public/ex_logo.png'
+import hub_logo from '../public/hub_logo.png'
 import tkv from '../public/TKV_logo.png'
 import RoadMapTime from "./RoadMapTime";
 import RoadMapGoal from "./RoadMapGoal"
@@ -181,15 +187,21 @@ const Mobile = () => {
                     <div className={styles.title}>Partners & Investors</div>
                 </div>
                 <div className={styles.sponsoredIcon} data-aos="fade-up">
-                    <img className={styles.sponsoredImage} src={gamee} />
                     <img className={styles.sponsoredImage} src={defi} />
+                    <img className={styles.sponsoredImage} src={impo_logo} />
                     <img className={styles.sponsoredImage} src={tomochain} />
+                    <img className={styles.sponsoredImage} src={gamee} />
+                    <img className={styles.sponsoredImage} src={solar_logo} />
+                    <img className={styles.sponsoredImage} src={kyros} />
+                    <img className={styles.sponsoredImage} src={good_game_logo} />
+                    <img className={styles.sponsoredImage} src={solscan_logo} />
+                    <img className={styles.sponsoredImage} src={parsiq} />
+                    <img className={styles.sponsoredImage} src={kyber_logo} />
                     <img className={styles.sponsoredImage} src={lua} />
                     <img className={styles.sponsoredImage} src={bigcoin} />
-                    <img className={styles.sponsoredImage} src={kyros} />
-                    <img className={styles.sponsoredImage} src={parsiq} />
                     <img className={styles.sponsoredImage} src={tkv} />
-                    <img className={styles.sponsoredImage} src={impo_logo} />
+                    <img className={styles.sponsoredImage} src={ex_logo} />
+                    <img className={styles.sponsoredImage} src={hub_logo} />
                 </div>
             </div>
             <div className={styles.ourTeam} id={"team"}>
