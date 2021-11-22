@@ -15,7 +15,7 @@ const Footer = () => {
                             <a className={styles.title}>About</a>
                             <a href={"https://medium.com/@starbots_game"} className={styles.content} target="_blank">News</a>
                             <a href={"https://whitepaper.starbots.net"} className={styles.content} target="_blank">Documentation</a>
-                            <a href={'/slideSb.pdf'} className={styles.content} target="_blank">Pitch Deck</a>
+                            <a href={'/Starbots_PickDeck.pdf'} className={styles.content} target="_blank">Pitch Deck</a>
                         </div>
                         <div className={styles.followUs}>
                             <a className={styles.title}>Follow us</a>
