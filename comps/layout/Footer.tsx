@@ -6,7 +6,7 @@ const Footer = () => {
             <div className={styles.Footer}>
                 <footer className={styles.FooterContent}>
                     <div className={styles.starBot}>
-                        <img className={styles.icon} src={"/logo_FOOTER.png"}/>
+                        <img className={styles.icon} src={"/logo_FOOTER.png"} />
                         <a className={styles.content}>The first-ever robot battle NFT game to exalt strategy over contingent
                             luck.</a>
                     </div>
@@ -15,6 +15,7 @@ const Footer = () => {
                             <a className={styles.title}>About</a>
                             <a href={"https://medium.com/@starbots_game"} className={styles.content} target="_blank">News</a>
                             <a href={"https://whitepaper.starbots.net"} className={styles.content} target="_blank">Documentation</a>
+                            <a href={'/slideSb.pdf'} className={styles.content} target="_blank">Pitch Deck</a>
                         </div>
                         <div className={styles.followUs}>
                             <a className={styles.title}>Follow us</a>
