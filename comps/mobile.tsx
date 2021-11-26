@@ -127,7 +127,7 @@ const Mobile = () => {
                             </div>
                         </div>
                         <div className={styles.roadmapBodyCol} data-aos="fade-up" >
-                            <RoadMapGoal text={"BOT NFT Slae"} />
+                            <RoadMapGoal text={"BOT NFT Sale"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
