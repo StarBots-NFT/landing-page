@@ -127,13 +127,13 @@ const Mobile = () => {
                             </div>
                         </div>
                         <div className={styles.roadmapBodyCol} data-aos="fade-up" >
-                            <RoadMapGoal text={"BOT NFT Sale"} />
+                            <RoadMapGoal text={"BOT token introduction & IDO"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
                         </div>
                         <div className={styles.roadmapBodyCol} data-aos="fade-up">
-                            <RoadMapTime months={"Jan"} year={"2022"} />
+                            <RoadMapTime months={"Feb"} year={"2022"} />
                             <div className={styles.roadmapStarCol}>
                                 <img src={dot} />
                             </div>
@@ -165,10 +165,10 @@ const Mobile = () => {
                             <RoadMapGoal text={"Gameplay & Whitepaper Release"} />
                         </div>
                         <div className={styles.roadmapBodyCol} data-aos="fade-up">
-                            <RoadMapTime months={"Dec"} year={"2021"} />
+                            <RoadMapTime months={"Jan"} year={"2022"} />
                         </div>
                         <div className={styles.roadmapBodyCol} data-aos="fade-up">
-                            <RoadMapGoal text={"BOT token introduction & IDO"} />
+                            <RoadMapGoal text={"NFT Sale"} />
                         </div>
                         <div className={styles.roadmapBodyCol} data-aos="fade-up">
                             <RoadMapTime months={"Q2"} year={"2022"} />
